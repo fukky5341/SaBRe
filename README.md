@@ -57,14 +57,6 @@ The details of the example in Section III-B are provided in [example](example/ex
 
 
 ## Running Experiments
-### Binary Search (RQ4)
-To run the binary search experiments:
-```
-uv run run_experiment_bs.py
-```
-In this experiment, we compare the performance of our method SABRE (RS_dual_Z) with baselines: RaVeN (base), ClasIS (IS_dual_ind), DualIS (IS_dual), and RandRS (RS_random_Z) via binary search on ACAS Xu, MNIST-F, MNIST-C, CIFAR. In binary search, each approach explores the maximum verifiable input relational distance.
-
-The results and logs are generated in `experiment_results/binary_search`. The processing status are written to the log files, and the final result is given at the bottom of the log file.
 
 ### RQ1-RQ3
 To run the experiments used in RQ1-RQ3:
@@ -74,6 +66,16 @@ uv run run_experiment_rs_is.py
 In this experiment, we compare the performance of our method SABRE (RS_dual_Z) with baselines: RaVeN (base), ClasIS (IS_dual_ind), DualIS (IS_dual), and RandRS (RS_random_Z) on ACAS Xu, MNIST-F, MNIST-C, CIFAR. For a given instance with output relational threshold, we evaluate whether each approach can verify or find counterexamples for the instance within the time limit.
 
 The results and logs are generated in `experiment_results/` network-wisely. The processing status are written to the log files, and the final result is given at the bottom of the log file.
+
+### Binary Search (RQ4)
+To run the binary search experiments:
+```
+uv run run_experiment_bs.py
+```
+In this experiment, we compare the performance of our method SABRE (RS_dual_Z) with baselines: RaVeN (base), ClasIS (IS_dual_ind), DualIS (IS_dual), and RandRS (RS_random_Z) via binary search on ACAS Xu, MNIST-F, MNIST-C, CIFAR. In binary search, each approach explores the maximum verifiable input relational distance.
+
+The results and logs are generated in `experiment_results/binary_search`. The processing status are written to the log files, and the final result is given at the bottom of the log file.
+
 
 
 ## Project Structure
