@@ -1,0 +1,27 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+**/__pycache__/**
+*.pyc
+
+# project-generated files
+*.log
+*.ilp
+*.lp
+experiment_result/
+small_result/
+result/
+result_analysis/
+*.csv
+Tex/
+image/
+
+# Virtual environments
+.venv
+
+# IDE files
+.vscode/
