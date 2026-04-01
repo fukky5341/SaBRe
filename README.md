@@ -43,7 +43,7 @@ This command:
 
 
 ## Example in Section III-B
-The details of the example in Section III-B is provided in [example](example/example.ipynb). You can run the notebook to visualize the bounds and splitting process.
+The details of the example in Section III-B are provided in [example](example/example.ipynb). You can run the notebook to visualize the bounds and splitting process.
 
 <figure>
     <img src="example/bounds.png" alt="Relational backsubstitution example" width="400">
