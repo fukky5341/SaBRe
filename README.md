@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Installation Guide](#installation-guide)
-- [Example in Section III-B](#the-example-in-section-iii-b)
+- [Example in Section III-B](#example-in-section-iii-b)
 - [Running Experiments](#running-experiments)
 - [Project Structure](#project-structure)
 
