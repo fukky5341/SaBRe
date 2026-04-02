@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Installation Guide](#installation-guide)
-- [Example in Section III-B](#example-in-section-iii-b)
+- [Example in Section III-B](#the-example-in-section-iii-b)
 - [Running Experiments](#running-experiments)
 - [Project Structure](#project-structure)
 
@@ -15,12 +15,36 @@ cd sabre
 ```
 
 ### 2. Install Gurobi (solver)
-Please install Gurobi from the official website: [gurobi installation](https://www.gurobi.com/)
+
+
+Reproducing experiments requires a Gurobi license. Please install Gurobi from the official website: [gurobi installation](https://www.gurobi.com/). Free academic licenses for students and researchers [Gurobi academic license](https://www.gurobi.com/academia/academic-program-and-licenses) are provided if needed.
+
+Aside from the official instructions, the following steps might be helpful.
+
+- Login to the Gurobi user portal.
+- Go to the ["Licenses - Request" tab](https://portal.gurobi.com/iam/licenses/request), genearte a "WLS Academic" license if you don't have one. If you already have a "WLS Academic" license, you might get an "[LICENSES_ACADEMIC_EXISTS] Cannot create academic license as other academic licenses already exists" error.
+- Go to the "Home" tab, click "Licenses - Open the WLS manager" to open the WLS manager.
+- In the WLS manager, you should see a license under the "Licenses" tab. Click "extend" if it has expired (it might take some time to take effect).
+- Go to the "API Keys" tab, click the "CREATE API KEY" button to create a new license, download the generated `gurobi.lic` file by following the instructions and place it at the proper location.
+
 
 Ensure that your Gurobi license is properly installed and gurobipy works in Python.
 
 ### 3. Install uv (python environment manager)
 Please install by following guide: [uv installation](https://github.com/astral-sh/uv?tab=readme-ov-file#installation)
+
+The following command might be helpful for installation:
+
+- For macOS/Linux:
+```
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+- For Windows (PowerShell):
+```
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+After installation, ensure that `uv` command is available in your terminal. You might need to run the command shown in the output of the installation script.
 
 
 ### 4. Setup python version
@@ -43,7 +67,7 @@ This command:
 
 
 ## Example in Section III-B
-The details of the example in Section III-B are provided in [example](example/example.ipynb). You can run the notebook to visualize the bounds and splitting process.
+The details of the example in Section III-B is provided in [example](example/example.ipynb). You can run the notebook to visualize the bounds and splitting process.
 
 <figure>
     <img src="example/bounds.png" alt="Relational backsubstitution example" width="400">
@@ -57,16 +81,6 @@ The details of the example in Section III-B are provided in [example](example/ex
 
 
 ## Running Experiments
-
-### RQ1-RQ3
-To run the experiments used in RQ1-RQ3:
-```
-uv run run_experiment_rs_is.py
-```
-In this experiment, we compare the performance of our method SABRE (RS_dual_Z) with baselines: RaVeN (base), ClasIS (IS_dual_ind), DualIS (IS_dual), and RandRS (RS_random_Z) on ACAS Xu, MNIST-F, MNIST-C, CIFAR. For a given instance with output relational threshold, we evaluate whether each approach can verify or find counterexamples for the instance within the time limit.
-
-The results and logs are generated in `experiment_results/` network-wisely. The processing status are written to the log files, and the final result is given at the bottom of the log file.
-
 ### Binary Search (RQ4)
 To run the binary search experiments:
 ```
@@ -76,6 +90,14 @@ In this experiment, we compare the performance of our method SABRE (RS_dual_Z) w
 
 The results and logs are generated in `experiment_results/binary_search`. The processing status are written to the log files, and the final result is given at the bottom of the log file.
 
+### RQ1-RQ3
+To run the experiments used in RQ1-RQ3:
+```
+uv run run_experiment_rs_is.py
+```
+In this experiment, we compare the performance of our method SABRE (RS_dual_Z) with baselines: RaVeN (base), ClasIS (IS_dual_ind), DualIS (IS_dual), and RandRS (RS_random_Z) on ACAS Xu, MNIST-F, MNIST-C, CIFAR. For a given instance with output relational threshold, we evaluate whether each approach can verify or find counterexamples for the instance within the time limit.
+
+The results and logs are generated in `experiment_results/` network-wisely. The processing status are written to the log files, and the final result is given at the bottom of the log file.
 
 
 ## Project Structure
