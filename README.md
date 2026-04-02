@@ -27,8 +27,8 @@ Aside from the official instructions, the following steps might be helpful.
 - In the WLS manager, you should see a license under the "Licenses" tab. Click "extend" if it has expired (it might take some time to take effect).
 - Go to the "API Keys" tab, click the "CREATE API KEY" button to create a new license, download the generated `gurobi.lic` file by following the instructions and place it at the proper location.
 
+Before running the experiments, ensure that your Gurobi license is properly installed and gurobipy works in Python.
 
-Ensure that your Gurobi license is properly installed and gurobipy works in Python.
 
 ### 3. Install uv (python environment manager)
 Please install by following guide: [uv installation](https://github.com/astral-sh/uv?tab=readme-ov-file#installation)
