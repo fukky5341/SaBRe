@@ -10,9 +10,10 @@
 
 ### 1. Clone the repository
 ```
-git clone https://github.com/fukky5341/sabre.git
+git clone https://github.com/fukky5341/SaBRe.git
 cd sabre
 ```
+The full code is available in the [https://github.com/fukky5341/SaBRe](https://github.com/fukky5341/SaBRe).
 
 ### 2. Install Gurobi (solver)
 
