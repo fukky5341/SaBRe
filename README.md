@@ -10,7 +10,7 @@
 
 ## Tables of Experiment Results
 
-Here we provide the tables of experiment results with detailed metrics. s# is the number of solved instances, p# is the average number of subproblems generated in the branch-and-bound process, and Δt is the average time taken per instance (in seconds). The best results are highlighted in bold.
+Here we provide the tables of experiment results with detailed metrics. s# is the number of solved instances, p# is the average number of subproblems generated in the branch-and-bound process, and Δt is the average time taken per instance (in seconds).
 
 ### Table IV: RQ2 — Comparison between relational neuron splitting and individual neuron splitting
 
