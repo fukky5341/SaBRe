@@ -1,10 +1,132 @@
 # SABRE: Splitting Approximated Bounds for Relational Verification
 
 ## Table of Contents
+- [Tables of Experiment Results](#tables-of-experiment-results)
 - [Installation Guide](#installation-guide)
 - [Example in Section III-B](#the-example-in-section-iii-b)
 - [Running Experiments](#running-experiments)
 - [Project Structure](#project-structure)
+
+
+## Tables of Experiment Results
+
+### Table IV: RQ2 — Comparison between relational neuron splitting and individual neuron splitting
+
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Method</th>
+      <th colspan="3">ACAS Xu</th>
+      <th colspan="3">MNIST-F</th>
+      <th colspan="3">MNIST-C</th>
+      <th colspan="3">CIFAR</th>
+    </tr>
+    <tr>
+      <th>s#</th><th>p#</th><th>&Delta; t</th>
+      <th>s#</th><th>p#</th><th>&Delta; t</th>
+      <th>s#</th><th>p#</th><th>&Delta; t</th>
+      <th>s#</th><th>p#</th><th>&Delta; t</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ClasIS</td>
+      <td>12</td><td>133.9</td><td>87.51</td>
+      <td>23</td><td>135.9</td><td>79.24</td>
+      <td>6</td><td>32.0</td><td>89.49</td>
+      <td>28</td><td>21.6</td><td>71.82</td>
+    </tr>
+    <tr>
+      <td>DualIS</td>
+      <td>9</td><td>117.3</td><td>89.46</td>
+      <td>27</td><td>124.7</td><td>73.22</td>
+      <td>8</td><td>33.3</td><td>90.86</td>
+      <td><b>31</b></td><td>21.4</td><td>68.63</td>
+    </tr>
+    <tr>
+      <td>SaBRe</td>
+      <td><b>67</b></td><td>83.4</td><td>34.24</td>
+      <td><b>54</b></td><td>59.9</td><td>30.73</td>
+      <td><b>27</b></td><td>27.5</td><td>71.37</td>
+      <td>23</td><td>28.3</td><td>75.03</td>
+    </tr>
+  </tbody>
+</table>
+
+### TABLE V: RQ2–Relational neuron splitting vs. individual neuron splitting in CIFAR
+
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Method</th>
+      <th colspan="3">&epsilon; = 1/256</th>
+      <th colspan="3">&epsilon; = 2/256</th>
+      <th colspan="3">&epsilon; = 3/256</th>
+    </tr>
+    <tr>
+      <th>s#</th><th>p#</th><th>Δt</th>
+      <th>s#</th><th>p#</th><th>Δt</th>
+      <th>s#</th><th>p#</th><th>Δt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ClasIS</td>
+      <td>16</td><td>22.1</td><td>56.49</td>
+      <td>8</td><td>22.6</td><td>77.34</td>
+      <td>4</td><td>19.3</td><td>93.54</td>
+    </tr>
+    <tr>
+      <td>DualIS</td>
+      <td>16</td><td>22.3</td><td>56.71</td>
+      <td>11</td><td>20.8</td><td>67.03</td>
+      <td>4</td><td>21.0</td><td>90.72</td>
+    </tr>
+    <tr>
+      <td>SaBRe</td>
+      <td>5</td><td>41.2</td><td>87.03</td>
+      <td>10</td><td>22.6</td><td>64.55</td>
+      <td>8</td><td>15.3</td><td>74.48</td>
+    </tr>
+  </tbody>
+</table>
+
+### TABLE VI: RQ3–Comparison of neuron selection SABRE v.s. RandRS
+
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Method</th>
+      <th colspan="3">ACAS Xu</th>
+      <th colspan="3">MNIST-F</th>
+      <th colspan="3">MNIST-C</th>
+      <th colspan="3">CIFAR</th>
+    </tr>
+    <tr>
+      <th>s#</th><th>p#</th><th>Δt</th>
+      <th>s#</th><th>p#</th><th>Δt</th>
+      <th>s#</th><th>p#</th><th>Δt</th>
+      <th>s#</th><th>p#</th><th>Δt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RandRS</td>
+      <td>44</td><td>199.2</td><td>60.35</td>
+      <td>44</td><td>117.6</td><td>48.11</td>
+      <td>11</td><td>38.7</td><td>90.43</td>
+      <td>8</td><td>24.4</td><td>87.17</td>
+    </tr>
+    <tr>
+      <td>SaBRe</td>
+      <td><b>67</b></td><td>100.8</td><td>34.24</td>
+      <td><b>54</b></td><td>67.3</td><td>30.73</td>
+      <td><b>27</b></td><td>28.2</td><td>71.37</td>
+      <td><b>23</b></td><td>18.0</td><td>75.03</td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## Installation Guide
 
