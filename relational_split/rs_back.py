@@ -170,6 +170,11 @@ class RS(RS_handler):
                             f.write(f"{dim}: {curr_iarb.inp1_lbs[-1][dim].item():.7f}, {curr_iarb.inp1_ubs[-1][dim].item():.7f}, "
                                     f"{curr_iarb.inp2_lbs[-1][dim].item():.7f}, {curr_iarb.inp2_ubs[-1][dim].item():.7f}, "
                                     f"{curr_iarb.d_lbs[-1][dim].item():.7f}, {curr_iarb.d_ubs[-1][dim].item():.7f}\n")
+                    curr_iarb.record_unstable_relu_num()
+                else:
+                    with open(f"{self.log_file}log.md", 'a') as f:
+                        f.write(f"\nBacksubstitution failed, marked as infeasible\n")
+                        f.write(f"No record of unstable ReLUs\n")
                 # ---- debug ----
             update_time = time.time() - update_start_time
             with open(f"{self.log_file}log.md", 'a') as f:
