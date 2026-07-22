@@ -1,10 +1,21 @@
-def get_thresholds(net_name, d_eps, i_eps, net_idx1=None, net_idx2=None):
+def get_thresholds(net_name, d_eps, i_eps, net_idx1=None, net_idx2=None, dimensional_perturbation=False, perturb_ratio=None):
+    if dimensional_perturbation:
+        if perturb_ratio is None:
+            raise ValueError("perturb_ratio should be provided when dimensional_perturbation is True")
+        if 'mnist-net_256x4' in net_name:
+            file_path = f"threshold/mnist4-dp{perturb_ratio}/d{d_eps}_e{i_eps}.txt"
+        else:
+            raise NotImplementedError("Dimensional perturbation threshold retrieval is only implemented for mnist-net_256x4. Please check the net_name or implement for other datasets.")
+        return read_thresholds(file_path)
+
     if 'mnist-net_256x4' in net_name:
         file_path = f"threshold/mnist4/d{d_eps}_e{i_eps}.txt"
     elif 'mnist_conv' in net_name:
         file_path = f"threshold/mnist-conv/d{d_eps}_e{i_eps}.txt"
     elif 'cifar10' in net_name:
         file_path = f"threshold/cifar10/d{d_eps}_e{i_eps}.txt"
+    elif 'gtsrb' in net_name:
+        file_path = f"threshold/gtsrb/d{d_eps}_e{i_eps}.txt"
     elif 'acasxu' in net_name:
         file_path = f"threshold/acasxu/net_{net_idx1}_{net_idx2}_d_{d_eps}.txt"
 
@@ -19,6 +30,8 @@ def get_thresholds_bs(net_name, thr_id=None):
         file_path = f"threshold/bs/mnist-conv_{thr_id}.txt"
     elif 'cifar10' in net_name:
         file_path = f"threshold/bs/cifar10_{thr_id}.txt"
+    elif 'gtsrb' in net_name:
+        file_path = f"threshold/bs/gtsrb_{thr_id}.txt"
     elif 'acasxu' in net_name:
         file_path = f"threshold/bs/acasxu_{thr_id}.txt"
 
