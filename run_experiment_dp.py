@@ -1,6 +1,8 @@
-from experiment import execute_experiment_mnist4, execute_experiment_cifar, \
+from nnRelationalVerify.experiment import execute_experiment_mnist4, execute_experiment_cifar, \
     execute_experiment_acasxu, execute_experiment_mnistConv, execute_experiment_gtsrb
 import sys
+import os
+from pathlib import Path
 
 # delta_eps = 1/256 * d_eps
 # eps = 1/256 * d_eps * i_eps

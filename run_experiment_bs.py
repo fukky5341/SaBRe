@@ -1,10 +1,12 @@
-from max_binary_search import (perform_binary_search_acasxu, 
+from nnRelationalVerify.max_binary_search import (perform_binary_search_acasxu, 
                                perform_binary_search_mnistConv, 
                                perform_binary_search_mnist4,
                                perform_binary_search_cifar,
                                perform_binary_search_gtsrb)
 import sys
 from math import pi
+import os
+from pathlib import Path
 
 
 def run_exp(dataset, net_idx1=None, net_idx2=None, RSIS_mode_list=None, time_budget=None, exe_start=0, exe_end=10, d_eps=None, i_eps=None, threshold_analysis=True):
