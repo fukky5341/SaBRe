@@ -53,6 +53,41 @@ def execute_experiment_acasxu(net_idx1=1, net_idx2=1, d_eps=1, RS_mode=None, IS_
                               threshold_analysis=threshold_analysis, global_target=global_target)
 
 
+def execute_experiment_gtsrb(d_eps=None, i_eps=2, RS_mode=None, IS_mode=None, threshold_analysis=False, time_budget=600, split_limit=5, inputs_num=50, exe_start=None, exe_end=None):
+    dataset = Dataset.GTSRB
+    net_name = 'onnx/gtsrb_cnn.onnx'
+    dataset_name = "gtsrb"
+
+    if d_eps is None:
+        result_folder_path = f"experiment_result/PE/{dataset_name}/"
+    else:
+        result_folder_path = f"experiment_result/{dataset_name}/"
+
+    if RS_mode is not None and IS_mode is not None:
+        raise ValueError("Only one of RS_mode or IS_mode should be specified.")
+    if RS_mode is not None:
+        if threshold_analysis:
+            result_file_path = f"{result_folder_path}{RS_mode}_threshold/"
+        else:
+            result_file_path = f"{result_folder_path}{RS_mode}/"
+    elif IS_mode is not None:
+        if threshold_analysis:
+            result_file_path = f"{result_folder_path}{IS_mode}_threshold/"
+        else:
+            result_file_path = f"{result_folder_path}{IS_mode}/"
+    os.makedirs(result_file_path, exist_ok=True)
+    relational_prop = RelationalProperty.GLOBAL_ROBUSTNESS
+    lp_analysis = True
+    global_target = True
+
+    return execute_experiment(dataset, net_name, result_file_path,
+                              d_eps=d_eps, i_eps=i_eps, relational_prop=relational_prop,
+                              RS_mode=RS_mode, IS_mode=IS_mode, exe_start=exe_start, exe_end=exe_end,
+                              split_limit=split_limit, inputs_num=inputs_num,
+                              time_budget=time_budget, lp_analysis=lp_analysis, threshold_analysis=threshold_analysis,
+                              global_target=global_target)
+
+
 def execute_experiment_cifar(d_eps=None, i_eps=2, RS_mode=None, IS_mode=None, threshold_analysis=False, time_budget=600, split_limit=5, inputs_num=50, exe_start=None, exe_end=None):
     dataset = Dataset.CIFAR10
     net_name = 'onnx/cifar10_conv_exp.onnx'
@@ -88,7 +123,7 @@ def execute_experiment_cifar(d_eps=None, i_eps=2, RS_mode=None, IS_mode=None, th
                               global_target=global_target)
 
 
-def execute_experiment_mnist4(d_eps=None, i_eps=2, RS_mode=None, IS_mode=None, threshold_analysis=False, time_budget=600, split_limit=5, inputs_num=50, exe_limit=1, exe_start=None, exe_end=None):
+def execute_experiment_mnist4(d_eps=None, i_eps=2, RS_mode=None, IS_mode=None, threshold_analysis=False, time_budget=600, split_limit=5, inputs_num=50, exe_limit=1, exe_start=None, exe_end=None, dimensional_perturbation=False, perturb_ratio=None):
     dataset = Dataset.MNIST
     net_name = 'onnx/mnist-net_256x4.onnx'
     dataset_name = "mnist-256x4"
@@ -102,14 +137,26 @@ def execute_experiment_mnist4(d_eps=None, i_eps=2, RS_mode=None, IS_mode=None, t
         raise ValueError("Only one of RS_mode or IS_mode should be specified.")
     if RS_mode is not None:
         if threshold_analysis:
-            result_file_path = f"{result_folder_path}{RS_mode}_threshold/"
+            if dimensional_perturbation and perturb_ratio is not None:
+                result_file_path = f"{result_folder_path}{RS_mode}_dimperturb_{perturb_ratio}_threshold/"
+            else:
+                result_file_path = f"{result_folder_path}{RS_mode}_threshold/"
         else:
-            result_file_path = f"{result_folder_path}{RS_mode}/"
+            if dimensional_perturbation and perturb_ratio is not None:
+                result_file_path = f"{result_folder_path}{RS_mode}_dimperturb_{perturb_ratio}/"
+            else:
+                result_file_path = f"{result_folder_path}{RS_mode}/"
     elif IS_mode is not None:
         if threshold_analysis:
-            result_file_path = f"{result_folder_path}{IS_mode}_threshold/"
+            if dimensional_perturbation and perturb_ratio is not None:
+                result_file_path = f"{result_folder_path}{IS_mode}_dimperturb_{perturb_ratio}_threshold/"
+            else:
+                result_file_path = f"{result_folder_path}{IS_mode}_threshold/"
         else:
-            result_file_path = f"{result_folder_path}{IS_mode}/"
+            if dimensional_perturbation and perturb_ratio is not None:
+                result_file_path = f"{result_folder_path}{IS_mode}_dimperturb_{perturb_ratio}/"
+            else:
+                result_file_path = f"{result_folder_path}{IS_mode}/"
     os.makedirs(result_file_path, exist_ok=True)
     relational_prop = RelationalProperty.GLOBAL_ROBUSTNESS
     lp_analysis = True
@@ -121,7 +168,8 @@ def execute_experiment_mnist4(d_eps=None, i_eps=2, RS_mode=None, IS_mode=None, t
                               split_limit=split_limit, inputs_num=inputs_num,
                               time_budget=time_budget, lp_analysis=lp_analysis,
                               threshold_analysis=threshold_analysis,
-                              exe_limit=exe_limit, global_target=global_target)
+                              exe_limit=exe_limit, global_target=global_target,
+                              dimensional_perturbation=dimensional_perturbation, perturb_ratio=perturb_ratio)
 
 
 def execute_experiment_mnistConv(d_eps=None, i_eps=2, RS_mode=None, IS_mode=None, threshold_analysis=False, time_budget=600, split_limit=5, inputs_num=50, exe_start=None, exe_end=None):
@@ -163,7 +211,7 @@ def execute_experiment_mnistConv(d_eps=None, i_eps=2, RS_mode=None, IS_mode=None
 def execute_experiment(dataset, net_name, result_file_path, d_eps=None, i_eps=None, net_idx1=None, net_idx2=None, exe_limit=None,
                        relational_prop=None, exe_start=None, exe_end=None, time_budget=200, inputs_num=50,
                        split_limit=1000, RS_mode=None, IS_mode=None, lp_analysis=False, threshold_analysis=False,
-                       global_target=False):
+                       global_target=False, dimensional_perturbation=False, perturb_ratio=None):
     net = util.get_net(net_name=net_name, dataset=dataset)
 
     backprop_mode = "DP"
@@ -189,10 +237,10 @@ def execute_experiment(dataset, net_name, result_file_path, d_eps=None, i_eps=No
         if exe_limit <= 1:
             exe_limit = None
 
-    props, _ = spec.get_specs(dataset=dataset, eps=eps, count=count, shuffle=True, generator=generator)
+    props, _ = spec.get_specs(dataset=dataset, eps=eps, count=count, shuffle=True, generator=generator, dimensional_perturbation=dimensional_perturbation, perturb_ratio=perturb_ratio)
 
     if threshold_analysis:
-        thresholds = get_thresholds(net_name, d_eps, i_eps, net_idx1=net_idx1, net_idx2=net_idx2)
+        thresholds = get_thresholds(net_name, d_eps, i_eps, net_idx1=net_idx1, net_idx2=net_idx2, dimensional_perturbation=dimensional_perturbation, perturb_ratio=perturb_ratio)
         if len(thresholds) < len(props):
             raise ValueError(f"The number of thresholds ({len(thresholds)}) does not match the number of properties ({len(props)}).")
 
@@ -246,6 +294,7 @@ def execute_experiment(dataset, net_name, result_file_path, d_eps=None, i_eps=No
         start_time_base_iar = time.time()
         inp1_lbs, inp1_ubs, inp2_lbs, inp2_ubs, d_lbs, d_ubs = iarb.run()
         end_time_base_iar = time.time()
+        iarb.record_unstable_relu_num()
         time_base_iar = end_time_base_iar - start_time_base_iar
         with open(f"{log_file}log.md", 'a') as f:
             f.write(f"\n### BASE IAR bounds\n")

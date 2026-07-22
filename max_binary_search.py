@@ -23,6 +23,7 @@ generator.manual_seed(42)  # fixed seed for reproducibility
 TOL = 1e-6
 MNIST_DENOM = 256.0
 CIFAR10_DENOM = 256.0
+GTSRB_DENOM = 256.0
 
 
 def perform_binary_search_acasxu(
@@ -92,7 +93,7 @@ def perform_binary_search_mnistConv(
     net_name = "onnx/mnist_conv_exp.onnx"
     dataset_name = "mnist-conv"
 
-    return perform_binary_search_mnist_cifar(
+    return perform_binary_search_mnist_cifar_gtsrb(
         d_eps=d_eps,
         i_eps=i_eps,
         ini_d_eps=ini_d_eps,
@@ -124,7 +125,7 @@ def perform_binary_search_mnist4(
     net_name = 'onnx/mnist-net_256x4.onnx'
     dataset_name = "mnist-256x4"
 
-    return perform_binary_search_mnist_cifar(
+    return perform_binary_search_mnist_cifar_gtsrb(
         d_eps=d_eps,
         i_eps=i_eps,
         ini_d_eps=ini_d_eps,
@@ -156,7 +157,7 @@ def perform_binary_search_cifar(
     net_name = 'onnx/cifar10_conv_exp.onnx'
     dataset_name = "cifar10"
 
-    return perform_binary_search_mnist_cifar(
+    return perform_binary_search_mnist_cifar_gtsrb(
         d_eps=d_eps,
         i_eps=i_eps,
         ini_d_eps=ini_d_eps,
@@ -172,7 +173,41 @@ def perform_binary_search_cifar(
         dataset_name=dataset_name,
     )
 
-def perform_binary_search_mnist_cifar(
+def perform_binary_search_gtsrb(
+    d_eps=2,
+    i_eps=4,
+    ini_d_eps=8,
+    ini_i_eps=8,
+    RSIS_mode_list=None,
+    time_budget=7200,
+    time_budget_for_one=2400,
+    bs_max_iter=100,
+    exe_start=None,
+    exe_end=None,
+    threshold_analysis=True
+):
+    dataset = Dataset.GTSRB
+    net_name = 'onnx/gtsrb_cnn.onnx'
+    dataset_name = "gtsrb"
+
+    return perform_binary_search_mnist_cifar_gtsrb(
+        d_eps=d_eps,
+        i_eps=i_eps,
+        ini_d_eps=ini_d_eps,
+        ini_i_eps=ini_i_eps,
+        RSIS_mode_list=RSIS_mode_list,
+        time_budget=time_budget,
+        time_budget_for_one=time_budget_for_one,
+        bs_max_iter=bs_max_iter,
+        exe_start=exe_start,
+        exe_end=exe_end,
+        dataset=dataset,
+        net_name=net_name,
+        dataset_name=dataset_name,
+        threshold_analysis=threshold_analysis
+    )
+
+def perform_binary_search_mnist_cifar_gtsrb(
     d_eps=3,
     i_eps=4,
     ini_d_eps=12,
@@ -186,14 +221,16 @@ def perform_binary_search_mnist_cifar(
     dataset=Dataset.MNIST,
     net_name="onnx/mnist_conv_exp.onnx",
     dataset_name="mnist-conv",
+    threshold_analysis=True
 ):
 
     mode_path_pairs = []
     for mode in RSIS_mode_list:
-        if mode.startswith("RS"):
-            result_file_path = f"experiment_result/binary_search/{dataset_name}/{mode}/"
-        elif mode.startswith("IS"):
-            result_file_path = f"experiment_result/binary_search/{dataset_name}/{mode}/"
+        if mode.startswith("RS") or mode.startswith("IS"):
+            if threshold_analysis:
+                result_file_path = f"experiment_result/binary_search/{dataset_name}/{mode}/"
+            else:
+                result_file_path = f"experiment_result/binary_search/{dataset_name}_nothreshold/{mode}/"
         else:
             raise ValueError(f"Invalid mode: {mode}. Mode should start with 'RS' or 'IS'.")
         os.makedirs(result_file_path, exist_ok=True)
@@ -214,6 +251,7 @@ def perform_binary_search_mnist_cifar(
         ini_i_eps=ini_i_eps,
         exe_start=exe_start,
         exe_end=exe_end,
+        threshold_analysis=threshold_analysis
     )
 
 
@@ -240,6 +278,7 @@ def convert_candidate_to_delta_eps(dataset, inp1_prop, candidate):
       - ACAS: real-valued diff
       - MNIST: integer k, meaning epsilon = k / 256
       - CIFAR10: integer k, meaning epsilon = k / 256
+      - GTSRB: integer k, meaning epsilon = k / 256
     """
     if dataset == Dataset.ACAS:
         return get_acasxu_input_diff(inp1_prop, candidate)
@@ -247,6 +286,8 @@ def convert_candidate_to_delta_eps(dataset, inp1_prop, candidate):
         return candidate / MNIST_DENOM
     elif dataset == Dataset.CIFAR10:
         return candidate / CIFAR10_DENOM
+    elif dataset == Dataset.GTSRB:
+        return candidate / GTSRB_DENOM
     else:
         raise NotImplementedError("Dataset not supported.")
 
@@ -262,6 +303,9 @@ def convert_eps_to_candidate(dataset, eps):
     elif dataset == Dataset.CIFAR10:
         k = int(round(eps * CIFAR10_DENOM))
         return max(1, k)
+    elif dataset == Dataset.GTSRB:
+        k = int(round(eps * GTSRB_DENOM))
+        return max(1, k)
     else:
         raise NotImplementedError("Dataset not supported.")
 
@@ -273,25 +317,25 @@ def get_initial_search_range(dataset, ini_d_eps, start_candidate=None):
     ACAS:
       search real value in [start_candidate, ini_d_eps]
 
-    MNIST or CIFAR10:
+    MNIST or CIFAR10 or GTSRB:
       search discrete integer k in [start_candidate, ini_d_eps],
       corresponding to eps in {k / 256 | k = start_candidate, ..., ini_d_eps}
     """
     if dataset == Dataset.ACAS:
         low = 0.0 if start_candidate is None else float(start_candidate)
         return low, float(ini_d_eps), False
-    elif dataset in (Dataset.MNIST, Dataset.CIFAR10):
+    elif dataset in (Dataset.MNIST, Dataset.CIFAR10, Dataset.GTSRB):
         low = 1 if start_candidate is None else int(start_candidate)
         return low, int(ini_d_eps), True
     else:
         raise NotImplementedError("Dataset not supported.")
 
 
-def build_relational_analysis(inp1_correct_label, inp2_correct_label, threshold, log_file):
+def build_relational_analysis(inp1_correct_label, inp2_correct_label, threshold, log_file, lp_analysis=True):
     rel_prop = RelationalProperty.GLOBAL_ROBUSTNESS
     relAna = RelationalAnalysis(
         rel_prop,
-        lp_analysis=True,
+        lp_analysis=lp_analysis,
         global_target=True,
         inp1_correct_label=inp1_correct_label,
         inp2_correct_label=inp2_correct_label,
@@ -362,8 +406,9 @@ def verify_candidate_base(
     )
 
     abs_max = get_abs_max_for_target(d_lbs, d_ubs, inp1_correct_label)
-    if abs_max <= threshold:
-        return Status.VERIFIED, abs_max, None, iarb
+    if threshold is not None:
+        if abs_max <= threshold:
+            return Status.VERIFIED, abs_max, None, iarb
 
     relAna = build_relational_analysis(
         inp1_correct_label=inp1_correct_label,
@@ -419,8 +464,9 @@ def verify_candidate_with_rsis(
     )
 
     abs_max = get_abs_max_for_target(d_lbs, d_ubs, inp1_correct_label)
-    if abs_max <= threshold:
-        return Status.VERIFIED, abs_max, None
+    if threshold is not None:
+        if abs_max <= threshold:
+            return Status.VERIFIED, abs_max, None, iarb
 
     relAna = build_relational_analysis(
         inp1_correct_label=inp1_correct_label,
@@ -484,7 +530,7 @@ def binary_search_candidate(
     ACAS:
       continuous search on diff in [0, ini_d_eps]
 
-    MNIST or CIFAR10:
+    MNIST or CIFAR10 or GTSRB:
       discrete search on k in [1, ini_d_eps], where eps = k / 256
     """
     low, high, is_discrete = get_initial_search_range(dataset, ini_d_eps, start_candidate)
@@ -498,6 +544,8 @@ def binary_search_candidate(
             return Status.VERIFIED, start_candidate / MNIST_DENOM
         elif dataset == Dataset.CIFAR10:
             return Status.VERIFIED, start_candidate / CIFAR10_DENOM
+        elif dataset == Dataset.GTSRB:
+            return Status.VERIFIED, start_candidate / GTSRB_DENOM
         else:
             return Status.VERIFIED, float(start_candidate)
 
@@ -514,11 +562,11 @@ def binary_search_candidate(
                 break
 
             mid = (low + high) // 2
-            denom_m_c = MNIST_DENOM if dataset == Dataset.MNIST else CIFAR10_DENOM
-            print(f"k_mid={mid}, eps_mid={mid / denom_m_c:.7f}")
+            denom_m_c_g = MNIST_DENOM if dataset == Dataset.MNIST else (CIFAR10_DENOM if dataset == Dataset.CIFAR10 else GTSRB_DENOM)
+            print(f"k_mid={mid}, eps_mid={mid / denom_m_c_g:.7f}")
             with open(f"{log_file}log.md", "a") as f:
                 f.write(f"\n## Binary search (step {iter_num}) starts\n")
-                f.write(f"Candidate k: {mid}, corresponding eps: {mid / denom_m_c:.7f}\n")
+                f.write(f"Candidate k: {mid}, corresponding eps: {mid / denom_m_c_g:.7f}\n")
 
             if RS_mode is None and IS_mode is None:
                 status, abs_max, rel_dist, _ = verify_candidate_base(
@@ -555,7 +603,7 @@ def binary_search_candidate(
                 f.write(
                     f"Binary search (step {iter_num}): "
                     f"status={status}, k_low={low}, k_high={high}, "
-                    f"k_mid={mid}, eps_mid={mid / denom_m_c:.7f}, abs_max={abs_max}\n"
+                    f"k_mid={mid}, eps_mid={mid / denom_m_c_g:.7f}, abs_max={abs_max}\n"
                 )
                 if rel_dist is not None:
                     f.write(f"rel_dist={rel_dist}\n")
@@ -569,7 +617,7 @@ def binary_search_candidate(
 
             iter_num += 1
 
-        max_d_eps = None if best_candidate is None else best_candidate / denom_m_c
+        max_d_eps = None if best_candidate is None else best_candidate / denom_m_c_g
         return best_status, max_d_eps
 
     else:
@@ -668,6 +716,7 @@ def binary_search_back(
     net_idx2=None,
     exe_start=None,
     exe_end=None,
+    threshold_analysis=True
 ):
     net = util.get_net(net_name, dataset)
     back_prop_mode = "DP"
@@ -692,6 +741,13 @@ def binary_search_back(
         seed_value = int(100*d_eps + i_eps)
         generator.manual_seed(seed_value)
         thr_id = seed_value
+    elif dataset == Dataset.GTSRB:
+        eps = ini_i_eps / GTSRB_DENOM
+        count = 10
+        base_candidate = int(ini_d_eps)
+        seed_value = int(100*d_eps + i_eps)
+        generator.manual_seed(seed_value)
+        thr_id = seed_value
     else:
         raise NotImplementedError("Dataset not supported for binary search.")
 
@@ -703,16 +759,22 @@ def binary_search_back(
         generator=generator,
     )
 
-    thresholds = get_thresholds_bs(net_name, thr_id=thr_id)
-    if len(thresholds) < len(props):
-        raise ValueError(
-            f"The number of thresholds ({len(thresholds)}) does not match "
-            f"the number of properties ({len(props)})."
-        )
+    if threshold_analysis:
+        thresholds = get_thresholds_bs(net_name, thr_id=thr_id)
+        if len(thresholds) < len(props):
+            raise ValueError(
+                f"The number of thresholds ({len(thresholds)}) does not match "
+                f"the number of properties ({len(props)})."
+            )
     
     if exe_start is not None and exe_end is not None:
         props = props[exe_start:exe_end]
-        thresholds = thresholds[exe_start:exe_end]
+        if threshold_analysis:
+            thresholds = thresholds[exe_start:exe_end]
+        else:
+            thresholds = [None] * len(props)
+    else:
+        thresholds = thresholds if threshold_analysis else [None] * len(props)
 
     for local_exe_idx in range(len(props)):
         inp1_prop, inp2_prop = props[local_exe_idx], props[local_exe_idx]
@@ -728,7 +790,7 @@ def binary_search_back(
             log_file = f"{result_file_path}{exe_idx}/"
             os.makedirs(log_file, exist_ok=True)
 
-            denom_m_c = MNIST_DENOM if dataset == Dataset.MNIST else CIFAR10_DENOM
+            denom_m_c_g = MNIST_DENOM if dataset == Dataset.MNIST else (CIFAR10_DENOM if dataset == Dataset.CIFAR10 else GTSRB_DENOM)
             with open(f"{log_file}log.md", "w") as f:
                 f.write("## Execution arguments:\n")
                 f.write(f"Dataset: {dataset}\n")
@@ -737,9 +799,9 @@ def binary_search_back(
                 f.write(f"Initial delta epsilon: {ini_d_eps}\n")
                 f.write(f"Time budget: {time_budget} seconds\n")
                 f.write(f"Threshold: {curr_threshold}\n")
-                if dataset in (Dataset.MNIST, Dataset.CIFAR10):
+                if dataset in (Dataset.MNIST, Dataset.CIFAR10, Dataset.GTSRB):
                     f.write(
-                        f"Search space: {{k/{denom_m_c} | k = 1, 2, ..., {ini_d_eps}}}\n"
+                        f"Search space: {{k/{denom_m_c_g} | k = 1, 2, ..., {ini_d_eps}}}\n"
                     )
 
             print(f"Executing binary search for property {exe_idx} with threshold {curr_threshold}...")
@@ -766,14 +828,15 @@ def binary_search_back(
             end_time_base_iar = time.time()
             time_base_iar = end_time_base_iar - start_time_base_iar
 
-            if abs_max <= curr_threshold:
-                status = Status.VERIFIED
-                with open(f"{log_file}log.md", "a") as f:
-                    f.write("\n## BASE Result\n")
-                    f.write(f"execution time: IAR = {time_base_iar:.2f} seconds\n")
-                    f.write(f"status: {status}\n")
-                print(f"Property {exe_idx} is done.")
-                continue
+            if curr_threshold is not None:
+                if abs_max <= curr_threshold:
+                    status = Status.VERIFIED
+                    with open(f"{log_file}log.md", "a") as f:
+                        f.write("\n## BASE Result\n")
+                        f.write(f"execution time: IAR = {time_base_iar:.2f} seconds\n")
+                        f.write(f"status: {status}\n")
+                    print(f"Property {exe_idx} is done.")
+                    continue
 
             start_time_base_lp = time.time()
             relAna_base = build_relational_analysis(
