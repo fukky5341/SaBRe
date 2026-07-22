@@ -1,12 +1,13 @@
 from max_binary_search import (perform_binary_search_acasxu, 
                                perform_binary_search_mnistConv, 
                                perform_binary_search_mnist4,
-                               perform_binary_search_cifar)
+                               perform_binary_search_cifar,
+                               perform_binary_search_gtsrb)
 import sys
 from math import pi
 
 
-def run_exp(dataset, net_idx1=None, net_idx2=None, RSIS_mode_list=None, time_budget=None, exe_start=0, exe_end=10, d_eps=None, i_eps=None):
+def run_exp(dataset, net_idx1=None, net_idx2=None, RSIS_mode_list=None, time_budget=None, exe_start=0, exe_end=10, d_eps=None, i_eps=None, threshold_analysis=True):
     if dataset == "cifar":
         time_budget = 18000
         time_budget_for_one = 4000
@@ -15,6 +16,14 @@ def run_exp(dataset, net_idx1=None, net_idx2=None, RSIS_mode_list=None, time_bud
         max_iter = 100
         perform_binary_search_cifar(d_eps=d_eps, i_eps=i_eps, ini_d_eps=ini_d_eps, ini_i_eps=ini_i_eps, RSIS_mode_list=RSIS_mode_list,
                                    exe_start=exe_start, exe_end=exe_end, time_budget=time_budget, bs_max_iter=max_iter, time_budget_for_one=time_budget_for_one)
+    if dataset == "gtsrb":
+        time_budget = 18000
+        time_budget_for_one = 4000
+        ini_d_eps = 12
+        ini_i_eps = 12
+        max_iter = 100
+        perform_binary_search_gtsrb(d_eps=d_eps, i_eps=i_eps, ini_d_eps=ini_d_eps, ini_i_eps=ini_i_eps, RSIS_mode_list=RSIS_mode_list,
+                                   exe_start=exe_start, exe_end=exe_end, time_budget=time_budget, bs_max_iter=max_iter, time_budget_for_one=time_budget_for_one, threshold_analysis=threshold_analysis)
     elif dataset == "mnistConv":
         time_budget = 3600
         time_budget_for_one = 800
@@ -43,17 +52,32 @@ def run_exp(dataset, net_idx1=None, net_idx2=None, RSIS_mode_list=None, time_bud
         sys.exit(1)
 
 
-# cifar
-cifar_bs_experiment_map = {
-    0: (2, 3),  # d_eps=2, i_eps=3
-    1: (2, 4)  # d_eps=2, i_eps=4
+# # cifar
+# cifar_bs_experiment_map = {
+#     0: (2, 3),  # d_eps=2, i_eps=3
+#     1: (2, 4)  # d_eps=2, i_eps=4
+# }
+# d_eps, i_eps = cifar_bs_experiment_map[0]
+# rsis_mode_list = ['RS_random_Z', 'RS_dual_Z', 'IS_dual', 'IS_dual_ind']
+# exe_start = 0
+# exe_end = 16  # run [0, 1, ..., 15]
+# print("** Run cifar **")
+# run_exp("cifar", RSIS_mode_list=rsis_mode_list, d_eps=d_eps, i_eps=i_eps, exe_start=exe_start, exe_end=exe_end)  # run [0, 1, ..., 10]
+
+
+# gtsrb
+gtsrb_bs_experiment_map = {
+    0: (2, 4),  # d_eps=3, i_eps=4
+    1: (3, 3),  # d_eps=3, i_eps=4
+    2: (3, 4),  # d_eps=3, i_eps=4
 }
-d_eps, i_eps = cifar_bs_experiment_map[0]
+d_eps, i_eps = gtsrb_bs_experiment_map[1]
 rsis_mode_list = ['RS_random_Z', 'RS_dual_Z', 'IS_dual', 'IS_dual_ind']
 exe_start = 0
-exe_end = 16  # run [0, 1, ..., 15]
-print("** Run cifar **")
-run_exp("cifar", RSIS_mode_list=rsis_mode_list, d_eps=d_eps, i_eps=i_eps, exe_start=exe_start, exe_end=exe_end)  # run [0, 1, ..., 10]
+exe_end = 10  # run [0, 1, ..., 9]
+threshold_analysis = True
+print("** Run gtsrb **")
+run_exp("gtsrb", RSIS_mode_list=rsis_mode_list, d_eps=d_eps, i_eps=i_eps, exe_start=exe_start, exe_end=exe_end, threshold_analysis=threshold_analysis)  # run [0, 1, ..., 12]
 
 
 # mnistConv

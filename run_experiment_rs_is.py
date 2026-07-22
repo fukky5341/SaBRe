@@ -1,5 +1,5 @@
 from experiment import execute_experiment_mnist4, execute_experiment_cifar, \
-    execute_experiment_acasxu, execute_experiment_mnistConv
+    execute_experiment_acasxu, execute_experiment_mnistConv, execute_experiment_gtsrb
 import sys
 
 # delta_eps = 1/256 * d_eps
@@ -28,10 +28,39 @@ def run_exp(dataset, d_eps, i_eps, net_idx1=None, net_idx2=None, RS_mode=None, I
         threshold_analysis = True
         execute_experiment_cifar(d_eps=d_eps, i_eps=i_eps, RS_mode=RS_mode, IS_mode=IS_mode, split_limit=100, exe_start=exe_start,
                                  exe_end=exe_end, inputs_num=inputs_num, time_budget=time, threshold_analysis=threshold_analysis)
+    elif dataset == "gtsrb":
+        threshold_analysis = True
+        execute_experiment_gtsrb(d_eps=d_eps, i_eps=i_eps, RS_mode=RS_mode, IS_mode=IS_mode, split_limit=100, exe_start=exe_start,
+                                 exe_end=exe_end, inputs_num=inputs_num, time_budget=time, threshold_analysis=threshold_analysis)
     else:
         print("Invalid dataset name. Use 'mnist2', 'mnist4', 'mnistConv', 'cifar', or 'acasxu'.")
         sys.exit(1)
 
+
+for d_val in [1, 2, 3]:
+    for i_val in [2, 3, 4]:
+        for rsis_mode in ['RS_random_Z', 'RS_dual_Z', 'IS_dual', 'IS_dual_ind']:
+            print(f"Running experiments with d_eps={d_val}, i_eps={i_val}, RS/IS mode={rsis_mode}")
+
+            # gtsrb
+            print("** Run gtsrb **")
+            if d_val == 1:
+                time = 1800
+            elif d_val == 2:
+                time = 3600
+            elif d_val == 3:
+                time = 7200
+            else:
+                raise ValueError("d_val should be 1, 2, or 3")
+            d_eps = d_val
+            i_eps = i_val
+            exe_start = 0
+            exe_end = 5
+            inputs_num = 5
+            if rsis_mode.startswith('RS'):
+                run_exp("gtsrb", RS_mode=rsis_mode, d_eps=d_val, i_eps=i_val, time=time, exe_start=exe_start, exe_end=exe_end, inputs_num=inputs_num)
+            elif rsis_mode.startswith('IS'):
+                run_exp("gtsrb", IS_mode=rsis_mode, d_eps=d_val, i_eps=i_val, time=time, exe_start=exe_start, exe_end=exe_end, inputs_num=inputs_num)
 
 for d_val in [1, 2, 3]:
     for i_val in [2, 3, 4]:
