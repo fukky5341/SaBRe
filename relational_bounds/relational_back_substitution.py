@@ -200,6 +200,67 @@ class IndividualAndRelationalBounds(ReLUTransformer):
         elif self.backprop_mode == "DP":
             self.handle_relu = self.handle_relu_DP
 
+    def record_unstable_relu_num(self):
+        '''
+        lbs1, ubs1 = iarb.inp1_lbs, iarb.inp1_ubs
+        lbs2, ubs2 = iarb.inp2_lbs, iarb.inp2_ubs
+        d_lbs, d_ubs = iarb.d_lbs, iarb.d_ubs
+
+        
+        net = [l0, l1, ...]
+        lbs = [inp_lb, l0_lb, l1_lb, ..., out_lb]
+        preactivation bounds at layer i: lbs[i+1], ubs[i+1]
+
+        count if there exists j such that lbs[i+1][j] < 0 and ubs[i+1][j] > 0 for linear and conv2d layers
+
+        for each linear and conv2d layer, log the number of unstable ReLUs and the total number of neurons in the layer
+        '''
+        if self.inp1_lbs is None or self.inp1_ubs is None \
+                or self.inp2_lbs is None or self.inp2_ubs is None \
+                or self.d_lbs is None or self.d_ubs is None:
+            raise ValueError("Bounds are not available. Run IAR back substitution first.")
+
+        unstable_stats = []
+        for layer_idx, layer in enumerate(self.net):
+            if layer.type not in [LayerType.Linear, LayerType.Conv2D]:
+                continue
+
+            # Bounds lists include input bounds at index 0, while net does not.
+            bounds_idx = layer_idx + 1
+            inp1_lb = self.inp1_lbs[bounds_idx].reshape(-1)
+            inp1_ub = self.inp1_ubs[bounds_idx].reshape(-1)
+            inp2_lb = self.inp2_lbs[bounds_idx].reshape(-1)
+            inp2_ub = self.inp2_ubs[bounds_idx].reshape(-1)
+            d_lb = self.d_lbs[bounds_idx].reshape(-1)
+            d_ub = self.d_ubs[bounds_idx].reshape(-1)
+
+            inp1_unstable = int(((inp1_lb < 0) & (inp1_ub > 0)).sum().item())
+            inp2_unstable = int(((inp2_lb < 0) & (inp2_ub > 0)).sum().item())
+            d_unstable = int(((d_lb < 0) & (d_ub > 0)).sum().item())
+            total_neurons = int(inp1_lb.numel())
+
+            unstable_stats.append({
+                "layer_idx": layer_idx,
+                "layer_type": str(layer.type),
+                "total_neurons": total_neurons,
+                "inp1_unstable": inp1_unstable,
+                "inp2_unstable": inp2_unstable,
+                "delta_unstable": d_unstable
+            })
+
+        with open(f"{self.log_file}log.md", 'a') as f:
+            f.write("\n### Unstable ReLU Count (Linear/Conv2D Layers)\n")
+            for stat in unstable_stats:
+                f.write(
+                    f"- layer_idx={stat['layer_idx']}, type={stat['layer_type']}, "
+                    f"total={stat['total_neurons']}, "
+                    f"inp1_unstable={stat['inp1_unstable']}, "
+                    f"inp2_unstable={stat['inp2_unstable']}, "
+                    f"delta_unstable={stat['delta_unstable']}\n"
+                )
+
+        return
+
     def handle_linear_IAR(self, linear_wt, bias, back_prop_struct):
         """
         Handles the symbolic propagation at the linear layer.
@@ -821,12 +882,16 @@ class IndividualAndRelationalBounds(ReLUTransformer):
             self.d_lbs = [self.diff]
             self.d_ubs = [self.diff]
         if self.delta_eps is not None:
+            input_width = self.inp1_input_ub - self.inp1_input_lb
             if isinstance(self.delta_eps, torch.Tensor):
-                self.d_lbs = [-self.delta_eps]
-                self.d_ubs = [self.delta_eps]
+                delta_eps = self.delta_eps.to(device=self.device, dtype=self.inp1_input_lb.dtype)
+                delta_eps = torch.broadcast_to(delta_eps, self.inp1_input_lb.shape)
+                d_abs = torch.minimum(delta_eps.abs(), input_width)
             else:
-                self.d_lbs = [torch.full_like(self.inp1_input_lb, -self.delta_eps, device=self.device)]
-                self.d_ubs = [torch.full_like(self.inp1_input_ub, self.delta_eps, device=self.device)]
+                delta_eps = torch.full_like(self.inp1_input_lb, self.delta_eps, device=self.device)
+                d_abs = torch.minimum(delta_eps, input_width)
+            self.d_lbs = [-d_abs]
+            self.d_ubs = [d_abs]
 
         # Check the validity of inputs.
         if self.net is None:
