@@ -17,7 +17,13 @@ or even the relu stability could be part of specification.
 
 
 def prepare_data(dataset, train=False, batch_size=100, normalize=False, shuffle=False, generator=None):
-    transform_list = [torchvision.transforms.ToTensor()]
+    if dataset == Dataset.GTSRB:
+        transform_list = [
+            torchvision.transforms.Resize((32, 32)),
+            torchvision.transforms.ToTensor(),
+        ]
+    else:
+        transform_list = [torchvision.transforms.ToTensor()]
 
     if normalize:
         mean, std = get_mean_std(dataset)
@@ -28,10 +34,12 @@ def prepare_data(dataset, train=False, batch_size=100, normalize=False, shuffle=
     """
     test_set → (input_image_tensor, label)
     """
-    if dataset == Dataset.CIFAR10 or dataset == Dataset.OVAL_CIFAR:
+    if dataset == Dataset.CIFAR10:
         test_set = torchvision.datasets.CIFAR10(root='./data', train=train, download=True, transform=tr)
     elif dataset == Dataset.MNIST:
         test_set = torchvision.datasets.MNIST(root='./data', train=train, download=True, transform=tr)
+    elif dataset == Dataset.GTSRB:
+        test_set = torchvision.datasets.GTSRB(root='./data', split='test', download=True, transform=tr)
     else:
         raise ValueError("Unsupported Dataset")
 
@@ -86,16 +94,20 @@ def process_input_for_target_label(inputs, labels, target_label, target_count=0)
 #         return inputs, labels
 
 
-def get_specs(dataset, spec_type=InputSpecType.LINF, eps=0.01, count=None, shuffle=False, generator=None):
+def get_specs(dataset, spec_type=InputSpecType.LINF, eps=0.01, count=None, shuffle=False, generator=None, dimensional_perturbation=False, perturb_ratio=None):
     # if debug_mode == True:
     #     return generate_debug_specs(count=count, eps=eps)
-    if dataset == Dataset.MNIST or dataset == Dataset.CIFAR10:
+    if dataset == Dataset.MNIST or dataset == Dataset.CIFAR10 or dataset == Dataset.GTSRB:
         if spec_type == InputSpecType.LINF:
             if count is None:
                 count = 100
             testloader = prepare_data(dataset, batch_size=count, shuffle=shuffle, generator=generator)  # * format and divide into batches
             inputs, labels = next(iter(testloader))
-            props = get_linf_spec(inputs, labels, eps, dataset)  # * L-inf norm spec
+            if dimensional_perturbation:
+                assert perturb_ratio is not None, "perturb_ratio must be provided when dimensional_perturbation is True"
+                props = get_lnum_spec(inputs, labels, eps, dataset, perturb_ratio=perturb_ratio)
+            else:
+                props = get_linf_spec(inputs, labels, eps, dataset)  # * L-inf norm spec
         elif spec_type == InputSpecType.PATCH:
             if count is None:
                 count = 10
@@ -135,7 +147,56 @@ def get_linf_spec(inputs, labels, eps, dataset, net_name=''):
 
         ilb = ilb.reshape(-1)
         iub = iub.reshape(-1)
-        out_constr = Constraint(OutSpecType.LOCAL_ROBUST, label=labels[i])
+        if dataset == Dataset.GTSRB:
+            out_constr = Constraint(OutSpecType.LOCAL_ROBUST, label=labels[i], out_classes=43)
+        else:
+            out_constr = Constraint(OutSpecType.LOCAL_ROBUST, label=labels[i])
+        properties.append(Property(ilb, iub, InputSpecType.LINF, out_constr, dataset, input=image))
+
+    return properties
+
+
+def get_lnum_spec(inputs, labels, eps, dataset, perturb_num=None, perturb_ratio=None, net_name=''):
+    properties = []
+
+    for i in range(len(inputs)):
+        image = inputs[i]
+
+        flat_image = image.reshape(-1)
+        total_dims = flat_image.numel()
+
+        if perturb_num is not None:
+            num_to_perturb = int(perturb_num)
+        elif perturb_ratio is not None:
+            if perturb_ratio < 0:
+                raise ValueError("perturb_ratio must be non-negative.")
+            num_to_perturb = int(torch.ceil(torch.tensor(total_dims * perturb_ratio)).item())
+        else:
+            num_to_perturb = total_dims
+
+        num_to_perturb = max(0, min(num_to_perturb, total_dims))
+
+        ilb = image.clone()
+        iub = image.clone()
+
+        if num_to_perturb > 0:
+            perturb_idx = torch.randperm(total_dims, device=image.device)[:num_to_perturb]
+            ilb_flat = ilb.reshape(-1)
+            iub_flat = iub.reshape(-1)
+            ilb_flat[perturb_idx] = torch.clip(flat_image[perturb_idx] - eps, min=0., max=1.)
+            iub_flat[perturb_idx] = torch.clip(flat_image[perturb_idx] + eps, min=0., max=1.)
+
+        mean, std = get_mean_std(dataset, net_name=net_name)
+        ilb = (ilb - mean) / std
+        iub = (iub - mean) / std
+        image = (image - mean) / std
+
+        ilb = ilb.reshape(-1)
+        iub = iub.reshape(-1)
+        if dataset == Dataset.GTSRB:
+            out_constr = Constraint(OutSpecType.LOCAL_ROBUST, label=labels[i], out_classes=43)
+        else:
+            out_constr = Constraint(OutSpecType.LOCAL_ROBUST, label=labels[i])
         properties.append(Property(ilb, iub, InputSpecType.LINF, out_constr, dataset, input=image))
 
     return properties
@@ -309,15 +370,18 @@ def get_patch_specs(inputs, labels, eps, dataset, p_width=2, p_length=2):
 
 def get_mean_std(dataset, net_name=''):
     if dataset == Dataset.MNIST:
-        means = [0]
-        stds = [1]
-    elif dataset == Dataset.CIFAR10 or dataset == Dataset.OVAL_CIFAR:
+        means = [0.0]
+        stds = [1.0]
+    elif dataset == Dataset.CIFAR10:
         # For the model that is loaded from cert def this normalization was
         # used
         means = [0.4914, 0.4822, 0.4465]
         stds = [0.2023, 0.1994, 0.2010]
         # means = [0.5, 0.5, 0.5]
         # stds = [1, 1, 1]
+    elif dataset == Dataset.GTSRB:
+        means = [0.0, 0.0, 0.0]
+        stds = [1.0, 1.0, 1.0]
     elif dataset == Dataset.ACAS:
         means = [19791.091, 0.0, 0.0, 650.0, 600.0]
         stds = [60261.0, 6.28318530718, 6.28318530718, 1100.0, 1200.0]

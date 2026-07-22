@@ -13,7 +13,7 @@ class OutSpecType(Enum):
 # Output constraint is represented as (A^T)*Y + B >= 0
 # Where constr_mat = (A, B)
 class Constraint:
-    def __init__(self, constr_type, is_conjunctive=True, constr_mat=None,
+    def __init__(self, constr_type, out_classes=10, is_conjunctive=True, constr_mat=None,
                  label=None, sink_label=None, debug_mode=False, is_binary=False):
         self.constr_type = constr_type
         self.label = label
@@ -28,7 +28,7 @@ class Constraint:
             self.constr_mat = (mat, 0)
         if constr_type == OutSpecType.LOCAL_ROBUST and debug_mode == False and is_binary is False:
             if label is not None:
-                mat = create_out_constr_matrix(label)
+                mat = create_out_constr_matrix(label, out_classes)
             elif sink_label is not None:
                 mat = create_out_targeted_uap_matrix(sink_label)
             else:
@@ -43,8 +43,8 @@ class Constraint:
             self.constr_mat = None
 
 
-def create_out_constr_matrix(label):
-    n_classes = 10
+def create_out_constr_matrix(label, out_classes):
+    n_classes = out_classes
     mat = torch.zeros(size=(n_classes, n_classes - 1))
     ground_truth = label.unsqueeze(0).unsqueeze(0).type(torch.int64)
     target_label = torch.zeros(size=(1, n_classes - 1))
