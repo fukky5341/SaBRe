@@ -77,7 +77,7 @@ def perform_binary_search_acasxu(
     )
 
 
-def perform_binary_search_mnistConv(
+def perform_binary_search_mnistC(
     d_eps=3,
     i_eps=4,
     ini_d_eps=12,
@@ -109,7 +109,7 @@ def perform_binary_search_mnistConv(
         dataset_name=dataset_name,
     )
 
-def perform_binary_search_mnist4(
+def perform_binary_search_mnistF(
     d_eps=3,
     i_eps=4,
     ini_d_eps=12,
@@ -228,9 +228,9 @@ def perform_binary_search_mnist_cifar_gtsrb(
     for mode in RSIS_mode_list:
         if mode.startswith("RS") or mode.startswith("IS"):
             if threshold_analysis:
-                result_file_path = f"experiment_result/binary_search/{dataset_name}/{mode}/"
+                result_file_path = f"experiment_result/binary_search/{dataset_name}_{d_eps}_{i_eps}/{mode}/"
             else:
-                result_file_path = f"experiment_result/binary_search/{dataset_name}_nothreshold/{mode}/"
+                result_file_path = f"experiment_result/binary_search/{dataset_name}_{d_eps}_{i_eps}_nothreshold/{mode}/"
         else:
             raise ValueError(f"Invalid mode: {mode}. Mode should start with 'RS' or 'IS'.")
         os.makedirs(result_file_path, exist_ok=True)

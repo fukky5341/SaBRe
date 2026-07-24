@@ -123,7 +123,7 @@ def execute_experiment_cifar(d_eps=None, i_eps=2, RS_mode=None, IS_mode=None, th
                               global_target=global_target)
 
 
-def execute_experiment_mnist4(d_eps=None, i_eps=2, RS_mode=None, IS_mode=None, threshold_analysis=False, time_budget=600, split_limit=5, inputs_num=50, exe_limit=1, exe_start=None, exe_end=None, dimensional_perturbation=False, perturb_ratio=None):
+def execute_experiment_mnistF(d_eps=None, i_eps=2, RS_mode=None, IS_mode=None, threshold_analysis=False, time_budget=600, split_limit=5, inputs_num=50, exe_limit=1, exe_start=None, exe_end=None, dimensional_perturbation=False, perturb_ratio=None):
     dataset = Dataset.MNIST
     net_name = 'onnx/mnist-net_256x4.onnx'
     dataset_name = "mnist-256x4"
@@ -172,7 +172,7 @@ def execute_experiment_mnist4(d_eps=None, i_eps=2, RS_mode=None, IS_mode=None, t
                               dimensional_perturbation=dimensional_perturbation, perturb_ratio=perturb_ratio)
 
 
-def execute_experiment_mnistConv(d_eps=None, i_eps=2, RS_mode=None, IS_mode=None, threshold_analysis=False, time_budget=600, split_limit=5, inputs_num=50, exe_start=None, exe_end=None):
+def execute_experiment_mnistC(d_eps=None, i_eps=2, RS_mode=None, IS_mode=None, threshold_analysis=False, time_budget=600, split_limit=5, inputs_num=50, exe_start=None, exe_end=None):
     dataset = Dataset.MNIST
     net_name = 'onnx/mnist_conv_exp.onnx'
     dataset_name = "mnist-conv"

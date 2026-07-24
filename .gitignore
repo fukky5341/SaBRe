@@ -12,13 +12,9 @@ wheels/
 *.log
 *.ilp
 *.lp
-experiment_result/
-small_result/
-result/
-result_analysis/
-*.csv
-Tex/
-image/
+nnRelationalVerify/experiment_result/
+nnRelationalVerify/data/
+nnRelationalVerify/image/
 
 # Virtual environments
 .venv

@@ -1,0 +1,13652 @@
+## Execution arguments:
+Dataset: Dataset.GTSRB
+Network: onnx/gtsrb_cnn.onnx
+Relational property: GLOBAL_ROBUSTNESS
+LP Analysis: True
+Epsilon: 0.046875
+Delta epsilon: 0.01171875
+execution index: (3, 4, 0)
+Time budget: 7200 seconds
+Split limit: 100
+Threshold: 111.367470151
+
+
+## IAR start
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2048
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+### BASE IAR bounds
+Layer (inp1_lb, inp1_ub, inp2_lb, inp2_ub, d_lb, d_ub)
+0: (-140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983)
+1: (-86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891)
+2: (-75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949)
+3: (-78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138)
+4: (-89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101)
+5: (-81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715)
+6: (-111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597)
+7: (-100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364)
+8: (-90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961)
+9: (-82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705)
+10: (-122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083)
+11: (-134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324)
+12: (-123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089)
+13: (-109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486)
+14: (-185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265)
+15: (-102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481)
+16: (-138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649)
+17: (-197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070)
+18: (-112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255)
+19: (-94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495)
+20: (-78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920)
+21: (-117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404)
+22: (-119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924)
+23: (-95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354)
+24: (-109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933)
+25: (-96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337)
+26: (-135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312)
+27: (-111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607)
+28: (-94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878)
+29: (-133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590)
+30: (-112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678)
+31: (-114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750)
+32: (-97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473)
+33: (-148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040)
+34: (-120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592)
+35: (-121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957)
+36: (-116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010)
+37: (-175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668)
+38: (-146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278)
+39: (-170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382)
+40: (-154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167)
+41: (-108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496)
+42: (-85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399)
+
+## BASE Relational Analysis
+
+## BASE Result
+execution time: IAR + RelationalAnalysis = 2.87 + 148.81 = 151.67 seconds
+status: Status.UNKNOWN
+relational distance
+Output dim: 9, lower bound: -111.4789491, upper bound: 111.4789491
+
+# Relational Split (RS) starts
+
+## BFS RS instance: RS
+
+Time for backsubstitution: 0.00 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 1685
+type: RSZ, layer: 1, pos: 663
+type: RSZ, layer: 1, pos: 1687
+type: RSZ, layer: 1, pos: 1623
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.12 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 1685
+
+### Relational analysis RSZ of RS_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ1
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.4768396, upper bound: 111.4090776
+time: 327.61 seconds
+
+### Relational analysis RSZ of RS_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ2
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.4090776, upper bound: 111.4768396
+time: 110.99 seconds
+
+## Summary of splitting (split count: 0)
+- Time for RS candidates: 438.73 seconds
+RS_RSZ1, status: Status.UNKNOWN, split count: 1, time: 438.73
+Output dim: 9, lower bound: -111.4768396, upper bound: 111.4090776
+RS_RSZ2, status: Status.UNKNOWN, split count: 1, time: 438.73
+Output dim: 9, lower bound: -111.4090776, upper bound: 111.4768396
+
+## BFS RS instance: RS_RSZ1
+
+### Backsubstitution after applying RS history:
+0: -140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983
+1: -86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891
+2: -75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949
+3: -78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138
+4: -89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101
+5: -81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715
+6: -111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597
+7: -100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364
+8: -90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961
+9: -82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705
+10: -122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083
+11: -134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324
+12: -123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089
+13: -109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486
+14: -185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265
+15: -102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481
+16: -138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649
+17: -197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070
+18: -112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255
+19: -94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495
+20: -78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920
+21: -117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404
+22: -119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924
+23: -95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354
+24: -109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933
+25: -96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337
+26: -135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312
+27: -111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607
+28: -94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878
+29: -133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590
+30: -112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678
+31: -114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750
+32: -97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473
+33: -148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040
+34: -120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592
+35: -121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957
+36: -116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010
+37: -175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668
+38: -146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278
+39: -170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382
+40: -154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167
+41: -108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496
+42: -85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2047
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+Time for backsubstitution: 2.34 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 663
+type: RSZ, layer: 1, pos: 1687
+type: RSZ, layer: 1, pos: 1623
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.11 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 663
+
+### Relational analysis RSZ of RS_RSZ1_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ1
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.3814688, upper bound: 111.4069967
+time: 278.89 seconds
+
+### Relational analysis RSZ of RS_RSZ1_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ2
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.4747613, upper bound: 111.3132515
+time: 115.74 seconds
+
+## BFS RS instance: RS_RSZ2
+
+### Backsubstitution after applying RS history:
+0: -140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983
+1: -86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891
+2: -75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949
+3: -78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138
+4: -89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101
+5: -81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715
+6: -111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597
+7: -100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364
+8: -90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961
+9: -82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705
+10: -122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083
+11: -134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324
+12: -123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089
+13: -109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486
+14: -185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265
+15: -102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481
+16: -138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649
+17: -197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070
+18: -112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255
+19: -94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495
+20: -78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920
+21: -117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404
+22: -119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924
+23: -95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354
+24: -109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933
+25: -96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337
+26: -135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312
+27: -111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607
+28: -94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878
+29: -133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590
+30: -112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678
+31: -114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750
+32: -97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473
+33: -148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040
+34: -120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592
+35: -121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957
+36: -116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010
+37: -175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668
+38: -146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278
+39: -170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382
+40: -154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167
+41: -108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496
+42: -85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2047
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+Time for backsubstitution: 2.30 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 663
+type: RSZ, layer: 1, pos: 1687
+type: RSZ, layer: 1, pos: 1623
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.13 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 663
+
+### Relational analysis RSZ of RS_RSZ2_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ2_RSZ1
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.3132515, upper bound: 111.4747613
+time: 145.25 seconds
+
+### Relational analysis RSZ of RS_RSZ2_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ2_RSZ2
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.4069967, upper bound: 111.3814688
+time: 123.59 seconds
+
+## Summary of splitting (split count: 1)
+- Time for RS candidates: 271.28 seconds
+RS_RSZ1_RSZ1, status: Status.UNKNOWN, split count: 2, time: 271.28
+Output dim: 9, lower bound: -111.3814688, upper bound: 111.4069967
+RS_RSZ1_RSZ2, status: Status.UNKNOWN, split count: 2, time: 271.28
+Output dim: 9, lower bound: -111.4747613, upper bound: 111.3132515
+RS_RSZ2_RSZ1, status: Status.UNKNOWN, split count: 2, time: 271.28
+Output dim: 9, lower bound: -111.3132515, upper bound: 111.4747613
+RS_RSZ2_RSZ2, status: Status.UNKNOWN, split count: 2, time: 271.28
+Output dim: 9, lower bound: -111.4069967, upper bound: 111.3814688
+
+## BFS RS instance: RS_RSZ1_RSZ1
+
+### Backsubstitution after applying RS history:
+0: -140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983
+1: -86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891
+2: -75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949
+3: -78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138
+4: -89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101
+5: -81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715
+6: -111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597
+7: -100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364
+8: -90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961
+9: -82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705
+10: -122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083
+11: -134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324
+12: -123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089
+13: -109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486
+14: -185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265
+15: -102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481
+16: -138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649
+17: -197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070
+18: -112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255
+19: -94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495
+20: -78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920
+21: -117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404
+22: -119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924
+23: -95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354
+24: -109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933
+25: -96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337
+26: -135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312
+27: -111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607
+28: -94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878
+29: -133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590
+30: -112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678
+31: -114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750
+32: -97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473
+33: -148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040
+34: -120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592
+35: -121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957
+36: -116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010
+37: -175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668
+38: -146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278
+39: -170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382
+40: -154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167
+41: -108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496
+42: -85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2046
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+Time for backsubstitution: 2.31 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 1687
+type: RSZ, layer: 1, pos: 1623
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.12 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 1687
+
+### Relational analysis RSZ of RS_RSZ1_RSZ1_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ1_RSZ1
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.3760513, upper bound: 111.3302561
+time: 109.97 seconds
+
+### Relational analysis RSZ of RS_RSZ1_RSZ1_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ1_RSZ2
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.3587133, upper bound: 111.4054866
+time: 135.58 seconds
+
+## BFS RS instance: RS_RSZ1_RSZ2
+
+### Backsubstitution after applying RS history:
+0: -140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983
+1: -86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891
+2: -75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949
+3: -78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138
+4: -89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101
+5: -81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715
+6: -111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597
+7: -100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364
+8: -90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961
+9: -82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705
+10: -122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083
+11: -134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324
+12: -123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089
+13: -109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486
+14: -185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265
+15: -102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481
+16: -138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649
+17: -197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070
+18: -112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255
+19: -94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495
+20: -78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920
+21: -117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404
+22: -119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924
+23: -95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354
+24: -109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933
+25: -96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337
+26: -135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312
+27: -111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607
+28: -94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878
+29: -133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590
+30: -112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678
+31: -114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750
+32: -97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473
+33: -148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040
+34: -120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592
+35: -121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957
+36: -116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010
+37: -175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668
+38: -146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278
+39: -170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382
+40: -154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167
+41: -108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496
+42: -85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2046
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+Time for backsubstitution: 2.29 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 1687
+type: RSZ, layer: 1, pos: 1623
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.12 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 1687
+
+### Relational analysis RSZ of RS_RSZ1_RSZ2_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ2_RSZ1
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.4732650, upper bound: 111.2904486
+time: 136.41 seconds
+
+### Relational analysis RSZ of RS_RSZ1_RSZ2_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ2_RSZ2
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.3983369, upper bound: 111.3077839
+time: 126.46 seconds
+
+## BFS RS instance: RS_RSZ2_RSZ1
+
+### Backsubstitution after applying RS history:
+0: -140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983
+1: -86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891
+2: -75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949
+3: -78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138
+4: -89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101
+5: -81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715
+6: -111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597
+7: -100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364
+8: -90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961
+9: -82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705
+10: -122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083
+11: -134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324
+12: -123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089
+13: -109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486
+14: -185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265
+15: -102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481
+16: -138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649
+17: -197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070
+18: -112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255
+19: -94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495
+20: -78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920
+21: -117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404
+22: -119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924
+23: -95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354
+24: -109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933
+25: -96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337
+26: -135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312
+27: -111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607
+28: -94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878
+29: -133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590
+30: -112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678
+31: -114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750
+32: -97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473
+33: -148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040
+34: -120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592
+35: -121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957
+36: -116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010
+37: -175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668
+38: -146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278
+39: -170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382
+40: -154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167
+41: -108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496
+42: -85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2046
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+Time for backsubstitution: 2.30 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 1687
+type: RSZ, layer: 1, pos: 1623
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.11 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 1687
+
+### Relational analysis RSZ of RS_RSZ2_RSZ1_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ2_RSZ1_RSZ1
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.3077839, upper bound: 111.3983369
+time: 396.00 seconds
+
+### Relational analysis RSZ of RS_RSZ2_RSZ1_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ2_RSZ1_RSZ2
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.2904486, upper bound: 111.4732650
+time: 103.61 seconds
+
+## BFS RS instance: RS_RSZ2_RSZ2
+
+### Backsubstitution after applying RS history:
+0: -140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983
+1: -86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891
+2: -75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949
+3: -78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138
+4: -89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101
+5: -81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715
+6: -111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597
+7: -100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364
+8: -90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961
+9: -82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705
+10: -122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083
+11: -134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324
+12: -123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089
+13: -109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486
+14: -185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265
+15: -102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481
+16: -138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649
+17: -197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070
+18: -112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255
+19: -94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495
+20: -78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920
+21: -117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404
+22: -119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924
+23: -95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354
+24: -109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933
+25: -96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337
+26: -135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312
+27: -111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607
+28: -94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878
+29: -133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590
+30: -112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678
+31: -114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750
+32: -97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473
+33: -148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040
+34: -120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592
+35: -121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957
+36: -116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010
+37: -175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668
+38: -146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278
+39: -170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382
+40: -154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167
+41: -108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496
+42: -85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2046
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+Time for backsubstitution: 2.51 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 1687
+type: RSZ, layer: 1, pos: 1623
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.15 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 1687
+
+### Relational analysis RSZ of RS_RSZ2_RSZ2_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ2_RSZ2_RSZ1
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.4054866, upper bound: 111.3587133
+time: 456.27 seconds
+
+### Relational analysis RSZ of RS_RSZ2_RSZ2_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ2_RSZ2_RSZ2
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.3302561, upper bound: 111.3760513
+time: 127.81 seconds
+
+## Summary of splitting (split count: 2)
+- Time for RS candidates: 586.75 seconds
+RS_RSZ1_RSZ1_RSZ1, status: Status.UNKNOWN, split count: 3, time: 586.75
+Output dim: 9, lower bound: -111.3760513, upper bound: 111.3302561
+RS_RSZ1_RSZ1_RSZ2, status: Status.UNKNOWN, split count: 3, time: 586.75
+Output dim: 9, lower bound: -111.3587133, upper bound: 111.4054866
+RS_RSZ1_RSZ2_RSZ1, status: Status.UNKNOWN, split count: 3, time: 586.75
+Output dim: 9, lower bound: -111.4732650, upper bound: 111.2904486
+RS_RSZ1_RSZ2_RSZ2, status: Status.UNKNOWN, split count: 3, time: 586.75
+Output dim: 9, lower bound: -111.3983369, upper bound: 111.3077839
+RS_RSZ2_RSZ1_RSZ1, status: Status.UNKNOWN, split count: 3, time: 586.75
+Output dim: 9, lower bound: -111.3077839, upper bound: 111.3983369
+RS_RSZ2_RSZ1_RSZ2, status: Status.UNKNOWN, split count: 3, time: 586.75
+Output dim: 9, lower bound: -111.2904486, upper bound: 111.4732650
+RS_RSZ2_RSZ2_RSZ1, status: Status.UNKNOWN, split count: 3, time: 586.75
+Output dim: 9, lower bound: -111.4054866, upper bound: 111.3587133
+RS_RSZ2_RSZ2_RSZ2, status: Status.UNKNOWN, split count: 3, time: 586.75
+Output dim: 9, lower bound: -111.3302561, upper bound: 111.3760513
+
+## BFS RS instance: RS_RSZ1_RSZ1_RSZ1
+
+### Backsubstitution after applying RS history:
+0: -140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983
+1: -86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891
+2: -75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949
+3: -78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138
+4: -89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101
+5: -81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715
+6: -111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597
+7: -100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364
+8: -90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961
+9: -82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705
+10: -122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083
+11: -134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324
+12: -123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089
+13: -109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486
+14: -185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265
+15: -102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481
+16: -138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649
+17: -197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070
+18: -112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255
+19: -94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495
+20: -78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920
+21: -117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404
+22: -119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924
+23: -95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354
+24: -109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933
+25: -96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337
+26: -135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312
+27: -111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607
+28: -94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878
+29: -133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590
+30: -112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678
+31: -114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750
+32: -97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473
+33: -148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040
+34: -120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592
+35: -121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957
+36: -116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010
+37: -175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668
+38: -146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278
+39: -170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382
+40: -154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167
+41: -108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496
+42: -85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2045
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+Time for backsubstitution: 2.55 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 1623
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.15 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 1623
+
+### Relational analysis RSZ of RS_RSZ1_RSZ1_RSZ1_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ1_RSZ1_RSZ1
+Status: Status.VERIFIED
+Output dim: 9, lower bound: -111.3313869, upper bound: 111.3284033
+time: 268.46 seconds
+
+### Relational analysis RSZ of RS_RSZ1_RSZ1_RSZ1_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ1_RSZ1_RSZ2
+Status: Status.VERIFIED
+Output dim: 9, lower bound: -111.3313869, upper bound: 111.2855740
+time: 110.65 seconds
+
+## BFS RS instance: RS_RSZ1_RSZ1_RSZ2
+
+### Backsubstitution after applying RS history:
+0: -140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983
+1: -86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891
+2: -75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949
+3: -78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138
+4: -89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101
+5: -81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715
+6: -111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597
+7: -100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364
+8: -90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961
+9: -82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705
+10: -122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083
+11: -134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324
+12: -123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089
+13: -109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486
+14: -185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265
+15: -102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481
+16: -138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649
+17: -197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070
+18: -112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255
+19: -94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495
+20: -78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920
+21: -117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404
+22: -119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924
+23: -95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354
+24: -109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933
+25: -96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337
+26: -135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312
+27: -111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607
+28: -94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878
+29: -133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590
+30: -112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678
+31: -114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750
+32: -97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473
+33: -148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040
+34: -120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592
+35: -121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957
+36: -116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010
+37: -175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668
+38: -146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278
+39: -170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382
+40: -154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167
+41: -108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496
+42: -85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2045
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+Time for backsubstitution: 2.52 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 1623
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.15 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 1623
+
+### Relational analysis RSZ of RS_RSZ1_RSZ1_RSZ2_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ1_RSZ2_RSZ1
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.3139932, upper bound: 111.4036196
+time: 206.38 seconds
+
+### Relational analysis RSZ of RS_RSZ1_RSZ1_RSZ2_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ1_RSZ2_RSZ2
+Status: Status.VERIFIED
+Output dim: 9, lower bound: -111.3568501, upper bound: 111.3607735
+time: 187.71 seconds
+
+## BFS RS instance: RS_RSZ1_RSZ2_RSZ1
+
+### Backsubstitution after applying RS history:
+0: -140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983
+1: -86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891
+2: -75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949
+3: -78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138
+4: -89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101
+5: -81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715
+6: -111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597
+7: -100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364
+8: -90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961
+9: -82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705
+10: -122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083
+11: -134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324
+12: -123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089
+13: -109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486
+14: -185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265
+15: -102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481
+16: -138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649
+17: -197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070
+18: -112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255
+19: -94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495
+20: -78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920
+21: -117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404
+22: -119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924
+23: -95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354
+24: -109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933
+25: -96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337
+26: -135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312
+27: -111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607
+28: -94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878
+29: -133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590
+30: -112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678
+31: -114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750
+32: -97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473
+33: -148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040
+34: -120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592
+35: -121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957
+36: -116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010
+37: -175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668
+38: -146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278
+39: -170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382
+40: -154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167
+41: -108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496
+42: -85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2045
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+Time for backsubstitution: 2.50 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 1623
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.15 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 1623
+
+### Relational analysis RSZ of RS_RSZ1_RSZ2_RSZ1_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ2_RSZ1_RSZ1
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.4285539, upper bound: 111.2885925
+time: 160.99 seconds
+
+### Relational analysis RSZ of RS_RSZ1_RSZ2_RSZ1_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ2_RSZ1_RSZ2
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.4713983, upper bound: 111.2458073
+time: 107.32 seconds
+
+## BFS RS instance: RS_RSZ1_RSZ2_RSZ2
+
+### Backsubstitution after applying RS history:
+0: -140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983
+1: -86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891
+2: -75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949
+3: -78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138
+4: -89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101
+5: -81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715
+6: -111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597
+7: -100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364
+8: -90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961
+9: -82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705
+10: -122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083
+11: -134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324
+12: -123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089
+13: -109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486
+14: -185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265
+15: -102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481
+16: -138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649
+17: -197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070
+18: -112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255
+19: -94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495
+20: -78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920
+21: -117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404
+22: -119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924
+23: -95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354
+24: -109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933
+25: -96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337
+26: -135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312
+27: -111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607
+28: -94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878
+29: -133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590
+30: -112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678
+31: -114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750
+32: -97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473
+33: -148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040
+34: -120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592
+35: -121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957
+36: -116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010
+37: -175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668
+38: -146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278
+39: -170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382
+40: -154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167
+41: -108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496
+42: -85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2045
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+Time for backsubstitution: 2.57 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 1623
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.15 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 1623
+
+### Relational analysis RSZ of RS_RSZ1_RSZ2_RSZ2_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ2_RSZ2_RSZ1
+Status: Status.VERIFIED
+Output dim: 9, lower bound: -111.3536154, upper bound: 111.3059246
+time: 104.62 seconds
+
+### Relational analysis RSZ of RS_RSZ1_RSZ2_RSZ2_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ2_RSZ2_RSZ2
+Status: Status.VERIFIED
+Output dim: 9, lower bound: -111.3536154, upper bound: 111.2631198
+time: 103.65 seconds
+
+## BFS RS instance: RS_RSZ2_RSZ1_RSZ1
+
+### Backsubstitution after applying RS history:
+0: -140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983
+1: -86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891
+2: -75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949
+3: -78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138
+4: -89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101
+5: -81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715
+6: -111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597
+7: -100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364
+8: -90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961
+9: -82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705
+10: -122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083
+11: -134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324
+12: -123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089
+13: -109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486
+14: -185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265
+15: -102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481
+16: -138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649
+17: -197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070
+18: -112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255
+19: -94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495
+20: -78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920
+21: -117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404
+22: -119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924
+23: -95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354
+24: -109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933
+25: -96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337
+26: -135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312
+27: -111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607
+28: -94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878
+29: -133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590
+30: -112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678
+31: -114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750
+32: -97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473
+33: -148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040
+34: -120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592
+35: -121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957
+36: -116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010
+37: -175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668
+38: -146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278
+39: -170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382
+40: -154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167
+41: -108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496
+42: -85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2045
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+Time for backsubstitution: 2.32 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 1623
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.12 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 1623
+
+### Relational analysis RSZ of RS_RSZ2_RSZ1_RSZ1_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ2_RSZ1_RSZ1_RSZ1
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.2631198, upper bound: 111.3964705
+time: 291.14 seconds
+
+### Relational analysis RSZ of RS_RSZ2_RSZ1_RSZ1_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ2_RSZ1_RSZ1_RSZ2
+Status: Status.VERIFIED
+Output dim: 9, lower bound: -111.3059246, upper bound: 111.3536155
+time: 104.89 seconds
+
+## BFS RS instance: RS_RSZ2_RSZ1_RSZ2
+
+### Backsubstitution after applying RS history:
+0: -140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983
+1: -86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891
+2: -75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949
+3: -78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138
+4: -89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101
+5: -81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715
+6: -111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597
+7: -100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364
+8: -90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961
+9: -82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705
+10: -122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083
+11: -134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324
+12: -123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089
+13: -109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486
+14: -185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265
+15: -102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481
+16: -138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649
+17: -197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070
+18: -112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255
+19: -94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495
+20: -78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920
+21: -117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404
+22: -119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924
+23: -95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354
+24: -109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933
+25: -96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337
+26: -135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312
+27: -111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607
+28: -94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878
+29: -133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590
+30: -112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678
+31: -114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750
+32: -97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473
+33: -148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040
+34: -120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592
+35: -121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957
+36: -116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010
+37: -175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668
+38: -146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278
+39: -170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382
+40: -154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167
+41: -108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496
+42: -85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2045
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+Time for backsubstitution: 2.27 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 1623
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.11 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 1623
+
+### Relational analysis RSZ of RS_RSZ2_RSZ1_RSZ2_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ2_RSZ1_RSZ2_RSZ1
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.2458072, upper bound: 111.4713983
+time: 154.93 seconds
+
+### Relational analysis RSZ of RS_RSZ2_RSZ1_RSZ2_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ2_RSZ1_RSZ2_RSZ2
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.2458072, upper bound: 111.4285539
+time: 152.12 seconds
+
+## BFS RS instance: RS_RSZ2_RSZ2_RSZ1
+
+### Backsubstitution after applying RS history:
+0: -140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983
+1: -86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891
+2: -75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949
+3: -78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138
+4: -89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101
+5: -81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715
+6: -111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597
+7: -100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364
+8: -90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961
+9: -82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705
+10: -122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083
+11: -134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324
+12: -123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089
+13: -109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486
+14: -185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265
+15: -102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481
+16: -138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649
+17: -197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070
+18: -112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255
+19: -94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495
+20: -78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920
+21: -117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404
+22: -119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924
+23: -95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354
+24: -109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933
+25: -96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337
+26: -135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312
+27: -111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607
+28: -94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878
+29: -133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590
+30: -112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678
+31: -114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750
+32: -97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473
+33: -148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040
+34: -120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592
+35: -121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957
+36: -116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010
+37: -175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668
+38: -146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278
+39: -170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382
+40: -154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167
+41: -108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496
+42: -85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2045
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+Time for backsubstitution: 2.36 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 1623
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.12 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 1623
+
+### Relational analysis RSZ of RS_RSZ2_RSZ2_RSZ1_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ2_RSZ2_RSZ1_RSZ1
+Status: Status.VERIFIED
+Output dim: 9, lower bound: -111.3607735, upper bound: 111.3568501
+time: 151.48 seconds
+
+### Relational analysis RSZ of RS_RSZ2_RSZ2_RSZ1_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ2_RSZ2_RSZ1_RSZ2
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.4036196, upper bound: 111.3139932
+time: 118.03 seconds
+
+## BFS RS instance: RS_RSZ2_RSZ2_RSZ2
+
+### Backsubstitution after applying RS history:
+0: -140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983
+1: -86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891
+2: -75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949
+3: -78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138
+4: -89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101
+5: -81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715
+6: -111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597
+7: -100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364
+8: -90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961
+9: -82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705
+10: -122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083
+11: -134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324
+12: -123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089
+13: -109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486
+14: -185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265
+15: -102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481
+16: -138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649
+17: -197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070
+18: -112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255
+19: -94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495
+20: -78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920
+21: -117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404
+22: -119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924
+23: -95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354
+24: -109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933
+25: -96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337
+26: -135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312
+27: -111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607
+28: -94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878
+29: -133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590
+30: -112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678
+31: -114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750
+32: -97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473
+33: -148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040
+34: -120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592
+35: -121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957
+36: -116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010
+37: -175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668
+38: -146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278
+39: -170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382
+40: -154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167
+41: -108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496
+42: -85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2045
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+Time for backsubstitution: 2.31 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 1623
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.12 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 1623
+
+### Relational analysis RSZ of RS_RSZ2_RSZ2_RSZ2_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ2_RSZ2_RSZ2_RSZ1
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.2855740, upper bound: 111.3741897
+time: 334.39 seconds
+
+### Relational analysis RSZ of RS_RSZ2_RSZ2_RSZ2_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ2_RSZ2_RSZ2_RSZ2
+Status: Status.VERIFIED
+Output dim: 9, lower bound: -111.3284033, upper bound: 111.3313869
+time: 178.36 seconds
+
+## Summary of splitting (split count: 3)
+- Time for RS candidates: 515.19 seconds
+RS_RSZ1_RSZ1_RSZ1_RSZ1, status: Status.VERIFIED, split count: 4, time: 515.19
+Output dim: 9, lower bound: -111.3313869, upper bound: 111.3284033
+RS_RSZ1_RSZ1_RSZ1_RSZ2, status: Status.VERIFIED, split count: 4, time: 515.19
+Output dim: 9, lower bound: -111.3313869, upper bound: 111.2855740
+RS_RSZ1_RSZ1_RSZ2_RSZ1, status: Status.UNKNOWN, split count: 4, time: 515.19
+Output dim: 9, lower bound: -111.3139932, upper bound: 111.4036196
+RS_RSZ1_RSZ1_RSZ2_RSZ2, status: Status.VERIFIED, split count: 4, time: 515.19
+Output dim: 9, lower bound: -111.3568501, upper bound: 111.3607735
+RS_RSZ1_RSZ2_RSZ1_RSZ1, status: Status.UNKNOWN, split count: 4, time: 515.19
+Output dim: 9, lower bound: -111.4285539, upper bound: 111.2885925
+RS_RSZ1_RSZ2_RSZ1_RSZ2, status: Status.UNKNOWN, split count: 4, time: 515.19
+Output dim: 9, lower bound: -111.4713983, upper bound: 111.2458073
+RS_RSZ1_RSZ2_RSZ2_RSZ1, status: Status.VERIFIED, split count: 4, time: 515.19
+Output dim: 9, lower bound: -111.3536154, upper bound: 111.3059246
+RS_RSZ1_RSZ2_RSZ2_RSZ2, status: Status.VERIFIED, split count: 4, time: 515.19
+Output dim: 9, lower bound: -111.3536154, upper bound: 111.2631198
+RS_RSZ2_RSZ1_RSZ1_RSZ1, status: Status.UNKNOWN, split count: 4, time: 515.19
+Output dim: 9, lower bound: -111.2631198, upper bound: 111.3964705
+RS_RSZ2_RSZ1_RSZ1_RSZ2, status: Status.VERIFIED, split count: 4, time: 515.19
+Output dim: 9, lower bound: -111.3059246, upper bound: 111.3536155
+RS_RSZ2_RSZ1_RSZ2_RSZ1, status: Status.UNKNOWN, split count: 4, time: 515.19
+Output dim: 9, lower bound: -111.2458072, upper bound: 111.4713983
+RS_RSZ2_RSZ1_RSZ2_RSZ2, status: Status.UNKNOWN, split count: 4, time: 515.19
+Output dim: 9, lower bound: -111.2458072, upper bound: 111.4285539
+RS_RSZ2_RSZ2_RSZ1_RSZ1, status: Status.VERIFIED, split count: 4, time: 515.19
+Output dim: 9, lower bound: -111.3607735, upper bound: 111.3568501
+RS_RSZ2_RSZ2_RSZ1_RSZ2, status: Status.UNKNOWN, split count: 4, time: 515.19
+Output dim: 9, lower bound: -111.4036196, upper bound: 111.3139932
+RS_RSZ2_RSZ2_RSZ2_RSZ1, status: Status.UNKNOWN, split count: 4, time: 515.19
+Output dim: 9, lower bound: -111.2855740, upper bound: 111.3741897
+RS_RSZ2_RSZ2_RSZ2_RSZ2, status: Status.VERIFIED, split count: 4, time: 515.19
+Output dim: 9, lower bound: -111.3284033, upper bound: 111.3313869
+
+## BFS RS instance: RS_RSZ1_RSZ1_RSZ2_RSZ1
+
+### Backsubstitution after applying RS history:
+0: -140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983
+1: -86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891
+2: -75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949
+3: -78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138
+4: -89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101
+5: -81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715
+6: -111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597
+7: -100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364
+8: -90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961
+9: -82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705
+10: -122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083
+11: -134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324
+12: -123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089
+13: -109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486
+14: -185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265
+15: -102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481
+16: -138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649
+17: -197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070
+18: -112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255
+19: -94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495
+20: -78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920
+21: -117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404
+22: -119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924
+23: -95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354
+24: -109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933
+25: -96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337
+26: -135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312
+27: -111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607
+28: -94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878
+29: -133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590
+30: -112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678
+31: -114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750
+32: -97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473
+33: -148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040
+34: -120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592
+35: -121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957
+36: -116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010
+37: -175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668
+38: -146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278
+39: -170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382
+40: -154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167
+41: -108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496
+42: -85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2044
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+Time for backsubstitution: 2.27 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.12 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 661
+
+### Relational analysis RSZ of RS_RSZ1_RSZ1_RSZ2_RSZ1_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ1_RSZ2_RSZ1_RSZ1
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.2395758, upper bound: 111.3944354
+time: 129.04 seconds
+
+### Relational analysis RSZ of RS_RSZ1_RSZ1_RSZ2_RSZ1_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ1_RSZ2_RSZ1_RSZ2
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.3124758, upper bound: 111.3728699
+time: 99.52 seconds
+
+## BFS RS instance: RS_RSZ1_RSZ2_RSZ1_RSZ1
+
+### Backsubstitution after applying RS history:
+0: -140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983
+1: -86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891
+2: -75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949
+3: -78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138
+4: -89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101
+5: -81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715
+6: -111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597
+7: -100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364
+8: -90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961
+9: -82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705
+10: -122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083
+11: -134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324
+12: -123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089
+13: -109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486
+14: -185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265
+15: -102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481
+16: -138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649
+17: -197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070
+18: -112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255
+19: -94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495
+20: -78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920
+21: -117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404
+22: -119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924
+23: -95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354
+24: -109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933
+25: -96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337
+26: -135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312
+27: -111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607
+28: -94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878
+29: -133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590
+30: -112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678
+31: -114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750
+32: -97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473
+33: -148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040
+34: -120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592
+35: -121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957
+36: -116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010
+37: -175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668
+38: -146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278
+39: -170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382
+40: -154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167
+41: -108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496
+42: -85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2044
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+Time for backsubstitution: 2.31 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.13 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 661
+
+### Relational analysis RSZ of RS_RSZ1_RSZ2_RSZ1_RSZ1_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ2_RSZ1_RSZ1_RSZ1
+Status: Status.VERIFIED
+Output dim: 9, lower bound: -111.3546759, upper bound: 111.2793221
+time: 245.14 seconds
+
+### Relational analysis RSZ of RS_RSZ1_RSZ2_RSZ1_RSZ1_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ2_RSZ1_RSZ1_RSZ2
+Status: Status.VERIFIED
+Output dim: 9, lower bound: -111.3298498, upper bound: 111.2575641
+time: 677.96 seconds
+
+## BFS RS instance: RS_RSZ1_RSZ2_RSZ1_RSZ2
+
+### Backsubstitution after applying RS history:
+0: -140.3872681, 93.1922379, -140.3872681, 93.1922379, -233.5794983, 233.5794983
+1: -86.8612366, 76.5682602, -86.8612366, 76.5682602, -163.4294739, 163.4294891
+2: -75.4908447, 75.6058502, -75.4908447, 75.6058502, -151.0966949, 151.0966949
+3: -78.1242981, 94.7173157, -78.1242981, 94.7173157, -172.8416138, 172.8416138
+4: -89.5348511, 90.1523743, -89.5348511, 90.1523743, -179.6872253, 179.6872101
+5: -81.5192795, 97.6977921, -81.5192795, 97.6977921, -179.2170715, 179.2170715
+6: -111.4176254, 77.0154572, -111.4176254, 77.0154572, -188.4330750, 188.4330597
+7: -100.9322662, 94.7750854, -100.9322662, 94.7750854, -195.7073517, 195.7073364
+8: -90.6206207, 105.7641678, -90.6206207, 105.7641678, -196.3847961, 196.3847961
+9: -82.1111145, 84.5286636, -82.1111145, 84.5286636, -166.6397705, 166.6397705
+10: -122.3009644, 123.3631439, -122.3009644, 123.3631439, -245.6641083, 245.6641083
+11: -134.2293091, 93.3395233, -134.2293091, 93.3395233, -227.5688171, 227.5688324
+12: -123.8814697, 101.0232620, -123.8814697, 101.0232620, -224.9046936, 224.9047089
+13: -109.7427902, 97.8520660, -109.7427902, 97.8520660, -207.5948486, 207.5948486
+14: -185.4212189, 96.3097229, -185.4212189, 96.3097229, -281.7309265, 281.7309265
+15: -102.3455276, 83.0031204, -102.3455276, 83.0031204, -185.3486481, 185.3486481
+16: -138.0480804, 95.9990845, -138.0480804, 95.9990845, -234.0471649, 234.0471649
+17: -197.4377289, 146.0119934, -197.4377289, 146.0119934, -343.4497070, 343.4497070
+18: -112.0304718, 73.4981689, -112.0304718, 73.4981689, -185.5286407, 185.5286255
+19: -94.2755432, 51.8621101, -94.2755432, 51.8621101, -146.1376495, 146.1376495
+20: -78.8905029, 62.9350891, -78.8905029, 62.9350891, -141.8255920, 141.8255920
+21: -117.0230026, 67.6521454, -117.0230026, 67.6521454, -184.6751404, 184.6751404
+22: -119.9860229, 83.7611771, -119.9860229, 83.7611771, -203.7471924, 203.7471924
+23: -95.5156326, 62.3644104, -95.5156326, 62.3644104, -157.8800354, 157.8800354
+24: -109.2621918, 59.7778053, -109.2621918, 59.7778053, -169.0399780, 169.0399933
+25: -96.0723572, 72.1884842, -96.0723572, 72.1884842, -168.2608337, 168.2608337
+26: -135.0967102, 98.9909439, -135.0967102, 98.9909439, -234.0876465, 234.0876312
+27: -111.8834229, 76.2519379, -111.8834229, 76.2519379, -188.1353455, 188.1353607
+28: -94.1311798, 69.4701309, -94.1311798, 69.4701309, -163.6013184, 163.6012878
+29: -133.9227600, 86.1615143, -133.9227600, 86.1615143, -220.0842285, 220.0842590
+30: -112.3293839, 71.1250992, -112.3293839, 71.1250992, -183.4544678, 183.4544678
+31: -114.9978027, 65.6003876, -114.9978027, 65.6003876, -180.5981750, 180.5981750
+32: -97.6411209, 80.0173492, -97.6411209, 80.0173492, -177.6584778, 177.6584473
+33: -148.3900604, 96.6971588, -148.3900604, 96.6971588, -245.0872192, 245.0872040
+34: -120.6523209, 87.0858459, -120.6523209, 87.0858459, -207.7381592, 207.7381592
+35: -121.4678421, 75.5914612, -121.4678421, 75.5914612, -197.0592957, 197.0592957
+36: -116.9944458, 72.0940552, -116.9944458, 72.0940552, -189.0885010, 189.0885010
+37: -175.5127411, 82.2907333, -175.5127411, 82.2907333, -257.8034668, 257.8034668
+38: -146.5955200, 85.3955231, -146.5955200, 85.3955231, -231.9910278, 231.9910278
+39: -170.8394623, 82.3909836, -170.8394623, 82.3909836, -253.2304077, 253.2304382
+40: -154.2845154, 88.4989166, -154.2845154, 88.4989166, -242.7834167, 242.7834167
+41: -108.0182953, 71.6025696, -108.0182953, 71.6025696, -179.6208496, 179.6208496
+42: -85.8654556, 76.8479919, -85.8654556, 76.8479919, -162.7134399, 162.7134399
+
+### Unstable ReLU Count (Linear/Conv2D Layers)
+- layer_idx=0, type=LayerType.Conv2D, total=2048, inp1_unstable=678, inp2_unstable=678, delta_unstable=2044
+- layer_idx=2, type=LayerType.Conv2D, total=1024, inp1_unstable=532, inp2_unstable=532, delta_unstable=1024
+- layer_idx=4, type=LayerType.Linear, total=50, inp1_unstable=27, inp2_unstable=27, delta_unstable=45
+- layer_idx=6, type=LayerType.Linear, total=43, inp1_unstable=43, inp2_unstable=43, delta_unstable=43
+
+Time for backsubstitution: 2.29 seconds
+
+### RS candidates at layer 1
+type: RSZ, layer: 1, pos: 661
+type: RSZ, layer: 1, pos: 1686
+type: RSZ, layer: 1, pos: 1669
+type: RSZ, layer: 1, pos: 1757
+type: RSZ, layer: 1, pos: 1639
+type: RSZ, layer: 1, pos: 1683
+type: RSZ, layer: 1, pos: 1671
+type: RSZ, layer: 1, pos: 662
+type: RSZ, layer: 1, pos: 1657
+type: RSZ, layer: 1, pos: 1651
+type: RSZ, layer: 1, pos: 1758
+type: RSZ, layer: 1, pos: 1624
+type: RSZ, layer: 1, pos: 659
+type: RSZ, layer: 1, pos: 733
+type: RSZ, layer: 1, pos: 1640
+type: RSZ, layer: 1, pos: 1641
+type: RSZ, layer: 1, pos: 1684
+type: RSZ, layer: 1, pos: 1652
+type: RSZ, layer: 1, pos: 629
+type: RSZ, layer: 1, pos: 1688
+type: RSZ, layer: 1, pos: 1653
+type: RSZ, layer: 1, pos: 1660
+type: RSZ, layer: 1, pos: 1658
+type: RSZ, layer: 1, pos: 1667
+type: RSZ, layer: 1, pos: 1701
+type: RSZ, layer: 1, pos: 1670
+type: RSZ, layer: 1, pos: 645
+type: RSZ, layer: 1, pos: 647
+type: RSZ, layer: 1, pos: 1692
+type: RSZ, layer: 1, pos: 1625
+type: RSZ, layer: 1, pos: 646
+type: RSZ, layer: 1, pos: 627
+type: RSZ, layer: 1, pos: 734
+type: RSZ, layer: 1, pos: 664
+type: RSZ, layer: 1, pos: 151
+type: RSZ, layer: 1, pos: 599
+type: RSZ, layer: 1, pos: 1175
+type: RSZ, layer: 1, pos: 650
+type: RSZ, layer: 1, pos: 1773
+type: RSZ, layer: 1, pos: 628
+type: RSZ, layer: 1, pos: 149
+type: RSZ, layer: 1, pos: 1173
+type: RSZ, layer: 1, pos: 1789
+type: RSZ, layer: 1, pos: 1759
+type: RSZ, layer: 1, pos: 633
+type: RSZ, layer: 1, pos: 735
+type: RSZ, layer: 1, pos: 1741
+type: RSZ, layer: 1, pos: 630
+type: RSZ, layer: 1, pos: 1668
+type: RSZ, layer: 1, pos: 1742
+type: RSZ, layer: 1, pos: 1661
+type: RSZ, layer: 1, pos: 1682
+type: RSZ, layer: 1, pos: 135
+type: RSZ, layer: 1, pos: 1672
+type: RSZ, layer: 1, pos: 150
+type: RSZ, layer: 1, pos: 669
+type: RSZ, layer: 1, pos: 634
+type: RSZ, layer: 1, pos: 1171
+type: RSZ, layer: 1, pos: 600
+type: RSZ, layer: 1, pos: 637
+type: RSZ, layer: 1, pos: 133
+type: RSZ, layer: 1, pos: 643
+type: RSZ, layer: 1, pos: 1159
+type: RSZ, layer: 1, pos: 1767
+type: RSZ, layer: 1, pos: 1111
+type: RSZ, layer: 1, pos: 1703
+type: RSZ, layer: 1, pos: 717
+type: RSZ, layer: 1, pos: 1693
+type: RSZ, layer: 1, pos: 1774
+type: RSZ, layer: 1, pos: 1702
+type: RSZ, layer: 1, pos: 407
+type: RSZ, layer: 1, pos: 1699
+type: RSZ, layer: 1, pos: 1157
+type: RSZ, layer: 1, pos: 679
+type: RSZ, layer: 1, pos: 1145
+type: RSZ, layer: 1, pos: 651
+type: RSZ, layer: 1, pos: 152
+type: RSZ, layer: 1, pos: 1726
+type: RSZ, layer: 1, pos: 725
+type: RSZ, layer: 1, pos: 1790
+type: RSZ, layer: 1, pos: 660
+type: RSZ, layer: 1, pos: 1174
+type: RSZ, layer: 1, pos: 658
+type: RSZ, layer: 1, pos: 1620
+type: RSZ, layer: 1, pos: 1628
+type: RSZ, layer: 1, pos: 1676
+type: RSZ, layer: 1, pos: 1690
+type: RSZ, layer: 1, pos: 1642
+type: RSZ, layer: 1, pos: 702
+type: RSZ, layer: 1, pos: 1768
+type: RSZ, layer: 1, pos: 1769
+type: RSZ, layer: 1, pos: 718
+type: RSZ, layer: 1, pos: 1129
+type: RSZ, layer: 1, pos: 695
+type: RSZ, layer: 1, pos: 678
+type: RSZ, layer: 1, pos: 1158
+type: RSZ, layer: 1, pos: 115
+type: RSZ, layer: 1, pos: 1622
+type: RSZ, layer: 1, pos: 1725
+type: RSZ, layer: 1, pos: 1674
+type: RSZ, layer: 1, pos: 1607
+type: RSZ, layer: 1, pos: 1146
+type: RSZ, layer: 1, pos: 1595
+type: RSZ, layer: 1, pos: 1654
+type: RSZ, layer: 1, pos: 765
+type: RSZ, layer: 1, pos: 1666
+type: RSZ, layer: 1, pos: 1677
+type: RSZ, layer: 1, pos: 1644
+type: RSZ, layer: 1, pos: 636
+type: RSZ, layer: 1, pos: 682
+type: RSZ, layer: 1, pos: 1139
+type: RSZ, layer: 1, pos: 1748
+type: RSZ, layer: 1, pos: 391
+type: RSZ, layer: 1, pos: 703
+type: RSZ, layer: 1, pos: 1594
+type: RSZ, layer: 1, pos: 1700
+type: RSZ, layer: 1, pos: 648
+type: RSZ, layer: 1, pos: 732
+type: RSZ, layer: 1, pos: 1155
+type: RSZ, layer: 1, pos: 1127
+type: RSZ, layer: 1, pos: 1112
+type: RSZ, layer: 1, pos: 612
+type: RSZ, layer: 1, pos: 136
+type: RSZ, layer: 1, pos: 603
+type: RSZ, layer: 1, pos: 1949
+type: RSZ, layer: 1, pos: 1721
+type: RSZ, layer: 1, pos: 1694
+type: RSZ, layer: 1, pos: 719
+type: RSZ, layer: 1, pos: 116
+type: RSZ, layer: 1, pos: 724
+type: RSZ, layer: 1, pos: 1733
+type: RSZ, layer: 1, pos: 1128
+type: RSZ, layer: 1, pos: 1149
+type: RSZ, layer: 1, pos: 134
+type: RSZ, layer: 1, pos: 1638
+type: RSZ, layer: 1, pos: 604
+type: RSZ, layer: 1, pos: 1707
+type: RSZ, layer: 1, pos: 156
+type: RSZ, layer: 1, pos: 147
+type: RSZ, layer: 1, pos: 766
+type: RSZ, layer: 1, pos: 1752
+type: RSZ, layer: 1, pos: 1708
+type: RSZ, layer: 1, pos: 750
+type: RSZ, layer: 1, pos: 1172
+type: RSZ, layer: 1, pos: 749
+type: RSZ, layer: 1, pos: 683
+type: RSZ, layer: 1, pos: 644
+type: RSZ, layer: 1, pos: 617
+type: RSZ, layer: 1, pos: 1611
+type: RSZ, layer: 1, pos: 1691
+type: RSZ, layer: 1, pos: 1636
+type: RSZ, layer: 1, pos: 1229
+type: RSZ, layer: 1, pos: 1140
+type: RSZ, layer: 1, pos: 642
+type: RSZ, layer: 1, pos: 1675
+type: RSZ, layer: 1, pos: 1784
+type: RSZ, layer: 1, pos: 131
+type: RSZ, layer: 1, pos: 1141
+type: RSZ, layer: 1, pos: 613
+type: RSZ, layer: 1, pos: 1181
+type: RSZ, layer: 1, pos: 677
+type: RSZ, layer: 1, pos: 1755
+type: RSZ, layer: 1, pos: 1791
+type: RSZ, layer: 1, pos: 1698
+type: RSZ, layer: 1, pos: 1779
+type: RSZ, layer: 1, pos: 767
+type: RSZ, layer: 1, pos: 696
+type: RSZ, layer: 1, pos: 1162
+type: RSZ, layer: 1, pos: 1176
+type: RSZ, layer: 1, pos: 1719
+type: RSZ, layer: 1, pos: 1645
+type: RSZ, layer: 1, pos: 1727
+type: RSZ, layer: 1, pos: 154
+type: RSZ, layer: 1, pos: 1783
+type: RSZ, layer: 1, pos: 601
+type: RSZ, layer: 1, pos: 148
+type: RSZ, layer: 1, pos: 406
+type: RSZ, layer: 1, pos: 1178
+type: RSZ, layer: 1, pos: 1756
+type: RSZ, layer: 1, pos: 1247
+type: RSZ, layer: 1, pos: 1743
+type: RSZ, layer: 1, pos: 761
+type: RSZ, layer: 1, pos: 620
+type: RSZ, layer: 1, pos: 1780
+type: RSZ, layer: 1, pos: 596
+type: RSZ, layer: 1, pos: 584
+type: RSZ, layer: 1, pos: 1787
+type: RSZ, layer: 1, pos: 1729
+type: RSZ, layer: 1, pos: 1592
+type: RSZ, layer: 1, pos: 709
+type: RSZ, layer: 1, pos: 583
+type: RSZ, layer: 1, pos: 668
+type: RSZ, layer: 1, pos: 1731
+type: RSZ, layer: 1, pos: 1160
+type: RSZ, layer: 1, pos: 1980
+type: RSZ, layer: 1, pos: 389
+type: RSZ, layer: 1, pos: 1627
+type: RSZ, layer: 1, pos: 1170
+type: RSZ, layer: 1, pos: 1751
+type: RSZ, layer: 1, pos: 1591
+type: RSZ, layer: 1, pos: 1788
+type: RSZ, layer: 1, pos: 626
+type: RSZ, layer: 1, pos: 1610
+type: RSZ, layer: 1, pos: 1720
+type: RSZ, layer: 1, pos: 722
+type: RSZ, layer: 1, pos: 1656
+type: RSZ, layer: 1, pos: 721
+type: RSZ, layer: 1, pos: 2007
+type: RSZ, layer: 1, pos: 697
+type: RSZ, layer: 1, pos: 84
+type: RSZ, layer: 1, pos: 1730
+type: RSZ, layer: 1, pos: 146
+type: RSZ, layer: 1, pos: 1734
+type: RSZ, layer: 1, pos: 689
+type: RSZ, layer: 1, pos: 1753
+type: RSZ, layer: 1, pos: 751
+type: RSZ, layer: 1, pos: 1156
+type: RSZ, layer: 1, pos: 745
+type: RSZ, layer: 1, pos: 638
+type: RSZ, layer: 1, pos: 381
+type: RSZ, layer: 1, pos: 1772
+type: RSZ, layer: 1, pos: 759
+type: RSZ, layer: 1, pos: 649
+type: RSZ, layer: 1, pos: 1775
+type: RSZ, layer: 1, pos: 605
+type: RSZ, layer: 1, pos: 1115
+type: RSZ, layer: 1, pos: 1148
+type: RSZ, layer: 1, pos: 653
+type: RSZ, layer: 1, pos: 1608
+type: RSZ, layer: 1, pos: 1262
+type: RSZ, layer: 1, pos: 132
+type: RSZ, layer: 1, pos: 611
+type: RSZ, layer: 1, pos: 595
+type: RSZ, layer: 1, pos: 403
+type: RSZ, layer: 1, pos: 680
+type: RSZ, layer: 1, pos: 233
+type: RSZ, layer: 1, pos: 694
+type: RSZ, layer: 1, pos: 140
+type: RSZ, layer: 1, pos: 92
+type: RSZ, layer: 1, pos: 711
+type: RSZ, layer: 1, pos: 1187
+type: RSZ, layer: 1, pos: 1116
+type: RSZ, layer: 1, pos: 621
+type: RSZ, layer: 1, pos: 675
+type: RSZ, layer: 1, pos: 1277
+type: RSZ, layer: 1, pos: 1785
+type: RSZ, layer: 1, pos: 1709
+type: RSZ, layer: 1, pos: 394
+type: RSZ, layer: 1, pos: 1735
+type: RSZ, layer: 1, pos: 1113
+type: RSZ, layer: 1, pos: 979
+type: RSZ, layer: 1, pos: 1165
+type: RSZ, layer: 1, pos: 1189
+type: RSZ, layer: 1, pos: 999
+type: RSZ, layer: 1, pos: 1665
+type: RSZ, layer: 1, pos: 125
+type: RSZ, layer: 1, pos: 656
+type: RSZ, layer: 1, pos: 688
+type: RSZ, layer: 1, pos: 1781
+type: RSZ, layer: 1, pos: 1190
+type: RSZ, layer: 1, pos: 1681
+type: RSZ, layer: 1, pos: 635
+type: RSZ, layer: 1, pos: 410
+type: RSZ, layer: 1, pos: 390
+type: RSZ, layer: 1, pos: 408
+type: RSZ, layer: 1, pos: 232
+type: RSZ, layer: 1, pos: 1231
+type: RSZ, layer: 1, pos: 567
+type: RSZ, layer: 1, pos: 1130
+type: RSZ, layer: 1, pos: 387
+type: RSZ, layer: 1, pos: 568
+type: RSZ, layer: 1, pos: 602
+type: RSZ, layer: 1, pos: 163
+type: RSZ, layer: 1, pos: 1154
+type: RSZ, layer: 1, pos: 405
+type: RSZ, layer: 1, pos: 1771
+type: RSZ, layer: 1, pos: 744
+type: RSZ, layer: 1, pos: 1180
+type: RSZ, layer: 1, pos: 1770
+type: RSZ, layer: 1, pos: 108
+type: RSZ, layer: 1, pos: 1117
+type: RSZ, layer: 1, pos: 1255
+type: RSZ, layer: 1, pos: 674
+type: RSZ, layer: 1, pos: 411
+type: RSZ, layer: 1, pos: 347
+type: RSZ, layer: 1, pos: 1211
+type: RSZ, layer: 1, pos: 1363
+type: RSZ, layer: 1, pos: 1697
+type: RSZ, layer: 1, pos: 710
+type: RSZ, layer: 1, pos: 1256
+type: RSZ, layer: 1, pos: 1722
+type: RSZ, layer: 1, pos: 1643
+type: RSZ, layer: 1, pos: 743
+type: RSZ, layer: 1, pos: 598
+type: RSZ, layer: 1, pos: 1257
+type: RSZ, layer: 1, pos: 1695
+type: RSZ, layer: 1, pos: 1191
+type: RSZ, layer: 1, pos: 1110
+type: RSZ, layer: 1, pos: 1124
+type: RSZ, layer: 1, pos: 1278
+type: RSZ, layer: 1, pos: 1244
+type: RSZ, layer: 1, pos: 756
+type: RSZ, layer: 1, pos: 1132
+type: RSZ, layer: 1, pos: 616
+type: RSZ, layer: 1, pos: 395
+type: RSZ, layer: 1, pos: 1164
+type: RSZ, layer: 1, pos: 1606
+type: RSZ, layer: 1, pos: 1716
+type: RSZ, layer: 1, pos: 1593
+type: RSZ, layer: 1, pos: 760
+type: RSZ, layer: 1, pos: 1095
+type: RSZ, layer: 1, pos: 1754
+type: RSZ, layer: 1, pos: 1169
+type: RSZ, layer: 1, pos: 652
+type: RSZ, layer: 1, pos: 1715
+type: RSZ, layer: 1, pos: 164
+type: RSZ, layer: 1, pos: 1133
+type: RSZ, layer: 1, pos: 715
+type: RSZ, layer: 1, pos: 716
+type: RSZ, layer: 1, pos: 2008
+type: RSZ, layer: 1, pos: 746
+type: RSZ, layer: 1, pos: 197
+type: RSZ, layer: 1, pos: 1217
+type: RSZ, layer: 1, pos: 2009
+type: RSZ, layer: 1, pos: 1948
+type: RSZ, layer: 1, pos: 700
+type: RSZ, layer: 1, pos: 614
+type: RSZ, layer: 1, pos: 726
+type: RSZ, layer: 1, pos: 100
+type: RSZ, layer: 1, pos: 55
+type: RSZ, layer: 1, pos: 1108
+type: RSZ, layer: 1, pos: 172
+type: RSZ, layer: 1, pos: 75
+type: RSZ, layer: 1, pos: 130
+type: RSZ, layer: 1, pos: 433
+type: RSZ, layer: 1, pos: 1621
+type: RSZ, layer: 1, pos: 1079
+type: RSZ, layer: 1, pos: 1491
+type: RSZ, layer: 1, pos: 1706
+type: RSZ, layer: 1, pos: 963
+type: RSZ, layer: 1, pos: 1664
+type: RSZ, layer: 1, pos: 404
+type: RSZ, layer: 1, pos: 1096
+type: RSZ, layer: 1, pos: 1194
+type: RSZ, layer: 1, pos: 402
+type: RSZ, layer: 1, pos: 1626
+type: RSZ, layer: 1, pos: 1221
+type: RSZ, layer: 1, pos: 56
+type: RSZ, layer: 1, pos: 1218
+type: RSZ, layer: 1, pos: 1219
+type: RSZ, layer: 1, pos: 1142
+type: RSZ, layer: 1, pos: 153
+type: RSZ, layer: 1, pos: 413
+type: RSZ, layer: 1, pos: 1907
+type: RSZ, layer: 1, pos: 216
+type: RSZ, layer: 1, pos: 978
+type: RSZ, layer: 1, pos: 141
+type: RSZ, layer: 1, pos: 693
+type: RSZ, layer: 1, pos: 1704
+type: RSZ, layer: 1, pos: 654
+type: RSZ, layer: 1, pos: 138
+type: RSZ, layer: 1, pos: 1212
+type: RSZ, layer: 1, pos: 1649
+type: RSZ, layer: 1, pos: 1263
+type: RSZ, layer: 1, pos: 727
+type: RSZ, layer: 1, pos: 409
+type: RSZ, layer: 1, pos: 1186
+type: RSZ, layer: 1, pos: 444
+type: RSZ, layer: 1, pos: 1223
+type: RSZ, layer: 1, pos: 671
+type: RSZ, layer: 1, pos: 570
+type: RSZ, layer: 1, pos: 1766
+type: RSZ, layer: 1, pos: 672
+type: RSZ, layer: 1, pos: 762
+type: RSZ, layer: 1, pos: 255
+type: RSZ, layer: 1, pos: 162
+type: RSZ, layer: 1, pos: 311
+type: RSZ, layer: 1, pos: 348
+type: RSZ, layer: 1, pos: 708
+type: RSZ, layer: 1, pos: 215
+type: RSZ, layer: 1, pos: 1272
+type: RSZ, layer: 1, pos: 1612
+type: RSZ, layer: 1, pos: 1609
+type: RSZ, layer: 1, pos: 1080
+type: RSZ, layer: 1, pos: 1188
+type: RSZ, layer: 1, pos: 371
+type: RSZ, layer: 1, pos: 1243
+type: RSZ, layer: 1, pos: 670
+type: RSZ, layer: 1, pos: 1689
+type: RSZ, layer: 1, pos: 217
+type: RSZ, layer: 1, pos: 1732
+type: RSZ, layer: 1, pos: 977
+type: RSZ, layer: 1, pos: 1588
+type: RSZ, layer: 1, pos: 397
+type: RSZ, layer: 1, pos: 657
+type: RSZ, layer: 1, pos: 144
+type: RSZ, layer: 1, pos: 748
+type: RSZ, layer: 1, pos: 1209
+type: RSZ, layer: 1, pos: 631
+type: RSZ, layer: 1, pos: 1166
+type: RSZ, layer: 1, pos: 1273
+type: RSZ, layer: 1, pos: 1222
+type: RSZ, layer: 1, pos: 356
+type: RSZ, layer: 1, pos: 582
+type: RSZ, layer: 1, pos: 701
+type: RSZ, layer: 1, pos: 443
+type: RSZ, layer: 1, pos: 764
+type: RSZ, layer: 1, pos: 313
+type: RSZ, layer: 1, pos: 571
+type: RSZ, layer: 1, pos: 1182
+type: RSZ, layer: 1, pos: 1279
+type: RSZ, layer: 1, pos: 713
+type: RSZ, layer: 1, pos: 1203
+type: RSZ, layer: 1, pos: 1099
+type: RSZ, layer: 1, pos: 585
+type: RSZ, layer: 1, pos: 1489
+type: RSZ, layer: 1, pos: 640
+type: RSZ, layer: 1, pos: 340
+type: RSZ, layer: 1, pos: 712
+type: RSZ, layer: 1, pos: 580
+type: RSZ, layer: 1, pos: 587
+type: RSZ, layer: 1, pos: 1153
+type: RSZ, layer: 1, pos: 641
+type: RSZ, layer: 1, pos: 401
+type: RSZ, layer: 1, pos: 312
+type: RSZ, layer: 1, pos: 2006
+type: RSZ, layer: 1, pos: 1490
+type: RSZ, layer: 1, pos: 1740
+type: RSZ, layer: 1, pos: 74
+type: RSZ, layer: 1, pos: 1718
+type: RSZ, layer: 1, pos: 1736
+type: RSZ, layer: 1, pos: 157
+type: RSZ, layer: 1, pos: 1673
+type: RSZ, layer: 1, pos: 981
+type: RSZ, layer: 1, pos: 1258
+type: RSZ, layer: 1, pos: 380
+type: RSZ, layer: 1, pos: 198
+type: RSZ, layer: 1, pos: 1739
+type: RSZ, layer: 1, pos: 586
+type: RSZ, layer: 1, pos: 1196
+type: RSZ, layer: 1, pos: 980
+type: RSZ, layer: 1, pos: 1492
+type: RSZ, layer: 1, pos: 1098
+type: RSZ, layer: 1, pos: 1637
+type: RSZ, layer: 1, pos: 615
+type: RSZ, layer: 1, pos: 1516
+type: RSZ, layer: 1, pos: 758
+type: RSZ, layer: 1, pos: 1144
+type: RSZ, layer: 1, pos: 388
+type: RSZ, layer: 1, pos: 1094
+type: RSZ, layer: 1, pos: 218
+type: RSZ, layer: 1, pos: 1508
+type: RSZ, layer: 1, pos: 686
+type: RSZ, layer: 1, pos: 1228
+type: RSZ, layer: 1, pos: 1204
+type: RSZ, layer: 1, pos: 386
+type: RSZ, layer: 1, pos: 729
+type: RSZ, layer: 1, pos: 1114
+type: RSZ, layer: 1, pos: 364
+type: RSZ, layer: 1, pos: 1659
+type: RSZ, layer: 1, pos: 1524
+type: RSZ, layer: 1, pos: 1201
+type: RSZ, layer: 1, pos: 139
+type: RSZ, layer: 1, pos: 1605
+type: RSZ, layer: 1, pos: 687
+type: RSZ, layer: 1, pos: 1525
+type: RSZ, layer: 1, pos: 510
+type: RSZ, layer: 1, pos: 699
+type: RSZ, layer: 1, pos: 730
+type: RSZ, layer: 1, pos: 998
+type: RSZ, layer: 1, pos: 1603
+type: RSZ, layer: 1, pos: 1276
+type: RSZ, layer: 1, pos: 419
+type: RSZ, layer: 1, pos: 1989
+type: RSZ, layer: 1, pos: 1227
+type: RSZ, layer: 1, pos: 2010
+type: RSZ, layer: 1, pos: 489
+type: RSZ, layer: 1, pos: 1109
+type: RSZ, layer: 1, pos: 459
+type: RSZ, layer: 1, pos: 1713
+type: RSZ, layer: 1, pos: 1241
+type: RSZ, layer: 1, pos: 1786
+type: RSZ, layer: 1, pos: 1163
+type: RSZ, layer: 1, pos: 988
+type: RSZ, layer: 1, pos: 588
+type: RSZ, layer: 1, pos: 511
+type: RSZ, layer: 1, pos: 1970
+type: RSZ, layer: 1, pos: 1220
+type: RSZ, layer: 1, pos: 453
+type: RSZ, layer: 1, pos: 1082
+type: RSZ, layer: 1, pos: 1723
+type: RSZ, layer: 1, pos: 1965
+type: RSZ, layer: 1, pos: 1126
+type: RSZ, layer: 1, pos: 1590
+type: RSZ, layer: 1, pos: 742
+type: RSZ, layer: 1, pos: 625
+type: RSZ, layer: 1, pos: 504
+type: RSZ, layer: 1, pos: 1655
+type: RSZ, layer: 1, pos: 70
+type: RSZ, layer: 1, pos: 1705
+type: RSZ, layer: 1, pos: 128
+type: RSZ, layer: 1, pos: 176
+type: RSZ, layer: 1, pos: 137
+type: RSZ, layer: 1, pos: 1647
+type: RSZ, layer: 1, pos: 412
+type: RSZ, layer: 1, pos: 1710
+type: RSZ, layer: 1, pos: 681
+type: RSZ, layer: 1, pos: 704
+type: RSZ, layer: 1, pos: 1507
+type: RSZ, layer: 1, pos: 1192
+type: RSZ, layer: 1, pos: 1782
+type: RSZ, layer: 1, pos: 471
+type: RSZ, layer: 1, pos: 1225
+type: RSZ, layer: 1, pos: 1100
+type: RSZ, layer: 1, pos: 180
+type: RSZ, layer: 1, pos: 393
+type: RSZ, layer: 1, pos: 1197
+type: RSZ, layer: 1, pos: 618
+type: RSZ, layer: 1, pos: 1161
+type: RSZ, layer: 1, pos: 1765
+type: RSZ, layer: 1, pos: 757
+type: RSZ, layer: 1, pos: 1206
+type: RSZ, layer: 1, pos: 692
+type: RSZ, layer: 1, pos: 470
+type: RSZ, layer: 1, pos: 1152
+type: RSZ, layer: 1, pos: 1213
+type: RSZ, layer: 1, pos: 928
+type: RSZ, layer: 1, pos: 488
+type: RSZ, layer: 1, pos: 1224
+type: RSZ, layer: 1, pos: 160
+type: RSZ, layer: 1, pos: 203
+type: RSZ, layer: 1, pos: 1955
+type: RSZ, layer: 1, pos: 1340
+type: RSZ, layer: 1, pos: 1205
+type: RSZ, layer: 1, pos: 987
+type: RSZ, layer: 1, pos: 691
+type: RSZ, layer: 1, pos: 1240
+type: RSZ, layer: 1, pos: 1238
+type: RSZ, layer: 1, pos: 173
+type: RSZ, layer: 1, pos: 460
+type: RSZ, layer: 1, pos: 418
+type: RSZ, layer: 1, pos: 619
+type: RSZ, layer: 1, pos: 714
+type: RSZ, layer: 1, pos: 597
+type: RSZ, layer: 1, pos: 1576
+type: RSZ, layer: 1, pos: 1147
+type: RSZ, layer: 1, pos: 505
+type: RSZ, layer: 1, pos: 1423
+type: RSZ, layer: 1, pos: 1728
+type: RSZ, layer: 1, pos: 1634
+type: RSZ, layer: 1, pos: 1078
+type: RSZ, layer: 1, pos: 326
+type: RSZ, layer: 1, pos: 475
+type: RSZ, layer: 1, pos: 385
+type: RSZ, layer: 1, pos: 1923
+type: RSZ, layer: 1, pos: 1717
+type: RSZ, layer: 1, pos: 1274
+type: RSZ, layer: 1, pos: 566
+type: RSZ, layer: 1, pos: 204
+type: RSZ, layer: 1, pos: 396
+type: RSZ, layer: 1, pos: 1506
+type: RSZ, layer: 1, pos: 1577
+type: RSZ, layer: 1, pos: 188
+type: RSZ, layer: 1, pos: 944
+type: RSZ, layer: 1, pos: 1573
+type: RSZ, layer: 1, pos: 1523
+type: RSZ, layer: 1, pos: 1724
+type: RSZ, layer: 1, pos: 435
+type: RSZ, layer: 1, pos: 1207
+type: RSZ, layer: 1, pos: 1505
+type: RSZ, layer: 1, pos: 676
+type: RSZ, layer: 1, pos: 1185
+type: RSZ, layer: 1, pos: 1208
+type: RSZ, layer: 1, pos: 1714
+type: RSZ, layer: 1, pos: 129
+type: RSZ, layer: 1, pos: 177
+type: RSZ, layer: 1, pos: 454
+type: RSZ, layer: 1, pos: 1711
+type: RSZ, layer: 1, pos: 763
+type: RSZ, layer: 1, pos: 331
+type: RSZ, layer: 1, pos: 445
+type: RSZ, layer: 1, pos: 145
+type: RSZ, layer: 1, pos: 1193
+type: RSZ, layer: 1, pos: 1995
+type: RSZ, layer: 1, pos: 565
+type: RSZ, layer: 1, pos: 685
+type: RSZ, layer: 1, pos: 1198
+type: RSZ, layer: 1, pos: 1093
+type: RSZ, layer: 1, pos: 1574
+type: RSZ, layer: 1, pos: 698
+type: RSZ, layer: 1, pos: 1179
+type: RSZ, layer: 1, pos: 1242
+type: RSZ, layer: 1, pos: 179
+type: RSZ, layer: 1, pos: 1509
+type: RSZ, layer: 1, pos: 569
+type: RSZ, layer: 1, pos: 1738
+type: RSZ, layer: 1, pos: 1521
+type: RSZ, layer: 1, pos: 552
+type: RSZ, layer: 1, pos: 1972
+type: RSZ, layer: 1, pos: 1239
+type: RSZ, layer: 1, pos: 54
+type: RSZ, layer: 1, pos: 436
+type: RSZ, layer: 1, pos: 1393
+type: RSZ, layer: 1, pos: 632
+type: RSZ, layer: 1, pos: 1259
+type: RSZ, layer: 1, pos: 1177
+type: RSZ, layer: 1, pos: 1939
+type: RSZ, layer: 1, pos: 690
+type: RSZ, layer: 1, pos: 178
+type: RSZ, layer: 1, pos: 747
+type: RSZ, layer: 1, pos: 1631
+type: RSZ, layer: 1, pos: 458
+type: RSZ, layer: 1, pos: 673
+type: RSZ, layer: 1, pos: 1210
+type: RSZ, layer: 1, pos: 1322
+type: RSZ, layer: 1, pos: 1226
+type: RSZ, layer: 1, pos: 202
+type: RSZ, layer: 1, pos: 428
+type: RSZ, layer: 1, pos: 1319
+type: RSZ, layer: 1, pos: 960
+type: RSZ, layer: 1, pos: 1737
+type: RSZ, layer: 1, pos: 434
+type: RSZ, layer: 1, pos: 214
+type: RSZ, layer: 1, pos: 728
+type: RSZ, layer: 1, pos: 976
+type: RSZ, layer: 1, pos: 1374
+type: RSZ, layer: 1, pos: 1357
+type: RSZ, layer: 1, pos: 1323
+type: RSZ, layer: 1, pos: 1618
+type: RSZ, layer: 1, pos: 1097
+type: RSZ, layer: 1, pos: 684
+type: RSZ, layer: 1, pos: 1195
+type: RSZ, layer: 1, pos: 181
+type: RSZ, layer: 1, pos: 1281
+type: RSZ, layer: 1, pos: 437
+type: RSZ, layer: 1, pos: 581
+type: RSZ, layer: 1, pos: 161
+type: RSZ, layer: 1, pos: 837
+type: RSZ, layer: 1, pos: 1282
+type: RSZ, layer: 1, pos: 1284
+type: RSZ, layer: 1, pos: 420
+type: RSZ, layer: 1, pos: 1125
+type: RSZ, layer: 1, pos: 472
+type: RSZ, layer: 1, pos: 1750
+type: RSZ, layer: 1, pos: 1283
+type: RSZ, layer: 1, pos: 1933
+type: RSZ, layer: 1, pos: 1202
+type: RSZ, layer: 1, pos: 429
+type: RSZ, layer: 1, pos: 474
+type: RSZ, layer: 1, pos: 57
+type: RSZ, layer: 1, pos: 1131
+type: RSZ, layer: 1, pos: 1143
+type: RSZ, layer: 1, pos: 551
+type: RSZ, layer: 1, pos: 775
+type: RSZ, layer: 1, pos: 69
+type: RSZ, layer: 1, pos: 1971
+type: RSZ, layer: 1, pos: 1318
+type: RSZ, layer: 1, pos: 1289
+type: RSZ, layer: 1, pos: 1290
+type: RSZ, layer: 1, pos: 1081
+type: RSZ, layer: 1, pos: 1292
+type: RSZ, layer: 1, pos: 1288
+type: RSZ, layer: 1, pos: 1287
+type: RSZ, layer: 1, pos: 1291
+type: RSZ, layer: 1, pos: 1293
+type: RSZ, layer: 1, pos: 1294
+type: RSZ, layer: 1, pos: 417
+type: RSZ, layer: 1, pos: 325
+type: RSZ, layer: 1, pos: 473
+type: RSZ, layer: 1, pos: 330
+type: RSZ, layer: 1, pos: 1285
+type: RSZ, layer: 1, pos: 155
+type: RSZ, layer: 1, pos: 1295
+type: RSZ, layer: 1, pos: 1286
+
+Time for candidate selection: 0.12 seconds
+
+### Candidate
+type: RSZ, layer: 1, pos: 661
+
+### Relational analysis RSZ of RS_RSZ1_RSZ2_RSZ1_RSZ2_RSZ1
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ2_RSZ1_RSZ2_RSZ1
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.3974950, upper bound: 111.2365303
+time: 242.72 seconds
+
+### Relational analysis RSZ of RS_RSZ1_RSZ2_RSZ1_RSZ2_RSZ2
+
+#### Relational analysis RSZ result of RS_RSZ1_RSZ2_RSZ1_RSZ2_RSZ2
+Status: Status.UNKNOWN
+Output dim: 9, lower bound: -111.4698874, upper bound: 111.2147829
+time: 190.22 seconds
+
+## Summary of splitting (split count: 4)
+- Time for RS candidates: 435.36 seconds
+RS_RSZ1_RSZ1_RSZ2_RSZ1_RSZ1, status: Status.UNKNOWN, split count: 5, time: 435.36
+Output dim: 9, lower bound: -111.2395758, upper bound: 111.3944354
+RS_RSZ1_RSZ1_RSZ2_RSZ1_RSZ2, status: Status.UNKNOWN, split count: 5, time: 435.36
+Output dim: 9, lower bound: -111.3124758, upper bound: 111.3728699
+RS_RSZ1_RSZ2_RSZ1_RSZ1_RSZ1, status: Status.VERIFIED, split count: 5, time: 435.36
+Output dim: 9, lower bound: -111.3546759, upper bound: 111.2793221
+RS_RSZ1_RSZ2_RSZ1_RSZ1_RSZ2, status: Status.VERIFIED, split count: 5, time: 435.36
+Output dim: 9, lower bound: -111.3298498, upper bound: 111.2575641
+RS_RSZ1_RSZ2_RSZ1_RSZ2_RSZ1, status: Status.UNKNOWN, split count: 5, time: 435.36
+Output dim: 9, lower bound: -111.3974950, upper bound: 111.2365303
+RS_RSZ1_RSZ2_RSZ1_RSZ2_RSZ2, status: Status.UNKNOWN, split count: 5, time: 435.36
+Output dim: 9, lower bound: -111.4698874, upper bound: 111.2147829
+RS_RSZ2_RSZ1_RSZ1_RSZ1, status: Status.UNKNOWN, split count: 4, time: 435.36
+Output dim: 9, lower bound: -111.2631198, upper bound: 111.3964705
+RS_RSZ2_RSZ1_RSZ2_RSZ1, status: Status.UNKNOWN, split count: 4, time: 435.36
+Output dim: 9, lower bound: -111.2458072, upper bound: 111.4713983
+RS_RSZ2_RSZ1_RSZ2_RSZ2, status: Status.UNKNOWN, split count: 4, time: 435.36
+Output dim: 9, lower bound: -111.2458072, upper bound: 111.4285539
+RS_RSZ2_RSZ2_RSZ1_RSZ2, status: Status.UNKNOWN, split count: 4, time: 435.36
+Output dim: 9, lower bound: -111.4036196, upper bound: 111.3139932
+RS_RSZ2_RSZ2_RSZ2_RSZ1, status: Status.UNKNOWN, split count: 4, time: 435.36
+Output dim: 9, lower bound: -111.2855740, upper bound: 111.3741897
+
+## RS Result
+status: Status.UNKNOWN
+execution time: (base) + (rs) = 151.67 + 7056.71 = 7208.38 seconds

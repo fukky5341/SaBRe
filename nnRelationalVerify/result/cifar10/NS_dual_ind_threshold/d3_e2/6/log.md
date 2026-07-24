@@ -1,0 +1,2456 @@
+## Execution arguments:
+Dataset: Dataset.CIFAR10
+Network: onnx/cifar10_conv_exp.onnx
+Relational property: GLOBAL_ROBUSTNESS
+LP Analysis: True
+Epsilon: 0.0234375
+Delta epsilon: 0.01171875
+execution index: (3, 2, 6)
+Time budget: 7200 seconds
+Split limit: 100
+Threshold: 0.32578885785
+
+
+## IAR start
+
+### BASE IAR bounds
+Layer (inp1_lb, inp1_ub, inp2_lb, inp2_ub, d_lb, d_ub)
+0: (-3.0209565, -0.9632084, -3.0209565, -0.9632084, -1.4069926, 1.4069926)
+1: (-3.8853817, -0.9901266, -3.8853817, -0.9901266, -1.9955665, 1.9955665)
+2: (-1.0377467, -0.2949088, -1.0377467, -0.2949088, -0.7428378, 0.7428378)
+3: (-1.3973571, -0.2312617, -1.3973571, -0.2312617, -0.8541119, 0.8541120)
+4: (-0.7051620, 0.3348906, -0.7051620, 0.3348906, -0.7479159, 0.7479158)
+5: (-1.6625407, -0.6227128, -1.6625407, -0.6227128, -0.7824583, 0.7824583)
+6: (-0.1922126, 0.5676912, -0.1922126, 0.5676912, -0.4135126, 0.4135125)
+7: (-2.1631868, -1.0505955, -2.1631868, -1.0505955, -0.8645149, 0.8645149)
+8: (-3.1872282, -0.9482212, -3.1872282, -0.9482212, -1.1990520, 1.1990521)
+9: (-3.9053702, -1.7991552, -3.9053702, -1.7991552, -1.0880301, 1.0880303)
+
+## BASE Relational Analysis
+
+## BASE Result
+execution time: IAR + RelationalAnalysis = 5.43 + 99.45 = 104.88 seconds
+status: Status.UNKNOWN
+relational distance
+Output dim: 0, lower bound: -0.3268303, upper bound: 0.3268329
+
+# Indivdual Split (IS) starts
+
+## BFS IS instance: IS
+
+Time for backsubstitution: 0.00 seconds
+
+### IS candidates at layer 1
+type: A, layer: 1, pos: 2573
+type: A, layer: 1, pos: 2396
+type: A, layer: 1, pos: 2119
+type: A, layer: 1, pos: 2585
+type: A, layer: 1, pos: 3054
+type: A, layer: 1, pos: 2558
+type: A, layer: 1, pos: 2120
+type: A, layer: 1, pos: 2170
+type: A, layer: 1, pos: 3040
+type: A, layer: 1, pos: 3094
+type: A, layer: 1, pos: 2394
+type: A, layer: 1, pos: 3011
+type: A, layer: 1, pos: 2604
+type: A, layer: 1, pos: 2587
+type: A, layer: 1, pos: 2408
+type: A, layer: 1, pos: 2543
+type: A, layer: 1, pos: 2567
+type: A, layer: 1, pos: 431
+type: A, layer: 1, pos: 2588
+type: A, layer: 1, pos: 2614
+type: A, layer: 1, pos: 2133
+type: A, layer: 1, pos: 2132
+type: A, layer: 1, pos: 3087
+type: A, layer: 1, pos: 2397
+type: A, layer: 1, pos: 2582
+type: A, layer: 1, pos: 3058
+type: A, layer: 1, pos: 2104
+type: A, layer: 1, pos: 2629
+type: A, layer: 1, pos: 3004
+type: A, layer: 1, pos: 2105
+type: A, layer: 1, pos: 416
+type: A, layer: 1, pos: 2553
+type: A, layer: 1, pos: 2537
+type: A, layer: 1, pos: 2337
+type: A, layer: 1, pos: 110
+type: A, layer: 1, pos: 2420
+type: A, layer: 1, pos: 776
+type: A, layer: 1, pos: 2825
+type: A, layer: 1, pos: 3130
+type: A, layer: 1, pos: 2383
+type: A, layer: 1, pos: 2552
+type: A, layer: 1, pos: 2128
+type: A, layer: 1, pos: 2838
+type: A, layer: 1, pos: 2652
+type: A, layer: 1, pos: 2644
+type: A, layer: 1, pos: 770
+type: A, layer: 1, pos: 3246
+type: A, layer: 1, pos: 2844
+type: A, layer: 1, pos: 2436
+type: A, layer: 1, pos: 2781
+type: A, layer: 1, pos: 2440
+type: A, layer: 1, pos: 3527
+type: A, layer: 1, pos: 2435
+type: A, layer: 1, pos: 2415
+type: A, layer: 1, pos: 2328
+type: A, layer: 1, pos: 2596
+type: A, layer: 1, pos: 2438
+type: A, layer: 1, pos: 2780
+type: A, layer: 1, pos: 3090
+type: A, layer: 1, pos: 2416
+type: A, layer: 1, pos: 2852
+type: A, layer: 1, pos: 2823
+type: A, layer: 1, pos: 3497
+type: A, layer: 1, pos: 2450
+type: A, layer: 1, pos: 2422
+type: A, layer: 1, pos: 159
+type: A, layer: 1, pos: 2767
+type: A, layer: 1, pos: 2216
+type: A, layer: 1, pos: 2803
+type: A, layer: 1, pos: 2574
+type: A, layer: 1, pos: 403
+type: A, layer: 1, pos: 805
+type: A, layer: 1, pos: 3513
+type: A, layer: 1, pos: 190
+type: A, layer: 1, pos: 2322
+type: A, layer: 1, pos: 3526
+type: A, layer: 1, pos: 2227
+type: A, layer: 1, pos: 2972
+type: A, layer: 1, pos: 2572
+type: A, layer: 1, pos: 846
+type: A, layer: 1, pos: 588
+type: A, layer: 1, pos: 573
+type: A, layer: 1, pos: 3274
+type: A, layer: 1, pos: 2891
+type: A, layer: 1, pos: 2516
+type: A, layer: 1, pos: 2226
+type: A, layer: 1, pos: 2581
+type: A, layer: 1, pos: 2973
+type: A, layer: 1, pos: 2657
+type: A, layer: 1, pos: 587
+type: A, layer: 1, pos: 2765
+type: A, layer: 1, pos: 3001
+type: A, layer: 1, pos: 2766
+type: A, layer: 1, pos: 2991
+type: A, layer: 1, pos: 2782
+type: A, layer: 1, pos: 3275
+type: A, layer: 1, pos: 2822
+type: A, layer: 1, pos: 844
+type: A, layer: 1, pos: 3443
+type: A, layer: 1, pos: 833
+type: A, layer: 1, pos: 2906
+type: A, layer: 1, pos: 2970
+type: A, layer: 1, pos: 3568
+type: A, layer: 1, pos: 2818
+type: A, layer: 1, pos: 3308
+type: A, layer: 1, pos: 341
+type: A, layer: 1, pos: 2821
+type: A, layer: 1, pos: 2672
+type: A, layer: 1, pos: 2986
+type: A, layer: 1, pos: 2747
+type: A, layer: 1, pos: 2851
+type: A, layer: 1, pos: 3543
+type: A, layer: 1, pos: 518
+type: A, layer: 1, pos: 2903
+type: A, layer: 1, pos: 2835
+type: A, layer: 1, pos: 2754
+type: A, layer: 1, pos: 2748
+type: A, layer: 1, pos: 2806
+type: A, layer: 1, pos: 2217
+type: A, layer: 1, pos: 186
+type: A, layer: 1, pos: 845
+type: A, layer: 1, pos: 2820
+type: A, layer: 1, pos: 2990
+type: A, layer: 1, pos: 2836
+type: A, layer: 1, pos: 2850
+type: A, layer: 1, pos: 2773
+type: A, layer: 1, pos: 2522
+type: A, layer: 1, pos: 3552
+type: A, layer: 1, pos: 3294
+type: A, layer: 1, pos: 3544
+type: A, layer: 1, pos: 3247
+type: A, layer: 1, pos: 2753
+type: A, layer: 1, pos: 2775
+type: A, layer: 1, pos: 3270
+type: A, layer: 1, pos: 2524
+type: A, layer: 1, pos: 2308
+type: A, layer: 1, pos: 2733
+type: A, layer: 1, pos: 2776
+type: A, layer: 1, pos: 861
+type: A, layer: 1, pos: 2732
+type: A, layer: 1, pos: 2760
+type: A, layer: 1, pos: 2983
+type: A, layer: 1, pos: 3216
+type: A, layer: 1, pos: 2731
+type: A, layer: 1, pos: 2664
+type: A, layer: 1, pos: 2752
+type: A, layer: 1, pos: 2751
+type: A, layer: 1, pos: 2730
+type: A, layer: 1, pos: 553
+type: A, layer: 1, pos: 2325
+type: A, layer: 1, pos: 2739
+type: A, layer: 1, pos: 620
+type: A, layer: 1, pos: 610
+type: A, layer: 1, pos: 343
+type: A, layer: 1, pos: 3081
+type: A, layer: 1, pos: 2908
+type: A, layer: 1, pos: 2745
+type: A, layer: 1, pos: 2750
+type: A, layer: 1, pos: 3403
+type: A, layer: 1, pos: 2886
+type: A, layer: 1, pos: 3295
+type: A, layer: 1, pos: 2718
+type: A, layer: 1, pos: 2880
+type: A, layer: 1, pos: 2717
+type: A, layer: 1, pos: 2837
+type: A, layer: 1, pos: 838
+type: A, layer: 1, pos: 598
+type: A, layer: 1, pos: 2866
+type: A, layer: 1, pos: 2907
+type: A, layer: 1, pos: 2749
+type: A, layer: 1, pos: 2716
+type: A, layer: 1, pos: 3493
+type: A, layer: 1, pos: 2974
+type: A, layer: 1, pos: 2715
+type: A, layer: 1, pos: 586
+type: A, layer: 1, pos: 2515
+type: A, layer: 1, pos: 2735
+type: A, layer: 1, pos: 2865
+type: A, layer: 1, pos: 3030
+type: A, layer: 1, pos: 619
+type: A, layer: 1, pos: 2902
+type: A, layer: 1, pos: 3285
+type: A, layer: 1, pos: 2734
+type: A, layer: 1, pos: 2502
+type: A, layer: 1, pos: 2736
+type: A, layer: 1, pos: 2737
+type: A, layer: 1, pos: 3484
+type: A, layer: 1, pos: 2761
+type: A, layer: 1, pos: 3342
+type: A, layer: 1, pos: 2738
+type: A, layer: 1, pos: 3223
+type: A, layer: 1, pos: 2895
+type: A, layer: 1, pos: 860
+type: A, layer: 1, pos: 2311
+type: A, layer: 1, pos: 3191
+type: A, layer: 1, pos: 2746
+type: A, layer: 1, pos: 630
+type: A, layer: 1, pos: 3574
+type: A, layer: 1, pos: 853
+type: A, layer: 1, pos: 2881
+type: A, layer: 1, pos: 2942
+type: A, layer: 1, pos: 532
+type: A, layer: 1, pos: 490
+type: A, layer: 1, pos: 2949
+type: A, layer: 1, pos: 3570
+type: A, layer: 1, pos: 2514
+type: A, layer: 1, pos: 3577
+type: A, layer: 1, pos: 2700
+type: A, layer: 1, pos: 3225
+type: A, layer: 1, pos: 504
+type: A, layer: 1, pos: 2701
+type: A, layer: 1, pos: 2476
+type: A, layer: 1, pos: 2702
+type: A, layer: 1, pos: 616
+type: A, layer: 1, pos: 2992
+type: A, layer: 1, pos: 3321
+type: A, layer: 1, pos: 3350
+type: A, layer: 1, pos: 463
+type: A, layer: 1, pos: 574
+type: A, layer: 1, pos: 834
+type: A, layer: 1, pos: 2488
+type: A, layer: 1, pos: 2503
+type: A, layer: 1, pos: 2742
+type: A, layer: 1, pos: 2560
+type: A, layer: 1, pos: 631
+type: A, layer: 1, pos: 2950
+type: A, layer: 1, pos: 2719
+type: A, layer: 1, pos: 2928
+type: A, layer: 1, pos: 2720
+type: A, layer: 1, pos: 2721
+type: A, layer: 1, pos: 2703
+type: A, layer: 1, pos: 2722
+type: A, layer: 1, pos: 2941
+type: A, layer: 1, pos: 649
+type: A, layer: 1, pos: 2706
+type: A, layer: 1, pos: 2708
+type: A, layer: 1, pos: 2501
+type: A, layer: 1, pos: 2709
+type: A, layer: 1, pos: 2707
+type: A, layer: 1, pos: 2723
+type: A, layer: 1, pos: 2705
+type: A, layer: 1, pos: 3525
+type: A, layer: 1, pos: 585
+type: A, layer: 1, pos: 3354
+type: A, layer: 1, pos: 2725
+type: A, layer: 1, pos: 2710
+type: A, layer: 1, pos: 2711
+type: A, layer: 1, pos: 2704
+type: A, layer: 1, pos: 615
+type: A, layer: 1, pos: 3538
+type: A, layer: 1, pos: 2485
+type: A, layer: 1, pos: 2494
+type: A, layer: 1, pos: 3178
+type: A, layer: 1, pos: 2500
+type: A, layer: 1, pos: 3177
+type: A, layer: 1, pos: 652
+type: A, layer: 1, pos: 653
+type: A, layer: 1, pos: 2712
+type: A, layer: 1, pos: 654
+type: A, layer: 1, pos: 2724
+type: A, layer: 1, pos: 374
+type: A, layer: 1, pos: 389
+type: A, layer: 1, pos: 599
+type: A, layer: 1, pos: 614
+type: A, layer: 1, pos: 629
+type: A, layer: 1, pos: 660
+type: A, layer: 1, pos: 661
+type: A, layer: 1, pos: 886
+type: A, layer: 1, pos: 889
+type: A, layer: 1, pos: 2369
+type: A, layer: 1, pos: 2460
+type: A, layer: 1, pos: 2464
+type: A, layer: 1, pos: 2534
+type: A, layer: 1, pos: 2564
+type: A, layer: 1, pos: 2698
+type: A, layer: 1, pos: 2789
+type: A, layer: 1, pos: 2804
+type: A, layer: 1, pos: 2819
+type: A, layer: 1, pos: 2864
+type: A, layer: 1, pos: 2879
+type: A, layer: 1, pos: 2894
+type: A, layer: 1, pos: 2909
+type: A, layer: 1, pos: 2914
+type: A, layer: 1, pos: 2917
+type: A, layer: 1, pos: 2918
+type: A, layer: 1, pos: 2919
+type: A, layer: 1, pos: 2920
+type: A, layer: 1, pos: 2921
+type: A, layer: 1, pos: 2922
+type: A, layer: 1, pos: 2923
+type: A, layer: 1, pos: 2924
+type: A, layer: 1, pos: 2969
+type: A, layer: 1, pos: 3059
+type: A, layer: 1, pos: 3089
+type: A, layer: 1, pos: 3134
+type: A, layer: 1, pos: 3135
+type: A, layer: 1, pos: 3164
+type: A, layer: 1, pos: 3254
+type: A, layer: 1, pos: 3299
+type: A, layer: 1, pos: 3314
+type: A, layer: 1, pos: 3404
+type: A, layer: 1, pos: 3539
+type: A, layer: 1, pos: 3569
+type: A, layer: 1, pos: 3595
+type: A, layer: 1, pos: 3597
+
+Time for candidate selection: 0.10 seconds
+
+### Candidate
+type: A, layer: 1, pos: 2573
+
+## Relational analysis of IS_A1
+
+### Relational analysis result of IS_A1
+Status: Status.UNKNOWN
+Output dim: 0, lower bound: -0.3256363, upper bound: 0.3264542
+time: 40.51 seconds
+
+## Relational analysis of IS_A2
+
+### Relational analysis result of IS_A2
+Status: Status.UNKNOWN
+Output dim: 0, lower bound: -0.3264503, upper bound: 0.3264580
+time: 38.65 seconds
+
+## Summary of splitting at layer (split count: 0)
+- Time for IS candidates: 79.28 seconds
+IS_A1, status: Status.UNKNOWN, split count: 1, time: 79.28
+Output dim: 0, lower bound: -0.3256363, upper bound: 0.3264542
+IS_A2, status: Status.UNKNOWN, split count: 1, time: 79.28
+Output dim: 0, lower bound: -0.3264503, upper bound: 0.3264580
+
+## BFS IS instance: IS_A1
+
+### Backsubstitution after applying IS history:
+0: -3.0143929, -0.9632101, -3.0154839, -0.9632101, -1.3978963, 1.3994881
+1: -3.8744745, -0.9901648, -3.8763299, -0.9901576, -1.9825352, 1.9848996
+2: -1.0373411, -0.2949173, -1.0374144, -0.2949154, -0.7424257, 0.7424972
+3: -1.3971533, -0.2336912, -1.3971910, -0.2332438, -0.8513927, 0.8507795
+4: -0.7050670, 0.3340864, -0.7050853, 0.3342376, -0.7468157, 0.7466209
+5: -1.6623374, -0.6251820, -1.6623752, -0.6247330, -0.7795893, 0.7789245
+6: -0.1921800, 0.5664529, -0.1921865, 0.5666820, -0.4121676, 0.4118717
+7: -2.1630545, -1.0506001, -2.1630790, -1.0505991, -0.8643839, 0.8643938
+8: -3.1844041, -0.9482746, -3.1849225, -0.9482651, -1.1942604, 1.1950589
+9: -3.9030104, -1.7991552, -3.9034247, -1.7991557, -1.0846999, 1.0853374
+
+Time for backsubstitution: 4.38 seconds
+
+### IS candidates at layer 1
+type: B, layer: 1, pos: 2396
+type: B, layer: 1, pos: 2119
+type: B, layer: 1, pos: 2585
+type: B, layer: 1, pos: 3054
+type: B, layer: 1, pos: 2558
+type: B, layer: 1, pos: 2120
+type: B, layer: 1, pos: 2170
+type: B, layer: 1, pos: 3040
+type: B, layer: 1, pos: 3094
+type: B, layer: 1, pos: 2394
+type: B, layer: 1, pos: 3011
+type: B, layer: 1, pos: 2604
+type: B, layer: 1, pos: 2587
+type: B, layer: 1, pos: 2408
+type: B, layer: 1, pos: 2543
+type: B, layer: 1, pos: 2567
+type: B, layer: 1, pos: 431
+type: B, layer: 1, pos: 2588
+type: B, layer: 1, pos: 2614
+type: B, layer: 1, pos: 2133
+type: B, layer: 1, pos: 2132
+type: B, layer: 1, pos: 3087
+type: B, layer: 1, pos: 2397
+type: B, layer: 1, pos: 2582
+type: B, layer: 1, pos: 3058
+type: B, layer: 1, pos: 2104
+type: B, layer: 1, pos: 2629
+type: B, layer: 1, pos: 3004
+type: B, layer: 1, pos: 2105
+type: B, layer: 1, pos: 416
+type: B, layer: 1, pos: 2553
+type: B, layer: 1, pos: 2537
+type: B, layer: 1, pos: 2337
+type: B, layer: 1, pos: 110
+type: B, layer: 1, pos: 2420
+type: B, layer: 1, pos: 776
+type: B, layer: 1, pos: 2825
+type: B, layer: 1, pos: 3130
+type: B, layer: 1, pos: 2383
+type: B, layer: 1, pos: 2552
+type: B, layer: 1, pos: 2128
+type: B, layer: 1, pos: 2838
+type: B, layer: 1, pos: 2652
+type: B, layer: 1, pos: 2644
+type: B, layer: 1, pos: 2573
+type: B, layer: 1, pos: 770
+type: B, layer: 1, pos: 3246
+type: B, layer: 1, pos: 2844
+type: B, layer: 1, pos: 2436
+type: B, layer: 1, pos: 2781
+type: B, layer: 1, pos: 2440
+type: B, layer: 1, pos: 3527
+type: B, layer: 1, pos: 2435
+type: B, layer: 1, pos: 2415
+type: B, layer: 1, pos: 2328
+type: B, layer: 1, pos: 2596
+type: B, layer: 1, pos: 2438
+type: B, layer: 1, pos: 2780
+type: B, layer: 1, pos: 3090
+type: B, layer: 1, pos: 2416
+type: B, layer: 1, pos: 2852
+type: B, layer: 1, pos: 2823
+type: B, layer: 1, pos: 3497
+type: B, layer: 1, pos: 2450
+type: B, layer: 1, pos: 2422
+type: B, layer: 1, pos: 159
+type: B, layer: 1, pos: 2767
+type: B, layer: 1, pos: 2216
+type: B, layer: 1, pos: 2803
+type: B, layer: 1, pos: 2574
+type: B, layer: 1, pos: 403
+type: B, layer: 1, pos: 805
+type: B, layer: 1, pos: 3513
+type: B, layer: 1, pos: 190
+type: B, layer: 1, pos: 2322
+type: B, layer: 1, pos: 3526
+type: B, layer: 1, pos: 2227
+type: B, layer: 1, pos: 2972
+type: B, layer: 1, pos: 2572
+type: B, layer: 1, pos: 846
+type: B, layer: 1, pos: 588
+type: B, layer: 1, pos: 573
+type: B, layer: 1, pos: 3274
+type: B, layer: 1, pos: 2891
+type: B, layer: 1, pos: 2516
+type: B, layer: 1, pos: 2226
+type: B, layer: 1, pos: 2581
+type: B, layer: 1, pos: 2973
+type: B, layer: 1, pos: 2657
+type: B, layer: 1, pos: 587
+type: B, layer: 1, pos: 2765
+type: B, layer: 1, pos: 3001
+type: B, layer: 1, pos: 2766
+type: B, layer: 1, pos: 2991
+type: B, layer: 1, pos: 2782
+type: B, layer: 1, pos: 3275
+type: B, layer: 1, pos: 2822
+type: B, layer: 1, pos: 844
+type: B, layer: 1, pos: 3443
+type: B, layer: 1, pos: 833
+type: B, layer: 1, pos: 2906
+type: B, layer: 1, pos: 2970
+type: B, layer: 1, pos: 3568
+type: B, layer: 1, pos: 2818
+type: B, layer: 1, pos: 3308
+type: B, layer: 1, pos: 341
+type: B, layer: 1, pos: 2821
+type: B, layer: 1, pos: 2672
+type: B, layer: 1, pos: 2986
+type: B, layer: 1, pos: 2747
+type: B, layer: 1, pos: 2851
+type: B, layer: 1, pos: 3543
+type: B, layer: 1, pos: 518
+type: B, layer: 1, pos: 2903
+type: B, layer: 1, pos: 2835
+type: B, layer: 1, pos: 2754
+type: B, layer: 1, pos: 2748
+type: B, layer: 1, pos: 2806
+type: B, layer: 1, pos: 2217
+type: B, layer: 1, pos: 186
+type: B, layer: 1, pos: 845
+type: B, layer: 1, pos: 2820
+type: B, layer: 1, pos: 2990
+type: B, layer: 1, pos: 2836
+type: B, layer: 1, pos: 2850
+type: B, layer: 1, pos: 2773
+type: B, layer: 1, pos: 2522
+type: B, layer: 1, pos: 3552
+type: B, layer: 1, pos: 3294
+type: B, layer: 1, pos: 3544
+type: B, layer: 1, pos: 3247
+type: B, layer: 1, pos: 2753
+type: B, layer: 1, pos: 2775
+type: B, layer: 1, pos: 3270
+type: B, layer: 1, pos: 2524
+type: B, layer: 1, pos: 2308
+type: B, layer: 1, pos: 2733
+type: B, layer: 1, pos: 2776
+type: B, layer: 1, pos: 861
+type: B, layer: 1, pos: 2732
+type: B, layer: 1, pos: 2760
+type: B, layer: 1, pos: 2983
+type: B, layer: 1, pos: 3216
+type: B, layer: 1, pos: 2731
+type: B, layer: 1, pos: 2664
+type: B, layer: 1, pos: 2752
+type: B, layer: 1, pos: 2751
+type: B, layer: 1, pos: 2730
+type: B, layer: 1, pos: 553
+type: B, layer: 1, pos: 2325
+type: B, layer: 1, pos: 2739
+type: B, layer: 1, pos: 620
+type: B, layer: 1, pos: 610
+type: B, layer: 1, pos: 343
+type: B, layer: 1, pos: 3081
+type: B, layer: 1, pos: 2908
+type: B, layer: 1, pos: 2745
+type: B, layer: 1, pos: 2750
+type: B, layer: 1, pos: 3403
+type: B, layer: 1, pos: 2886
+type: B, layer: 1, pos: 3295
+type: B, layer: 1, pos: 2718
+type: B, layer: 1, pos: 2880
+type: B, layer: 1, pos: 2717
+type: B, layer: 1, pos: 2837
+type: B, layer: 1, pos: 838
+type: B, layer: 1, pos: 598
+type: B, layer: 1, pos: 2866
+type: B, layer: 1, pos: 2907
+type: B, layer: 1, pos: 2749
+type: B, layer: 1, pos: 2716
+type: B, layer: 1, pos: 3493
+type: B, layer: 1, pos: 2974
+type: B, layer: 1, pos: 2715
+type: B, layer: 1, pos: 586
+type: B, layer: 1, pos: 2515
+type: B, layer: 1, pos: 2735
+type: B, layer: 1, pos: 2865
+type: B, layer: 1, pos: 3030
+type: B, layer: 1, pos: 619
+type: B, layer: 1, pos: 2902
+type: B, layer: 1, pos: 3285
+type: B, layer: 1, pos: 2734
+type: B, layer: 1, pos: 2502
+type: B, layer: 1, pos: 2736
+type: B, layer: 1, pos: 2737
+type: B, layer: 1, pos: 3484
+type: B, layer: 1, pos: 2761
+type: B, layer: 1, pos: 3342
+type: B, layer: 1, pos: 2738
+type: B, layer: 1, pos: 3223
+type: B, layer: 1, pos: 2895
+type: B, layer: 1, pos: 860
+type: B, layer: 1, pos: 2311
+type: B, layer: 1, pos: 3191
+type: B, layer: 1, pos: 2746
+type: B, layer: 1, pos: 630
+type: B, layer: 1, pos: 3574
+type: B, layer: 1, pos: 853
+type: B, layer: 1, pos: 2881
+type: B, layer: 1, pos: 2942
+type: B, layer: 1, pos: 532
+type: B, layer: 1, pos: 490
+type: B, layer: 1, pos: 2949
+type: B, layer: 1, pos: 3570
+type: B, layer: 1, pos: 2514
+type: B, layer: 1, pos: 3577
+type: B, layer: 1, pos: 2700
+type: B, layer: 1, pos: 3225
+type: B, layer: 1, pos: 504
+type: B, layer: 1, pos: 2701
+type: B, layer: 1, pos: 2476
+type: B, layer: 1, pos: 2702
+type: B, layer: 1, pos: 616
+type: B, layer: 1, pos: 2992
+type: B, layer: 1, pos: 3321
+type: B, layer: 1, pos: 3350
+type: B, layer: 1, pos: 463
+type: B, layer: 1, pos: 574
+type: B, layer: 1, pos: 834
+type: B, layer: 1, pos: 2488
+type: B, layer: 1, pos: 2503
+type: B, layer: 1, pos: 2742
+type: B, layer: 1, pos: 2560
+type: B, layer: 1, pos: 631
+type: B, layer: 1, pos: 2950
+type: B, layer: 1, pos: 2719
+type: B, layer: 1, pos: 2928
+type: B, layer: 1, pos: 2720
+type: B, layer: 1, pos: 2721
+type: B, layer: 1, pos: 2703
+type: B, layer: 1, pos: 2722
+type: B, layer: 1, pos: 2941
+type: B, layer: 1, pos: 649
+type: B, layer: 1, pos: 2706
+type: B, layer: 1, pos: 2708
+type: B, layer: 1, pos: 2501
+type: B, layer: 1, pos: 2709
+type: B, layer: 1, pos: 2707
+type: B, layer: 1, pos: 2723
+type: B, layer: 1, pos: 2705
+type: B, layer: 1, pos: 3525
+type: B, layer: 1, pos: 585
+type: B, layer: 1, pos: 3354
+type: B, layer: 1, pos: 2725
+type: B, layer: 1, pos: 2710
+type: B, layer: 1, pos: 2711
+type: B, layer: 1, pos: 2704
+type: B, layer: 1, pos: 615
+type: B, layer: 1, pos: 3538
+type: B, layer: 1, pos: 2485
+type: B, layer: 1, pos: 2494
+type: B, layer: 1, pos: 3178
+type: B, layer: 1, pos: 2500
+type: B, layer: 1, pos: 3177
+type: B, layer: 1, pos: 652
+type: B, layer: 1, pos: 653
+type: B, layer: 1, pos: 2712
+type: B, layer: 1, pos: 654
+type: B, layer: 1, pos: 2724
+type: B, layer: 1, pos: 374
+type: B, layer: 1, pos: 389
+type: B, layer: 1, pos: 599
+type: B, layer: 1, pos: 614
+type: B, layer: 1, pos: 629
+type: B, layer: 1, pos: 660
+type: B, layer: 1, pos: 661
+type: B, layer: 1, pos: 886
+type: B, layer: 1, pos: 889
+type: B, layer: 1, pos: 2369
+type: B, layer: 1, pos: 2460
+type: B, layer: 1, pos: 2464
+type: B, layer: 1, pos: 2534
+type: B, layer: 1, pos: 2564
+type: B, layer: 1, pos: 2698
+type: B, layer: 1, pos: 2789
+type: B, layer: 1, pos: 2804
+type: B, layer: 1, pos: 2819
+type: B, layer: 1, pos: 2864
+type: B, layer: 1, pos: 2879
+type: B, layer: 1, pos: 2894
+type: B, layer: 1, pos: 2909
+type: B, layer: 1, pos: 2914
+type: B, layer: 1, pos: 2917
+type: B, layer: 1, pos: 2918
+type: B, layer: 1, pos: 2919
+type: B, layer: 1, pos: 2920
+type: B, layer: 1, pos: 2921
+type: B, layer: 1, pos: 2922
+type: B, layer: 1, pos: 2923
+type: B, layer: 1, pos: 2924
+type: B, layer: 1, pos: 2969
+type: B, layer: 1, pos: 3059
+type: B, layer: 1, pos: 3089
+type: B, layer: 1, pos: 3134
+type: B, layer: 1, pos: 3135
+type: B, layer: 1, pos: 3164
+type: B, layer: 1, pos: 3254
+type: B, layer: 1, pos: 3299
+type: B, layer: 1, pos: 3314
+type: B, layer: 1, pos: 3404
+type: B, layer: 1, pos: 3539
+type: B, layer: 1, pos: 3569
+type: B, layer: 1, pos: 3595
+type: B, layer: 1, pos: 3597
+
+Time for candidate selection: 0.10 seconds
+
+### Candidate
+type: B, layer: 1, pos: 2396
+
+## Relational analysis of IS_A1_B1
+
+### Relational analysis result of IS_A1_B1
+Status: Status.UNKNOWN
+Output dim: 0, lower bound: -0.3245847, upper bound: 0.3259151
+time: 92.82 seconds
+
+## Relational analysis of IS_A1_B2
+
+### Relational analysis result of IS_A1_B2
+Status: Status.UNKNOWN
+Output dim: 0, lower bound: -0.3251388, upper bound: 0.3259539
+time: 169.02 seconds
+
+## BFS IS instance: IS_A2
+
+### Backsubstitution after applying IS history:
+0: -3.0150547, -0.9552898, -3.0158505, -0.9632092, -1.3986001, 1.4196951
+1: -3.8776987, -0.9768434, -3.8788328, -0.9901533, -1.9851003, 2.0094857
+2: -1.0375533, -0.2946483, -1.0373875, -0.2949163, -0.7426370, 0.7427392
+3: -1.4026093, -0.2332400, -1.3971987, -0.2329723, -0.8608671, 0.8512001
+4: -0.7070016, 0.3343557, -0.7050660, 0.3344432, -0.7501683, 0.7468625
+5: -1.6673591, -0.6252558, -1.6623867, -0.6249019, -0.7893770, 0.7792996
+6: -0.1937604, 0.5662091, -0.1921921, 0.5663810, -0.4156646, 0.4119858
+7: -2.1654055, -1.0503364, -2.1630678, -1.0505980, -0.8667195, 0.8646911
+8: -3.1842294, -0.9452019, -3.1847451, -0.9482594, -1.1945156, 1.2052332
+9: -3.9035678, -1.7964458, -3.9038544, -1.7991557, -1.0849526, 1.0929904
+
+Time for backsubstitution: 4.43 seconds
+
+### IS candidates at layer 1
+type: B, layer: 1, pos: 2396
+type: B, layer: 1, pos: 2119
+type: B, layer: 1, pos: 2585
+type: B, layer: 1, pos: 3054
+type: B, layer: 1, pos: 2558
+type: B, layer: 1, pos: 2120
+type: B, layer: 1, pos: 2170
+type: B, layer: 1, pos: 3040
+type: B, layer: 1, pos: 3094
+type: B, layer: 1, pos: 2394
+type: B, layer: 1, pos: 3011
+type: B, layer: 1, pos: 2604
+type: B, layer: 1, pos: 2587
+type: B, layer: 1, pos: 2408
+type: B, layer: 1, pos: 2543
+type: B, layer: 1, pos: 2567
+type: B, layer: 1, pos: 431
+type: B, layer: 1, pos: 2588
+type: B, layer: 1, pos: 2614
+type: B, layer: 1, pos: 2133
+type: B, layer: 1, pos: 2132
+type: B, layer: 1, pos: 3087
+type: B, layer: 1, pos: 2397
+type: B, layer: 1, pos: 2582
+type: B, layer: 1, pos: 3058
+type: B, layer: 1, pos: 2104
+type: B, layer: 1, pos: 2629
+type: B, layer: 1, pos: 3004
+type: B, layer: 1, pos: 2105
+type: B, layer: 1, pos: 416
+type: B, layer: 1, pos: 2553
+type: B, layer: 1, pos: 2537
+type: B, layer: 1, pos: 2337
+type: B, layer: 1, pos: 110
+type: B, layer: 1, pos: 2420
+type: B, layer: 1, pos: 776
+type: B, layer: 1, pos: 2825
+type: B, layer: 1, pos: 3130
+type: B, layer: 1, pos: 2383
+type: B, layer: 1, pos: 2552
+type: B, layer: 1, pos: 2128
+type: B, layer: 1, pos: 2838
+type: B, layer: 1, pos: 2652
+type: B, layer: 1, pos: 2644
+type: B, layer: 1, pos: 770
+type: B, layer: 1, pos: 3246
+type: B, layer: 1, pos: 2844
+type: B, layer: 1, pos: 2573
+type: B, layer: 1, pos: 2436
+type: B, layer: 1, pos: 2781
+type: B, layer: 1, pos: 2440
+type: B, layer: 1, pos: 3527
+type: B, layer: 1, pos: 2435
+type: B, layer: 1, pos: 2415
+type: B, layer: 1, pos: 2328
+type: B, layer: 1, pos: 2596
+type: B, layer: 1, pos: 2438
+type: B, layer: 1, pos: 2780
+type: B, layer: 1, pos: 3090
+type: B, layer: 1, pos: 2416
+type: B, layer: 1, pos: 2852
+type: B, layer: 1, pos: 2823
+type: B, layer: 1, pos: 3497
+type: B, layer: 1, pos: 2450
+type: B, layer: 1, pos: 2422
+type: B, layer: 1, pos: 159
+type: B, layer: 1, pos: 2767
+type: B, layer: 1, pos: 2216
+type: B, layer: 1, pos: 2803
+type: B, layer: 1, pos: 2574
+type: B, layer: 1, pos: 403
+type: B, layer: 1, pos: 805
+type: B, layer: 1, pos: 3513
+type: B, layer: 1, pos: 190
+type: B, layer: 1, pos: 2322
+type: B, layer: 1, pos: 3526
+type: B, layer: 1, pos: 2227
+type: B, layer: 1, pos: 2972
+type: B, layer: 1, pos: 2572
+type: B, layer: 1, pos: 846
+type: B, layer: 1, pos: 588
+type: B, layer: 1, pos: 573
+type: B, layer: 1, pos: 3274
+type: B, layer: 1, pos: 2891
+type: B, layer: 1, pos: 2516
+type: B, layer: 1, pos: 2226
+type: B, layer: 1, pos: 2581
+type: B, layer: 1, pos: 2973
+type: B, layer: 1, pos: 2657
+type: B, layer: 1, pos: 587
+type: B, layer: 1, pos: 2765
+type: B, layer: 1, pos: 3001
+type: B, layer: 1, pos: 2766
+type: B, layer: 1, pos: 2991
+type: B, layer: 1, pos: 2782
+type: B, layer: 1, pos: 3275
+type: B, layer: 1, pos: 2822
+type: B, layer: 1, pos: 844
+type: B, layer: 1, pos: 3443
+type: B, layer: 1, pos: 833
+type: B, layer: 1, pos: 2906
+type: B, layer: 1, pos: 2970
+type: B, layer: 1, pos: 3568
+type: B, layer: 1, pos: 2818
+type: B, layer: 1, pos: 3308
+type: B, layer: 1, pos: 341
+type: B, layer: 1, pos: 2821
+type: B, layer: 1, pos: 2672
+type: B, layer: 1, pos: 2986
+type: B, layer: 1, pos: 2747
+type: B, layer: 1, pos: 2851
+type: B, layer: 1, pos: 3543
+type: B, layer: 1, pos: 518
+type: B, layer: 1, pos: 2903
+type: B, layer: 1, pos: 2835
+type: B, layer: 1, pos: 2754
+type: B, layer: 1, pos: 2748
+type: B, layer: 1, pos: 2806
+type: B, layer: 1, pos: 2217
+type: B, layer: 1, pos: 186
+type: B, layer: 1, pos: 845
+type: B, layer: 1, pos: 2820
+type: B, layer: 1, pos: 2990
+type: B, layer: 1, pos: 2836
+type: B, layer: 1, pos: 2850
+type: B, layer: 1, pos: 2773
+type: B, layer: 1, pos: 2522
+type: B, layer: 1, pos: 3552
+type: B, layer: 1, pos: 3294
+type: B, layer: 1, pos: 3544
+type: B, layer: 1, pos: 3247
+type: B, layer: 1, pos: 2753
+type: B, layer: 1, pos: 2775
+type: B, layer: 1, pos: 3270
+type: B, layer: 1, pos: 2524
+type: B, layer: 1, pos: 2308
+type: B, layer: 1, pos: 2733
+type: B, layer: 1, pos: 2776
+type: B, layer: 1, pos: 861
+type: B, layer: 1, pos: 2732
+type: B, layer: 1, pos: 2760
+type: B, layer: 1, pos: 2983
+type: B, layer: 1, pos: 3216
+type: B, layer: 1, pos: 2731
+type: B, layer: 1, pos: 2664
+type: B, layer: 1, pos: 2752
+type: B, layer: 1, pos: 2751
+type: B, layer: 1, pos: 2730
+type: B, layer: 1, pos: 553
+type: B, layer: 1, pos: 2325
+type: B, layer: 1, pos: 2739
+type: B, layer: 1, pos: 620
+type: B, layer: 1, pos: 610
+type: B, layer: 1, pos: 343
+type: B, layer: 1, pos: 3081
+type: B, layer: 1, pos: 2908
+type: B, layer: 1, pos: 2745
+type: B, layer: 1, pos: 2750
+type: B, layer: 1, pos: 3403
+type: B, layer: 1, pos: 2886
+type: B, layer: 1, pos: 3295
+type: B, layer: 1, pos: 2718
+type: B, layer: 1, pos: 2880
+type: B, layer: 1, pos: 2717
+type: B, layer: 1, pos: 2837
+type: B, layer: 1, pos: 838
+type: B, layer: 1, pos: 598
+type: B, layer: 1, pos: 2866
+type: B, layer: 1, pos: 2907
+type: B, layer: 1, pos: 2749
+type: B, layer: 1, pos: 2716
+type: B, layer: 1, pos: 3493
+type: B, layer: 1, pos: 2974
+type: B, layer: 1, pos: 2715
+type: B, layer: 1, pos: 586
+type: B, layer: 1, pos: 2515
+type: B, layer: 1, pos: 2735
+type: B, layer: 1, pos: 2865
+type: B, layer: 1, pos: 3030
+type: B, layer: 1, pos: 619
+type: B, layer: 1, pos: 2902
+type: B, layer: 1, pos: 3285
+type: B, layer: 1, pos: 2734
+type: B, layer: 1, pos: 2502
+type: B, layer: 1, pos: 2736
+type: B, layer: 1, pos: 2737
+type: B, layer: 1, pos: 3484
+type: B, layer: 1, pos: 2761
+type: B, layer: 1, pos: 3342
+type: B, layer: 1, pos: 2738
+type: B, layer: 1, pos: 3223
+type: B, layer: 1, pos: 2895
+type: B, layer: 1, pos: 860
+type: B, layer: 1, pos: 2311
+type: B, layer: 1, pos: 3191
+type: B, layer: 1, pos: 2746
+type: B, layer: 1, pos: 630
+type: B, layer: 1, pos: 3574
+type: B, layer: 1, pos: 853
+type: B, layer: 1, pos: 2881
+type: B, layer: 1, pos: 2942
+type: B, layer: 1, pos: 532
+type: B, layer: 1, pos: 490
+type: B, layer: 1, pos: 2949
+type: B, layer: 1, pos: 3570
+type: B, layer: 1, pos: 2514
+type: B, layer: 1, pos: 3577
+type: B, layer: 1, pos: 2700
+type: B, layer: 1, pos: 3225
+type: B, layer: 1, pos: 504
+type: B, layer: 1, pos: 2701
+type: B, layer: 1, pos: 2476
+type: B, layer: 1, pos: 2702
+type: B, layer: 1, pos: 616
+type: B, layer: 1, pos: 2992
+type: B, layer: 1, pos: 3321
+type: B, layer: 1, pos: 3350
+type: B, layer: 1, pos: 463
+type: B, layer: 1, pos: 574
+type: B, layer: 1, pos: 834
+type: B, layer: 1, pos: 2488
+type: B, layer: 1, pos: 2503
+type: B, layer: 1, pos: 2742
+type: B, layer: 1, pos: 631
+type: B, layer: 1, pos: 2560
+type: B, layer: 1, pos: 2950
+type: B, layer: 1, pos: 2719
+type: B, layer: 1, pos: 2928
+type: B, layer: 1, pos: 2720
+type: B, layer: 1, pos: 2721
+type: B, layer: 1, pos: 2703
+type: B, layer: 1, pos: 2722
+type: B, layer: 1, pos: 2941
+type: B, layer: 1, pos: 649
+type: B, layer: 1, pos: 2706
+type: B, layer: 1, pos: 2708
+type: B, layer: 1, pos: 2501
+type: B, layer: 1, pos: 2709
+type: B, layer: 1, pos: 2707
+type: B, layer: 1, pos: 2723
+type: B, layer: 1, pos: 2705
+type: B, layer: 1, pos: 3525
+type: B, layer: 1, pos: 585
+type: B, layer: 1, pos: 3354
+type: B, layer: 1, pos: 2725
+type: B, layer: 1, pos: 2710
+type: B, layer: 1, pos: 2711
+type: B, layer: 1, pos: 2704
+type: B, layer: 1, pos: 615
+type: B, layer: 1, pos: 3538
+type: B, layer: 1, pos: 2485
+type: B, layer: 1, pos: 2494
+type: B, layer: 1, pos: 3178
+type: B, layer: 1, pos: 2500
+type: B, layer: 1, pos: 3177
+type: B, layer: 1, pos: 652
+type: B, layer: 1, pos: 653
+type: B, layer: 1, pos: 2712
+type: B, layer: 1, pos: 654
+type: B, layer: 1, pos: 2724
+type: B, layer: 1, pos: 374
+type: B, layer: 1, pos: 389
+type: B, layer: 1, pos: 599
+type: B, layer: 1, pos: 614
+type: B, layer: 1, pos: 629
+type: B, layer: 1, pos: 660
+type: B, layer: 1, pos: 661
+type: B, layer: 1, pos: 886
+type: B, layer: 1, pos: 889
+type: B, layer: 1, pos: 2369
+type: B, layer: 1, pos: 2460
+type: B, layer: 1, pos: 2464
+type: B, layer: 1, pos: 2534
+type: B, layer: 1, pos: 2564
+type: B, layer: 1, pos: 2698
+type: B, layer: 1, pos: 2789
+type: B, layer: 1, pos: 2804
+type: B, layer: 1, pos: 2819
+type: B, layer: 1, pos: 2864
+type: B, layer: 1, pos: 2879
+type: B, layer: 1, pos: 2894
+type: B, layer: 1, pos: 2909
+type: B, layer: 1, pos: 2914
+type: B, layer: 1, pos: 2917
+type: B, layer: 1, pos: 2918
+type: B, layer: 1, pos: 2919
+type: B, layer: 1, pos: 2920
+type: B, layer: 1, pos: 2921
+type: B, layer: 1, pos: 2922
+type: B, layer: 1, pos: 2923
+type: B, layer: 1, pos: 2924
+type: B, layer: 1, pos: 2969
+type: B, layer: 1, pos: 3059
+type: B, layer: 1, pos: 3089
+type: B, layer: 1, pos: 3134
+type: B, layer: 1, pos: 3135
+type: B, layer: 1, pos: 3164
+type: B, layer: 1, pos: 3254
+type: B, layer: 1, pos: 3299
+type: B, layer: 1, pos: 3314
+type: B, layer: 1, pos: 3404
+type: B, layer: 1, pos: 3539
+type: B, layer: 1, pos: 3569
+type: B, layer: 1, pos: 3595
+type: B, layer: 1, pos: 3597
+
+Time for candidate selection: 0.10 seconds
+
+### Candidate
+type: B, layer: 1, pos: 2396
+
+## Relational analysis of IS_A2_B1
+
+### Relational analysis result of IS_A2_B1
+Status: Status.UNKNOWN
+Output dim: 0, lower bound: -0.3254009, upper bound: 0.3259145
+time: 35.54 seconds
+
+## Relational analysis of IS_A2_B2
+
+### Relational analysis result of IS_A2_B2
+Status: Status.UNKNOWN
+Output dim: 0, lower bound: -0.3259538, upper bound: 0.3259574
+time: 36.44 seconds
+
+## Summary of splitting at layer (split count: 1)
+- Time for IS candidates: 76.52 seconds
+IS_A1_B1, status: Status.UNKNOWN, split count: 2, time: 76.52
+Output dim: 0, lower bound: -0.3245847, upper bound: 0.3259151
+IS_A1_B2, status: Status.UNKNOWN, split count: 2, time: 76.52
+Output dim: 0, lower bound: -0.3251388, upper bound: 0.3259539
+IS_A2_B1, status: Status.UNKNOWN, split count: 2, time: 76.52
+Output dim: 0, lower bound: -0.3254009, upper bound: 0.3259145
+IS_A2_B2, status: Status.UNKNOWN, split count: 2, time: 76.52
+Output dim: 0, lower bound: -0.3259538, upper bound: 0.3259574
+
+## BFS IS instance: IS_A1_B1
+
+### Backsubstitution after applying IS history:
+0: -3.0140886, -0.9763699, -3.0189784, -0.9790511, -1.3774211, 1.3795934
+1: -3.8742616, -1.0047703, -3.8802133, -1.0081325, -1.9598392, 1.9646298
+2: -1.0362316, -0.2949179, -1.0361061, -0.2946598, -0.7415719, 0.7411883
+3: -1.3894207, -0.2337440, -1.3881209, -0.2316866, -0.8420398, 0.8403196
+4: -0.7026147, 0.3340834, -0.7020409, 0.3347701, -0.7444787, 0.7433394
+5: -1.6547786, -0.6252248, -1.6534529, -0.6230379, -0.7701706, 0.7684463
+6: -0.1916305, 0.5664335, -0.1915273, 0.5666618, -0.4114996, 0.4111477
+7: -2.1570864, -1.0506051, -2.1558306, -1.0500124, -0.8573536, 0.8563237
+8: -3.1844025, -0.9620476, -3.1899438, -0.9648967, -1.1706481, 1.1724170
+9: -3.9030037, -1.8097172, -3.9068952, -1.8121176, -1.0659362, 1.0652618
+
+Time for backsubstitution: 4.22 seconds
+
+### IS candidates at layer 1
+type: A, layer: 1, pos: 2119
+type: A, layer: 1, pos: 2585
+type: A, layer: 1, pos: 3054
+type: A, layer: 1, pos: 2558
+type: A, layer: 1, pos: 2120
+type: A, layer: 1, pos: 2170
+type: A, layer: 1, pos: 3040
+type: A, layer: 1, pos: 3094
+type: A, layer: 1, pos: 2394
+type: A, layer: 1, pos: 3011
+type: A, layer: 1, pos: 2604
+type: A, layer: 1, pos: 2587
+type: A, layer: 1, pos: 2408
+type: A, layer: 1, pos: 2543
+type: A, layer: 1, pos: 2567
+type: A, layer: 1, pos: 431
+type: A, layer: 1, pos: 2588
+type: A, layer: 1, pos: 2614
+type: A, layer: 1, pos: 2133
+type: A, layer: 1, pos: 2132
+type: A, layer: 1, pos: 3087
+type: A, layer: 1, pos: 2397
+type: A, layer: 1, pos: 2582
+type: A, layer: 1, pos: 3058
+type: A, layer: 1, pos: 2104
+type: A, layer: 1, pos: 2629
+type: A, layer: 1, pos: 3004
+type: A, layer: 1, pos: 2105
+type: A, layer: 1, pos: 416
+type: A, layer: 1, pos: 2553
+type: A, layer: 1, pos: 2537
+type: A, layer: 1, pos: 2337
+type: A, layer: 1, pos: 110
+type: A, layer: 1, pos: 2420
+type: A, layer: 1, pos: 776
+type: A, layer: 1, pos: 2825
+type: A, layer: 1, pos: 3130
+type: A, layer: 1, pos: 2383
+type: A, layer: 1, pos: 2552
+type: A, layer: 1, pos: 2128
+type: A, layer: 1, pos: 2838
+type: A, layer: 1, pos: 2652
+type: A, layer: 1, pos: 2644
+type: A, layer: 1, pos: 770
+type: A, layer: 1, pos: 3246
+type: A, layer: 1, pos: 2844
+type: A, layer: 1, pos: 2436
+type: A, layer: 1, pos: 2781
+type: A, layer: 1, pos: 2396
+type: A, layer: 1, pos: 2440
+type: A, layer: 1, pos: 3527
+type: A, layer: 1, pos: 2435
+type: A, layer: 1, pos: 2415
+type: A, layer: 1, pos: 2328
+type: A, layer: 1, pos: 2596
+type: A, layer: 1, pos: 2438
+type: A, layer: 1, pos: 2780
+type: A, layer: 1, pos: 3090
+type: A, layer: 1, pos: 2416
+type: A, layer: 1, pos: 2852
+type: A, layer: 1, pos: 2823
+type: A, layer: 1, pos: 3497
+type: A, layer: 1, pos: 2450
+type: A, layer: 1, pos: 2422
+type: A, layer: 1, pos: 159
+type: A, layer: 1, pos: 2767
+type: A, layer: 1, pos: 2216
+type: A, layer: 1, pos: 2803
+type: A, layer: 1, pos: 2574
+type: A, layer: 1, pos: 403
+type: A, layer: 1, pos: 805
+type: A, layer: 1, pos: 3513
+type: A, layer: 1, pos: 190
+type: A, layer: 1, pos: 2322
+type: A, layer: 1, pos: 3526
+type: A, layer: 1, pos: 2227
+type: A, layer: 1, pos: 2972
+type: A, layer: 1, pos: 2572
+type: A, layer: 1, pos: 846
+type: A, layer: 1, pos: 588
+type: A, layer: 1, pos: 573
+type: A, layer: 1, pos: 3274
+type: A, layer: 1, pos: 2891
+type: A, layer: 1, pos: 2516
+type: A, layer: 1, pos: 2226
+type: A, layer: 1, pos: 2581
+type: A, layer: 1, pos: 2973
+type: A, layer: 1, pos: 2657
+type: A, layer: 1, pos: 587
+type: A, layer: 1, pos: 2765
+type: A, layer: 1, pos: 3001
+type: A, layer: 1, pos: 2766
+type: A, layer: 1, pos: 2991
+type: A, layer: 1, pos: 2782
+type: A, layer: 1, pos: 3275
+type: A, layer: 1, pos: 2822
+type: A, layer: 1, pos: 844
+type: A, layer: 1, pos: 3443
+type: A, layer: 1, pos: 833
+type: A, layer: 1, pos: 2906
+type: A, layer: 1, pos: 2970
+type: A, layer: 1, pos: 3568
+type: A, layer: 1, pos: 2818
+type: A, layer: 1, pos: 3308
+type: A, layer: 1, pos: 341
+type: A, layer: 1, pos: 2821
+type: A, layer: 1, pos: 2672
+type: A, layer: 1, pos: 2986
+type: A, layer: 1, pos: 2747
+type: A, layer: 1, pos: 2851
+type: A, layer: 1, pos: 3543
+type: A, layer: 1, pos: 518
+type: A, layer: 1, pos: 2903
+type: A, layer: 1, pos: 2835
+type: A, layer: 1, pos: 2754
+type: A, layer: 1, pos: 2748
+type: A, layer: 1, pos: 2806
+type: A, layer: 1, pos: 2217
+type: A, layer: 1, pos: 186
+type: A, layer: 1, pos: 845
+type: A, layer: 1, pos: 2820
+type: A, layer: 1, pos: 2990
+type: A, layer: 1, pos: 2836
+type: A, layer: 1, pos: 2850
+type: A, layer: 1, pos: 2773
+type: A, layer: 1, pos: 2522
+type: A, layer: 1, pos: 3552
+type: A, layer: 1, pos: 3294
+type: A, layer: 1, pos: 3544
+type: A, layer: 1, pos: 3247
+type: A, layer: 1, pos: 2753
+type: A, layer: 1, pos: 2775
+type: A, layer: 1, pos: 3270
+type: A, layer: 1, pos: 2524
+type: A, layer: 1, pos: 2308
+type: A, layer: 1, pos: 2733
+type: A, layer: 1, pos: 2776
+type: A, layer: 1, pos: 861
+type: A, layer: 1, pos: 2732
+type: A, layer: 1, pos: 2760
+type: A, layer: 1, pos: 2983
+type: A, layer: 1, pos: 3216
+type: A, layer: 1, pos: 2731
+type: A, layer: 1, pos: 2664
+type: A, layer: 1, pos: 2752
+type: A, layer: 1, pos: 2751
+type: A, layer: 1, pos: 2730
+type: A, layer: 1, pos: 553
+type: A, layer: 1, pos: 2325
+type: A, layer: 1, pos: 2739
+type: A, layer: 1, pos: 620
+type: A, layer: 1, pos: 610
+type: A, layer: 1, pos: 343
+type: A, layer: 1, pos: 3081
+type: A, layer: 1, pos: 2908
+type: A, layer: 1, pos: 2745
+type: A, layer: 1, pos: 2750
+type: A, layer: 1, pos: 3403
+type: A, layer: 1, pos: 2886
+type: A, layer: 1, pos: 3295
+type: A, layer: 1, pos: 2718
+type: A, layer: 1, pos: 2880
+type: A, layer: 1, pos: 2717
+type: A, layer: 1, pos: 2837
+type: A, layer: 1, pos: 838
+type: A, layer: 1, pos: 598
+type: A, layer: 1, pos: 2866
+type: A, layer: 1, pos: 2907
+type: A, layer: 1, pos: 2749
+type: A, layer: 1, pos: 2716
+type: A, layer: 1, pos: 3493
+type: A, layer: 1, pos: 2974
+type: A, layer: 1, pos: 2715
+type: A, layer: 1, pos: 586
+type: A, layer: 1, pos: 2515
+type: A, layer: 1, pos: 2735
+type: A, layer: 1, pos: 2865
+type: A, layer: 1, pos: 3030
+type: A, layer: 1, pos: 619
+type: A, layer: 1, pos: 2902
+type: A, layer: 1, pos: 3285
+type: A, layer: 1, pos: 2734
+type: A, layer: 1, pos: 2502
+type: A, layer: 1, pos: 2736
+type: A, layer: 1, pos: 2737
+type: A, layer: 1, pos: 3484
+type: A, layer: 1, pos: 2761
+type: A, layer: 1, pos: 3342
+type: A, layer: 1, pos: 2738
+type: A, layer: 1, pos: 3223
+type: A, layer: 1, pos: 2895
+type: A, layer: 1, pos: 860
+type: A, layer: 1, pos: 2311
+type: A, layer: 1, pos: 3191
+type: A, layer: 1, pos: 2746
+type: A, layer: 1, pos: 630
+type: A, layer: 1, pos: 3574
+type: A, layer: 1, pos: 853
+type: A, layer: 1, pos: 2881
+type: A, layer: 1, pos: 532
+type: A, layer: 1, pos: 2942
+type: A, layer: 1, pos: 490
+type: A, layer: 1, pos: 2949
+type: A, layer: 1, pos: 3570
+type: A, layer: 1, pos: 2514
+type: A, layer: 1, pos: 3577
+type: A, layer: 1, pos: 2700
+type: A, layer: 1, pos: 3225
+type: A, layer: 1, pos: 504
+type: A, layer: 1, pos: 2701
+type: A, layer: 1, pos: 2476
+type: A, layer: 1, pos: 2702
+type: A, layer: 1, pos: 616
+type: A, layer: 1, pos: 2992
+type: A, layer: 1, pos: 3321
+type: A, layer: 1, pos: 3350
+type: A, layer: 1, pos: 463
+type: A, layer: 1, pos: 574
+type: A, layer: 1, pos: 834
+type: A, layer: 1, pos: 2488
+type: A, layer: 1, pos: 2503
+type: A, layer: 1, pos: 2742
+type: A, layer: 1, pos: 2560
+type: A, layer: 1, pos: 631
+type: A, layer: 1, pos: 2950
+type: A, layer: 1, pos: 2719
+type: A, layer: 1, pos: 2928
+type: A, layer: 1, pos: 2720
+type: A, layer: 1, pos: 2721
+type: A, layer: 1, pos: 2703
+type: A, layer: 1, pos: 2722
+type: A, layer: 1, pos: 2941
+type: A, layer: 1, pos: 649
+type: A, layer: 1, pos: 2706
+type: A, layer: 1, pos: 2708
+type: A, layer: 1, pos: 2501
+type: A, layer: 1, pos: 2709
+type: A, layer: 1, pos: 2707
+type: A, layer: 1, pos: 2723
+type: A, layer: 1, pos: 2705
+type: A, layer: 1, pos: 3525
+type: A, layer: 1, pos: 585
+type: A, layer: 1, pos: 3354
+type: A, layer: 1, pos: 2725
+type: A, layer: 1, pos: 2710
+type: A, layer: 1, pos: 2711
+type: A, layer: 1, pos: 2704
+type: A, layer: 1, pos: 615
+type: A, layer: 1, pos: 3538
+type: A, layer: 1, pos: 2485
+type: A, layer: 1, pos: 2494
+type: A, layer: 1, pos: 3178
+type: A, layer: 1, pos: 2500
+type: A, layer: 1, pos: 3177
+type: A, layer: 1, pos: 652
+type: A, layer: 1, pos: 653
+type: A, layer: 1, pos: 2712
+type: A, layer: 1, pos: 654
+type: A, layer: 1, pos: 2724
+type: A, layer: 1, pos: 374
+type: A, layer: 1, pos: 389
+type: A, layer: 1, pos: 599
+type: A, layer: 1, pos: 614
+type: A, layer: 1, pos: 629
+type: A, layer: 1, pos: 660
+type: A, layer: 1, pos: 661
+type: A, layer: 1, pos: 886
+type: A, layer: 1, pos: 889
+type: A, layer: 1, pos: 2369
+type: A, layer: 1, pos: 2460
+type: A, layer: 1, pos: 2464
+type: A, layer: 1, pos: 2534
+type: A, layer: 1, pos: 2564
+type: A, layer: 1, pos: 2698
+type: A, layer: 1, pos: 2789
+type: A, layer: 1, pos: 2804
+type: A, layer: 1, pos: 2819
+type: A, layer: 1, pos: 2864
+type: A, layer: 1, pos: 2879
+type: A, layer: 1, pos: 2894
+type: A, layer: 1, pos: 2909
+type: A, layer: 1, pos: 2914
+type: A, layer: 1, pos: 2917
+type: A, layer: 1, pos: 2918
+type: A, layer: 1, pos: 2919
+type: A, layer: 1, pos: 2920
+type: A, layer: 1, pos: 2921
+type: A, layer: 1, pos: 2922
+type: A, layer: 1, pos: 2923
+type: A, layer: 1, pos: 2924
+type: A, layer: 1, pos: 2969
+type: A, layer: 1, pos: 3059
+type: A, layer: 1, pos: 3089
+type: A, layer: 1, pos: 3134
+type: A, layer: 1, pos: 3135
+type: A, layer: 1, pos: 3164
+type: A, layer: 1, pos: 3254
+type: A, layer: 1, pos: 3299
+type: A, layer: 1, pos: 3314
+type: A, layer: 1, pos: 3404
+type: A, layer: 1, pos: 3539
+type: A, layer: 1, pos: 3569
+type: A, layer: 1, pos: 3595
+type: A, layer: 1, pos: 3597
+
+Time for candidate selection: 0.10 seconds
+
+### Candidate
+type: A, layer: 1, pos: 2119
+
+## Relational analysis of IS_A1_B1_A1
+
+### Relational analysis result of IS_A1_B1_A1
+Status: Status.VERIFIED
+Output dim: 0, lower bound: -0.3243924, upper bound: 0.3251892
+time: 551.78 seconds
+
+## Relational analysis of IS_A1_B1_A2
+
+### Relational analysis result of IS_A1_B1_A2
+Status: Status.VERIFIED
+Output dim: 0, lower bound: -0.3243933, upper bound: 0.3257263
+time: 22.76 seconds
+
+## BFS IS instance: IS_A1_B2
+
+### Backsubstitution after applying IS history:
+0: -3.0142984, -0.9652071, -3.0153677, -0.9658799, -1.3754886, 1.3989141
+1: -3.8744452, -0.9924092, -3.8762918, -0.9930630, -1.9610345, 1.9839406
+2: -1.0371890, -0.2949173, -1.0372218, -0.2949155, -0.7422735, 0.7423046
+3: -1.3958101, -0.2337035, -1.3954242, -0.2332591, -0.8503664, 0.8456224
+4: -0.7046571, 0.3340859, -0.7045667, 0.3342372, -0.7464739, 0.7457306
+5: -1.6610107, -0.6251887, -1.6606232, -0.6247422, -0.7786329, 0.7732638
+6: -0.1920737, 0.5664499, -0.1920553, 0.5666780, -0.4120587, 0.4112317
+7: -2.1620951, -1.0506010, -2.1618237, -1.0506002, -0.8633649, 0.8617458
+8: -3.1844037, -0.9504633, -3.1849217, -0.9511938, -1.1675556, 1.1943989
+9: -3.9030099, -1.8008432, -3.9034221, -1.8014159, -1.0611068, 1.0851605
+
+Time for backsubstitution: 4.58 seconds
+
+### IS candidates at layer 1
+type: A, layer: 1, pos: 2119
+type: A, layer: 1, pos: 2585
+type: A, layer: 1, pos: 3054
+type: A, layer: 1, pos: 2558
+type: A, layer: 1, pos: 2120
+type: A, layer: 1, pos: 2170
+type: A, layer: 1, pos: 3040
+type: A, layer: 1, pos: 3094
+type: A, layer: 1, pos: 2394
+type: A, layer: 1, pos: 3011
+type: A, layer: 1, pos: 2604
+type: A, layer: 1, pos: 2587
+type: A, layer: 1, pos: 2408
+type: A, layer: 1, pos: 2543
+type: A, layer: 1, pos: 2567
+type: A, layer: 1, pos: 431
+type: A, layer: 1, pos: 2588
+type: A, layer: 1, pos: 2614
+type: A, layer: 1, pos: 2133
+type: A, layer: 1, pos: 2132
+type: A, layer: 1, pos: 3087
+type: A, layer: 1, pos: 2397
+type: A, layer: 1, pos: 2582
+type: A, layer: 1, pos: 3058
+type: A, layer: 1, pos: 2104
+type: A, layer: 1, pos: 2629
+type: A, layer: 1, pos: 3004
+type: A, layer: 1, pos: 2105
+type: A, layer: 1, pos: 416
+type: A, layer: 1, pos: 2553
+type: A, layer: 1, pos: 2537
+type: A, layer: 1, pos: 2337
+type: A, layer: 1, pos: 110
+type: A, layer: 1, pos: 2420
+type: A, layer: 1, pos: 776
+type: A, layer: 1, pos: 2825
+type: A, layer: 1, pos: 3130
+type: A, layer: 1, pos: 2383
+type: A, layer: 1, pos: 2552
+type: A, layer: 1, pos: 2128
+type: A, layer: 1, pos: 2838
+type: A, layer: 1, pos: 2652
+type: A, layer: 1, pos: 2644
+type: A, layer: 1, pos: 770
+type: A, layer: 1, pos: 2396
+type: A, layer: 1, pos: 3246
+type: A, layer: 1, pos: 2844
+type: A, layer: 1, pos: 2436
+type: A, layer: 1, pos: 2781
+type: A, layer: 1, pos: 2440
+type: A, layer: 1, pos: 3527
+type: A, layer: 1, pos: 2435
+type: A, layer: 1, pos: 2415
+type: A, layer: 1, pos: 2328
+type: A, layer: 1, pos: 2596
+type: A, layer: 1, pos: 2438
+type: A, layer: 1, pos: 2780
+type: A, layer: 1, pos: 3090
+type: A, layer: 1, pos: 2416
+type: A, layer: 1, pos: 2852
+type: A, layer: 1, pos: 2823
+type: A, layer: 1, pos: 3497
+type: A, layer: 1, pos: 2450
+type: A, layer: 1, pos: 2422
+type: A, layer: 1, pos: 159
+type: A, layer: 1, pos: 2767
+type: A, layer: 1, pos: 2216
+type: A, layer: 1, pos: 2803
+type: A, layer: 1, pos: 2574
+type: A, layer: 1, pos: 403
+type: A, layer: 1, pos: 805
+type: A, layer: 1, pos: 3513
+type: A, layer: 1, pos: 190
+type: A, layer: 1, pos: 2322
+type: A, layer: 1, pos: 3526
+type: A, layer: 1, pos: 2227
+type: A, layer: 1, pos: 2972
+type: A, layer: 1, pos: 2572
+type: A, layer: 1, pos: 846
+type: A, layer: 1, pos: 588
+type: A, layer: 1, pos: 573
+type: A, layer: 1, pos: 3274
+type: A, layer: 1, pos: 2891
+type: A, layer: 1, pos: 2516
+type: A, layer: 1, pos: 2226
+type: A, layer: 1, pos: 2581
+type: A, layer: 1, pos: 2973
+type: A, layer: 1, pos: 2657
+type: A, layer: 1, pos: 587
+type: A, layer: 1, pos: 2765
+type: A, layer: 1, pos: 3001
+type: A, layer: 1, pos: 2766
+type: A, layer: 1, pos: 2991
+type: A, layer: 1, pos: 2782
+type: A, layer: 1, pos: 3275
+type: A, layer: 1, pos: 2822
+type: A, layer: 1, pos: 844
+type: A, layer: 1, pos: 3443
+type: A, layer: 1, pos: 833
+type: A, layer: 1, pos: 2906
+type: A, layer: 1, pos: 2970
+type: A, layer: 1, pos: 3568
+type: A, layer: 1, pos: 2818
+type: A, layer: 1, pos: 3308
+type: A, layer: 1, pos: 341
+type: A, layer: 1, pos: 2821
+type: A, layer: 1, pos: 2672
+type: A, layer: 1, pos: 2986
+type: A, layer: 1, pos: 2747
+type: A, layer: 1, pos: 2851
+type: A, layer: 1, pos: 3543
+type: A, layer: 1, pos: 518
+type: A, layer: 1, pos: 2903
+type: A, layer: 1, pos: 2835
+type: A, layer: 1, pos: 2754
+type: A, layer: 1, pos: 2748
+type: A, layer: 1, pos: 2806
+type: A, layer: 1, pos: 2217
+type: A, layer: 1, pos: 186
+type: A, layer: 1, pos: 845
+type: A, layer: 1, pos: 2820
+type: A, layer: 1, pos: 2990
+type: A, layer: 1, pos: 2836
+type: A, layer: 1, pos: 2850
+type: A, layer: 1, pos: 2773
+type: A, layer: 1, pos: 2522
+type: A, layer: 1, pos: 3552
+type: A, layer: 1, pos: 3294
+type: A, layer: 1, pos: 3544
+type: A, layer: 1, pos: 3247
+type: A, layer: 1, pos: 2753
+type: A, layer: 1, pos: 2775
+type: A, layer: 1, pos: 3270
+type: A, layer: 1, pos: 2524
+type: A, layer: 1, pos: 2308
+type: A, layer: 1, pos: 2733
+type: A, layer: 1, pos: 2776
+type: A, layer: 1, pos: 861
+type: A, layer: 1, pos: 2732
+type: A, layer: 1, pos: 2760
+type: A, layer: 1, pos: 2983
+type: A, layer: 1, pos: 3216
+type: A, layer: 1, pos: 2731
+type: A, layer: 1, pos: 2664
+type: A, layer: 1, pos: 2752
+type: A, layer: 1, pos: 2751
+type: A, layer: 1, pos: 2730
+type: A, layer: 1, pos: 553
+type: A, layer: 1, pos: 2325
+type: A, layer: 1, pos: 2739
+type: A, layer: 1, pos: 620
+type: A, layer: 1, pos: 610
+type: A, layer: 1, pos: 343
+type: A, layer: 1, pos: 3081
+type: A, layer: 1, pos: 2908
+type: A, layer: 1, pos: 2745
+type: A, layer: 1, pos: 2750
+type: A, layer: 1, pos: 3403
+type: A, layer: 1, pos: 2886
+type: A, layer: 1, pos: 3295
+type: A, layer: 1, pos: 2718
+type: A, layer: 1, pos: 2880
+type: A, layer: 1, pos: 2717
+type: A, layer: 1, pos: 2837
+type: A, layer: 1, pos: 838
+type: A, layer: 1, pos: 598
+type: A, layer: 1, pos: 2866
+type: A, layer: 1, pos: 2907
+type: A, layer: 1, pos: 2749
+type: A, layer: 1, pos: 2716
+type: A, layer: 1, pos: 3493
+type: A, layer: 1, pos: 2974
+type: A, layer: 1, pos: 2715
+type: A, layer: 1, pos: 586
+type: A, layer: 1, pos: 2515
+type: A, layer: 1, pos: 2735
+type: A, layer: 1, pos: 2865
+type: A, layer: 1, pos: 3030
+type: A, layer: 1, pos: 619
+type: A, layer: 1, pos: 2902
+type: A, layer: 1, pos: 3285
+type: A, layer: 1, pos: 2734
+type: A, layer: 1, pos: 2502
+type: A, layer: 1, pos: 2736
+type: A, layer: 1, pos: 2737
+type: A, layer: 1, pos: 3484
+type: A, layer: 1, pos: 2761
+type: A, layer: 1, pos: 3342
+type: A, layer: 1, pos: 2738
+type: A, layer: 1, pos: 3223
+type: A, layer: 1, pos: 2895
+type: A, layer: 1, pos: 860
+type: A, layer: 1, pos: 2311
+type: A, layer: 1, pos: 3191
+type: A, layer: 1, pos: 2746
+type: A, layer: 1, pos: 630
+type: A, layer: 1, pos: 3574
+type: A, layer: 1, pos: 853
+type: A, layer: 1, pos: 2881
+type: A, layer: 1, pos: 2942
+type: A, layer: 1, pos: 532
+type: A, layer: 1, pos: 490
+type: A, layer: 1, pos: 2949
+type: A, layer: 1, pos: 3570
+type: A, layer: 1, pos: 2514
+type: A, layer: 1, pos: 3577
+type: A, layer: 1, pos: 2700
+type: A, layer: 1, pos: 3225
+type: A, layer: 1, pos: 504
+type: A, layer: 1, pos: 2701
+type: A, layer: 1, pos: 2476
+type: A, layer: 1, pos: 2702
+type: A, layer: 1, pos: 616
+type: A, layer: 1, pos: 2992
+type: A, layer: 1, pos: 3321
+type: A, layer: 1, pos: 3350
+type: A, layer: 1, pos: 463
+type: A, layer: 1, pos: 574
+type: A, layer: 1, pos: 834
+type: A, layer: 1, pos: 2488
+type: A, layer: 1, pos: 2503
+type: A, layer: 1, pos: 2742
+type: A, layer: 1, pos: 2560
+type: A, layer: 1, pos: 631
+type: A, layer: 1, pos: 2950
+type: A, layer: 1, pos: 2719
+type: A, layer: 1, pos: 2928
+type: A, layer: 1, pos: 2720
+type: A, layer: 1, pos: 2721
+type: A, layer: 1, pos: 2703
+type: A, layer: 1, pos: 2722
+type: A, layer: 1, pos: 2941
+type: A, layer: 1, pos: 649
+type: A, layer: 1, pos: 2706
+type: A, layer: 1, pos: 2708
+type: A, layer: 1, pos: 2501
+type: A, layer: 1, pos: 2709
+type: A, layer: 1, pos: 2707
+type: A, layer: 1, pos: 2723
+type: A, layer: 1, pos: 2705
+type: A, layer: 1, pos: 3525
+type: A, layer: 1, pos: 585
+type: A, layer: 1, pos: 3354
+type: A, layer: 1, pos: 2725
+type: A, layer: 1, pos: 2710
+type: A, layer: 1, pos: 2711
+type: A, layer: 1, pos: 2704
+type: A, layer: 1, pos: 615
+type: A, layer: 1, pos: 3538
+type: A, layer: 1, pos: 2485
+type: A, layer: 1, pos: 2494
+type: A, layer: 1, pos: 3178
+type: A, layer: 1, pos: 2500
+type: A, layer: 1, pos: 3177
+type: A, layer: 1, pos: 652
+type: A, layer: 1, pos: 653
+type: A, layer: 1, pos: 2712
+type: A, layer: 1, pos: 654
+type: A, layer: 1, pos: 2724
+type: A, layer: 1, pos: 374
+type: A, layer: 1, pos: 389
+type: A, layer: 1, pos: 599
+type: A, layer: 1, pos: 614
+type: A, layer: 1, pos: 629
+type: A, layer: 1, pos: 660
+type: A, layer: 1, pos: 661
+type: A, layer: 1, pos: 886
+type: A, layer: 1, pos: 889
+type: A, layer: 1, pos: 2369
+type: A, layer: 1, pos: 2460
+type: A, layer: 1, pos: 2464
+type: A, layer: 1, pos: 2534
+type: A, layer: 1, pos: 2564
+type: A, layer: 1, pos: 2698
+type: A, layer: 1, pos: 2789
+type: A, layer: 1, pos: 2804
+type: A, layer: 1, pos: 2819
+type: A, layer: 1, pos: 2864
+type: A, layer: 1, pos: 2879
+type: A, layer: 1, pos: 2894
+type: A, layer: 1, pos: 2909
+type: A, layer: 1, pos: 2914
+type: A, layer: 1, pos: 2917
+type: A, layer: 1, pos: 2918
+type: A, layer: 1, pos: 2919
+type: A, layer: 1, pos: 2920
+type: A, layer: 1, pos: 2921
+type: A, layer: 1, pos: 2922
+type: A, layer: 1, pos: 2923
+type: A, layer: 1, pos: 2924
+type: A, layer: 1, pos: 2969
+type: A, layer: 1, pos: 3059
+type: A, layer: 1, pos: 3089
+type: A, layer: 1, pos: 3134
+type: A, layer: 1, pos: 3135
+type: A, layer: 1, pos: 3164
+type: A, layer: 1, pos: 3254
+type: A, layer: 1, pos: 3299
+type: A, layer: 1, pos: 3314
+type: A, layer: 1, pos: 3404
+type: A, layer: 1, pos: 3539
+type: A, layer: 1, pos: 3569
+type: A, layer: 1, pos: 3595
+type: A, layer: 1, pos: 3597
+
+Time for candidate selection: 0.12 seconds
+
+### Candidate
+type: A, layer: 1, pos: 2119
+
+## Relational analysis of IS_A1_B2_A1
+
+### Relational analysis result of IS_A1_B2_A1
+Status: Status.VERIFIED
+Output dim: 0, lower bound: -0.3249484, upper bound: 0.3252302
+time: 91.60 seconds
+
+## Relational analysis of IS_A1_B2_A2
+
+### Relational analysis result of IS_A1_B2_A2
+Status: Status.VERIFIED
+Output dim: 0, lower bound: -0.3249478, upper bound: 0.3257636
+time: 199.86 seconds
+
+## BFS IS instance: IS_A2_B1
+
+### Backsubstitution after applying IS history:
+0: -3.0147507, -0.9684501, -3.0193436, -0.9790511, -1.3781259, 1.3997992
+1: -3.8774872, -0.9914489, -3.8827164, -1.0081286, -1.9624060, 1.9892118
+2: -1.0364439, -0.2946489, -1.0360793, -0.2946607, -0.7417832, 0.7414304
+3: -1.3948737, -0.2332925, -1.3881285, -0.2314150, -0.8515162, 0.8407408
+4: -0.7045478, 0.3343526, -0.7020217, 0.3349755, -0.7478311, 0.7435811
+5: -1.6597980, -0.6252987, -1.6534643, -0.6232065, -0.7799603, 0.7688222
+6: -0.1932107, 0.5661898, -0.1915330, 0.5663608, -0.4149969, 0.4112619
+7: -2.1594331, -1.0503411, -2.1558192, -1.0500114, -0.8596914, 0.8566209
+8: -3.1842279, -0.9589739, -3.1897657, -0.9648924, -1.1709038, 1.1825906
+9: -3.9035606, -1.8070073, -3.9073255, -1.8121171, -1.0661889, 1.0729148
+
+Time for backsubstitution: 4.49 seconds
+
+### IS candidates at layer 1
+type: A, layer: 1, pos: 2119
+type: A, layer: 1, pos: 2585
+type: A, layer: 1, pos: 3054
+type: A, layer: 1, pos: 2558
+type: A, layer: 1, pos: 2120
+type: A, layer: 1, pos: 2170
+type: A, layer: 1, pos: 3040
+type: A, layer: 1, pos: 3094
+type: A, layer: 1, pos: 2394
+type: A, layer: 1, pos: 3011
+type: A, layer: 1, pos: 2604
+type: A, layer: 1, pos: 2587
+type: A, layer: 1, pos: 2408
+type: A, layer: 1, pos: 2543
+type: A, layer: 1, pos: 2567
+type: A, layer: 1, pos: 431
+type: A, layer: 1, pos: 2588
+type: A, layer: 1, pos: 2614
+type: A, layer: 1, pos: 2133
+type: A, layer: 1, pos: 2132
+type: A, layer: 1, pos: 3087
+type: A, layer: 1, pos: 2397
+type: A, layer: 1, pos: 2582
+type: A, layer: 1, pos: 3058
+type: A, layer: 1, pos: 2104
+type: A, layer: 1, pos: 2629
+type: A, layer: 1, pos: 3004
+type: A, layer: 1, pos: 2105
+type: A, layer: 1, pos: 416
+type: A, layer: 1, pos: 2553
+type: A, layer: 1, pos: 2537
+type: A, layer: 1, pos: 2337
+type: A, layer: 1, pos: 110
+type: A, layer: 1, pos: 2420
+type: A, layer: 1, pos: 776
+type: A, layer: 1, pos: 2825
+type: A, layer: 1, pos: 3130
+type: A, layer: 1, pos: 2383
+type: A, layer: 1, pos: 2552
+type: A, layer: 1, pos: 2128
+type: A, layer: 1, pos: 2838
+type: A, layer: 1, pos: 2652
+type: A, layer: 1, pos: 2644
+type: A, layer: 1, pos: 770
+type: A, layer: 1, pos: 3246
+type: A, layer: 1, pos: 2844
+type: A, layer: 1, pos: 2436
+type: A, layer: 1, pos: 2781
+type: A, layer: 1, pos: 2396
+type: A, layer: 1, pos: 2440
+type: A, layer: 1, pos: 3527
+type: A, layer: 1, pos: 2435
+type: A, layer: 1, pos: 2415
+type: A, layer: 1, pos: 2328
+type: A, layer: 1, pos: 2596
+type: A, layer: 1, pos: 2438
+type: A, layer: 1, pos: 2780
+type: A, layer: 1, pos: 3090
+type: A, layer: 1, pos: 2416
+type: A, layer: 1, pos: 2852
+type: A, layer: 1, pos: 2823
+type: A, layer: 1, pos: 3497
+type: A, layer: 1, pos: 2450
+type: A, layer: 1, pos: 2422
+type: A, layer: 1, pos: 159
+type: A, layer: 1, pos: 2767
+type: A, layer: 1, pos: 2216
+type: A, layer: 1, pos: 2803
+type: A, layer: 1, pos: 2574
+type: A, layer: 1, pos: 403
+type: A, layer: 1, pos: 805
+type: A, layer: 1, pos: 3513
+type: A, layer: 1, pos: 190
+type: A, layer: 1, pos: 2322
+type: A, layer: 1, pos: 3526
+type: A, layer: 1, pos: 2227
+type: A, layer: 1, pos: 2972
+type: A, layer: 1, pos: 2572
+type: A, layer: 1, pos: 846
+type: A, layer: 1, pos: 588
+type: A, layer: 1, pos: 573
+type: A, layer: 1, pos: 3274
+type: A, layer: 1, pos: 2891
+type: A, layer: 1, pos: 2516
+type: A, layer: 1, pos: 2226
+type: A, layer: 1, pos: 2581
+type: A, layer: 1, pos: 2973
+type: A, layer: 1, pos: 2657
+type: A, layer: 1, pos: 587
+type: A, layer: 1, pos: 2765
+type: A, layer: 1, pos: 3001
+type: A, layer: 1, pos: 2766
+type: A, layer: 1, pos: 2991
+type: A, layer: 1, pos: 2782
+type: A, layer: 1, pos: 3275
+type: A, layer: 1, pos: 2822
+type: A, layer: 1, pos: 844
+type: A, layer: 1, pos: 3443
+type: A, layer: 1, pos: 833
+type: A, layer: 1, pos: 2906
+type: A, layer: 1, pos: 2970
+type: A, layer: 1, pos: 3568
+type: A, layer: 1, pos: 2818
+type: A, layer: 1, pos: 3308
+type: A, layer: 1, pos: 341
+type: A, layer: 1, pos: 2821
+type: A, layer: 1, pos: 2672
+type: A, layer: 1, pos: 2986
+type: A, layer: 1, pos: 2747
+type: A, layer: 1, pos: 2851
+type: A, layer: 1, pos: 3543
+type: A, layer: 1, pos: 518
+type: A, layer: 1, pos: 2903
+type: A, layer: 1, pos: 2835
+type: A, layer: 1, pos: 2754
+type: A, layer: 1, pos: 2748
+type: A, layer: 1, pos: 2806
+type: A, layer: 1, pos: 2217
+type: A, layer: 1, pos: 186
+type: A, layer: 1, pos: 845
+type: A, layer: 1, pos: 2820
+type: A, layer: 1, pos: 2990
+type: A, layer: 1, pos: 2836
+type: A, layer: 1, pos: 2850
+type: A, layer: 1, pos: 2773
+type: A, layer: 1, pos: 2522
+type: A, layer: 1, pos: 3552
+type: A, layer: 1, pos: 3294
+type: A, layer: 1, pos: 3544
+type: A, layer: 1, pos: 3247
+type: A, layer: 1, pos: 2753
+type: A, layer: 1, pos: 2775
+type: A, layer: 1, pos: 3270
+type: A, layer: 1, pos: 2524
+type: A, layer: 1, pos: 2308
+type: A, layer: 1, pos: 2733
+type: A, layer: 1, pos: 2776
+type: A, layer: 1, pos: 861
+type: A, layer: 1, pos: 2732
+type: A, layer: 1, pos: 2760
+type: A, layer: 1, pos: 2983
+type: A, layer: 1, pos: 3216
+type: A, layer: 1, pos: 2731
+type: A, layer: 1, pos: 2664
+type: A, layer: 1, pos: 2752
+type: A, layer: 1, pos: 2751
+type: A, layer: 1, pos: 2730
+type: A, layer: 1, pos: 553
+type: A, layer: 1, pos: 2325
+type: A, layer: 1, pos: 2739
+type: A, layer: 1, pos: 620
+type: A, layer: 1, pos: 610
+type: A, layer: 1, pos: 343
+type: A, layer: 1, pos: 3081
+type: A, layer: 1, pos: 2908
+type: A, layer: 1, pos: 2745
+type: A, layer: 1, pos: 2750
+type: A, layer: 1, pos: 3403
+type: A, layer: 1, pos: 2886
+type: A, layer: 1, pos: 3295
+type: A, layer: 1, pos: 2718
+type: A, layer: 1, pos: 2880
+type: A, layer: 1, pos: 2717
+type: A, layer: 1, pos: 2837
+type: A, layer: 1, pos: 838
+type: A, layer: 1, pos: 598
+type: A, layer: 1, pos: 2866
+type: A, layer: 1, pos: 2907
+type: A, layer: 1, pos: 2749
+type: A, layer: 1, pos: 2716
+type: A, layer: 1, pos: 3493
+type: A, layer: 1, pos: 2974
+type: A, layer: 1, pos: 2715
+type: A, layer: 1, pos: 586
+type: A, layer: 1, pos: 2515
+type: A, layer: 1, pos: 2735
+type: A, layer: 1, pos: 2865
+type: A, layer: 1, pos: 3030
+type: A, layer: 1, pos: 619
+type: A, layer: 1, pos: 2902
+type: A, layer: 1, pos: 3285
+type: A, layer: 1, pos: 2734
+type: A, layer: 1, pos: 2502
+type: A, layer: 1, pos: 2736
+type: A, layer: 1, pos: 2737
+type: A, layer: 1, pos: 3484
+type: A, layer: 1, pos: 2761
+type: A, layer: 1, pos: 3342
+type: A, layer: 1, pos: 2738
+type: A, layer: 1, pos: 3223
+type: A, layer: 1, pos: 2895
+type: A, layer: 1, pos: 860
+type: A, layer: 1, pos: 2311
+type: A, layer: 1, pos: 3191
+type: A, layer: 1, pos: 2746
+type: A, layer: 1, pos: 630
+type: A, layer: 1, pos: 3574
+type: A, layer: 1, pos: 853
+type: A, layer: 1, pos: 2881
+type: A, layer: 1, pos: 2942
+type: A, layer: 1, pos: 532
+type: A, layer: 1, pos: 490
+type: A, layer: 1, pos: 2949
+type: A, layer: 1, pos: 3570
+type: A, layer: 1, pos: 2514
+type: A, layer: 1, pos: 3577
+type: A, layer: 1, pos: 2700
+type: A, layer: 1, pos: 3225
+type: A, layer: 1, pos: 504
+type: A, layer: 1, pos: 2701
+type: A, layer: 1, pos: 2476
+type: A, layer: 1, pos: 2702
+type: A, layer: 1, pos: 616
+type: A, layer: 1, pos: 2992
+type: A, layer: 1, pos: 3321
+type: A, layer: 1, pos: 3350
+type: A, layer: 1, pos: 463
+type: A, layer: 1, pos: 574
+type: A, layer: 1, pos: 834
+type: A, layer: 1, pos: 2488
+type: A, layer: 1, pos: 2503
+type: A, layer: 1, pos: 2742
+type: A, layer: 1, pos: 631
+type: A, layer: 1, pos: 2560
+type: A, layer: 1, pos: 2950
+type: A, layer: 1, pos: 2719
+type: A, layer: 1, pos: 2928
+type: A, layer: 1, pos: 2720
+type: A, layer: 1, pos: 2721
+type: A, layer: 1, pos: 2703
+type: A, layer: 1, pos: 2722
+type: A, layer: 1, pos: 2941
+type: A, layer: 1, pos: 649
+type: A, layer: 1, pos: 2706
+type: A, layer: 1, pos: 2708
+type: A, layer: 1, pos: 2501
+type: A, layer: 1, pos: 2709
+type: A, layer: 1, pos: 2707
+type: A, layer: 1, pos: 2723
+type: A, layer: 1, pos: 2705
+type: A, layer: 1, pos: 3525
+type: A, layer: 1, pos: 585
+type: A, layer: 1, pos: 3354
+type: A, layer: 1, pos: 2725
+type: A, layer: 1, pos: 2710
+type: A, layer: 1, pos: 2711
+type: A, layer: 1, pos: 2704
+type: A, layer: 1, pos: 615
+type: A, layer: 1, pos: 3538
+type: A, layer: 1, pos: 2485
+type: A, layer: 1, pos: 2494
+type: A, layer: 1, pos: 3178
+type: A, layer: 1, pos: 2500
+type: A, layer: 1, pos: 3177
+type: A, layer: 1, pos: 652
+type: A, layer: 1, pos: 653
+type: A, layer: 1, pos: 2712
+type: A, layer: 1, pos: 654
+type: A, layer: 1, pos: 2724
+type: A, layer: 1, pos: 374
+type: A, layer: 1, pos: 389
+type: A, layer: 1, pos: 599
+type: A, layer: 1, pos: 614
+type: A, layer: 1, pos: 629
+type: A, layer: 1, pos: 660
+type: A, layer: 1, pos: 661
+type: A, layer: 1, pos: 886
+type: A, layer: 1, pos: 889
+type: A, layer: 1, pos: 2369
+type: A, layer: 1, pos: 2460
+type: A, layer: 1, pos: 2464
+type: A, layer: 1, pos: 2534
+type: A, layer: 1, pos: 2564
+type: A, layer: 1, pos: 2698
+type: A, layer: 1, pos: 2789
+type: A, layer: 1, pos: 2804
+type: A, layer: 1, pos: 2819
+type: A, layer: 1, pos: 2864
+type: A, layer: 1, pos: 2879
+type: A, layer: 1, pos: 2894
+type: A, layer: 1, pos: 2909
+type: A, layer: 1, pos: 2914
+type: A, layer: 1, pos: 2917
+type: A, layer: 1, pos: 2918
+type: A, layer: 1, pos: 2919
+type: A, layer: 1, pos: 2920
+type: A, layer: 1, pos: 2921
+type: A, layer: 1, pos: 2922
+type: A, layer: 1, pos: 2923
+type: A, layer: 1, pos: 2924
+type: A, layer: 1, pos: 2969
+type: A, layer: 1, pos: 3059
+type: A, layer: 1, pos: 3089
+type: A, layer: 1, pos: 3134
+type: A, layer: 1, pos: 3135
+type: A, layer: 1, pos: 3164
+type: A, layer: 1, pos: 3254
+type: A, layer: 1, pos: 3299
+type: A, layer: 1, pos: 3314
+type: A, layer: 1, pos: 3404
+type: A, layer: 1, pos: 3539
+type: A, layer: 1, pos: 3569
+type: A, layer: 1, pos: 3595
+type: A, layer: 1, pos: 3597
+
+Time for candidate selection: 0.10 seconds
+
+### Candidate
+type: A, layer: 1, pos: 2119
+
+## Relational analysis of IS_A2_B1_A1
+
+### Relational analysis result of IS_A2_B1_A1
+Status: Status.VERIFIED
+Output dim: 0, lower bound: -0.3252055, upper bound: 0.3251862
+time: 307.98 seconds
+
+## Relational analysis of IS_A2_B1_A2
+
+### Relational analysis result of IS_A2_B1_A2
+Status: Status.VERIFIED
+Output dim: 0, lower bound: -0.3252085, upper bound: 0.3257233
+time: 411.11 seconds
+
+## BFS IS instance: IS_A2_B2
+
+### Backsubstitution after applying IS history:
+0: -3.0149598, -0.9572864, -3.0157342, -0.9658790, -1.3761915, 1.4191207
+1: -3.8776700, -0.9790869, -3.8787942, -0.9930573, -1.9635924, 2.0085263
+2: -1.0374014, -0.2946483, -1.0371950, -0.2949163, -0.7424852, 0.7425467
+3: -1.4012659, -0.2332520, -1.3954321, -0.2329875, -0.8598409, 0.8460431
+4: -0.7065916, 0.3343552, -0.7045478, 0.3344427, -0.7498268, 0.7459722
+5: -1.6660321, -0.6252625, -1.6606346, -0.6249108, -0.7884187, 0.7736387
+6: -0.1936538, 0.5662062, -0.1920612, 0.5663770, -0.4155554, 0.4113459
+7: -2.1644456, -1.0503371, -2.1618125, -1.0505993, -0.8657011, 0.8620432
+8: -3.1842291, -0.9473901, -3.1847444, -0.9511886, -1.1678108, 1.2045729
+9: -3.9035668, -1.7981343, -3.9038525, -1.8014159, -1.0613592, 1.0928128
+
+Time for backsubstitution: 4.38 seconds
+
+### IS candidates at layer 1
+type: A, layer: 1, pos: 2119
+type: A, layer: 1, pos: 2585
+type: A, layer: 1, pos: 3054
+type: A, layer: 1, pos: 2558
+type: A, layer: 1, pos: 2120
+type: A, layer: 1, pos: 2170
+type: A, layer: 1, pos: 3040
+type: A, layer: 1, pos: 3094
+type: A, layer: 1, pos: 2394
+type: A, layer: 1, pos: 3011
+type: A, layer: 1, pos: 2604
+type: A, layer: 1, pos: 2587
+type: A, layer: 1, pos: 2408
+type: A, layer: 1, pos: 2543
+type: A, layer: 1, pos: 2567
+type: A, layer: 1, pos: 431
+type: A, layer: 1, pos: 2588
+type: A, layer: 1, pos: 2614
+type: A, layer: 1, pos: 2133
+type: A, layer: 1, pos: 2132
+type: A, layer: 1, pos: 3087
+type: A, layer: 1, pos: 2397
+type: A, layer: 1, pos: 2582
+type: A, layer: 1, pos: 3058
+type: A, layer: 1, pos: 2104
+type: A, layer: 1, pos: 2629
+type: A, layer: 1, pos: 3004
+type: A, layer: 1, pos: 2105
+type: A, layer: 1, pos: 416
+type: A, layer: 1, pos: 2553
+type: A, layer: 1, pos: 2537
+type: A, layer: 1, pos: 2337
+type: A, layer: 1, pos: 110
+type: A, layer: 1, pos: 2420
+type: A, layer: 1, pos: 776
+type: A, layer: 1, pos: 2825
+type: A, layer: 1, pos: 3130
+type: A, layer: 1, pos: 2383
+type: A, layer: 1, pos: 2552
+type: A, layer: 1, pos: 2128
+type: A, layer: 1, pos: 2838
+type: A, layer: 1, pos: 2652
+type: A, layer: 1, pos: 2644
+type: A, layer: 1, pos: 770
+type: A, layer: 1, pos: 2396
+type: A, layer: 1, pos: 3246
+type: A, layer: 1, pos: 2844
+type: A, layer: 1, pos: 2436
+type: A, layer: 1, pos: 2781
+type: A, layer: 1, pos: 2440
+type: A, layer: 1, pos: 3527
+type: A, layer: 1, pos: 2435
+type: A, layer: 1, pos: 2415
+type: A, layer: 1, pos: 2328
+type: A, layer: 1, pos: 2596
+type: A, layer: 1, pos: 2438
+type: A, layer: 1, pos: 2780
+type: A, layer: 1, pos: 3090
+type: A, layer: 1, pos: 2416
+type: A, layer: 1, pos: 2852
+type: A, layer: 1, pos: 2823
+type: A, layer: 1, pos: 3497
+type: A, layer: 1, pos: 2450
+type: A, layer: 1, pos: 2422
+type: A, layer: 1, pos: 159
+type: A, layer: 1, pos: 2767
+type: A, layer: 1, pos: 2216
+type: A, layer: 1, pos: 2803
+type: A, layer: 1, pos: 2574
+type: A, layer: 1, pos: 403
+type: A, layer: 1, pos: 805
+type: A, layer: 1, pos: 3513
+type: A, layer: 1, pos: 190
+type: A, layer: 1, pos: 2322
+type: A, layer: 1, pos: 3526
+type: A, layer: 1, pos: 2227
+type: A, layer: 1, pos: 2972
+type: A, layer: 1, pos: 2572
+type: A, layer: 1, pos: 846
+type: A, layer: 1, pos: 588
+type: A, layer: 1, pos: 573
+type: A, layer: 1, pos: 3274
+type: A, layer: 1, pos: 2891
+type: A, layer: 1, pos: 2516
+type: A, layer: 1, pos: 2226
+type: A, layer: 1, pos: 2581
+type: A, layer: 1, pos: 2973
+type: A, layer: 1, pos: 2657
+type: A, layer: 1, pos: 587
+type: A, layer: 1, pos: 2765
+type: A, layer: 1, pos: 3001
+type: A, layer: 1, pos: 2766
+type: A, layer: 1, pos: 2991
+type: A, layer: 1, pos: 2782
+type: A, layer: 1, pos: 3275
+type: A, layer: 1, pos: 2822
+type: A, layer: 1, pos: 844
+type: A, layer: 1, pos: 3443
+type: A, layer: 1, pos: 833
+type: A, layer: 1, pos: 2906
+type: A, layer: 1, pos: 2970
+type: A, layer: 1, pos: 3568
+type: A, layer: 1, pos: 2818
+type: A, layer: 1, pos: 3308
+type: A, layer: 1, pos: 341
+type: A, layer: 1, pos: 2821
+type: A, layer: 1, pos: 2672
+type: A, layer: 1, pos: 2986
+type: A, layer: 1, pos: 2747
+type: A, layer: 1, pos: 2851
+type: A, layer: 1, pos: 3543
+type: A, layer: 1, pos: 518
+type: A, layer: 1, pos: 2903
+type: A, layer: 1, pos: 2835
+type: A, layer: 1, pos: 2754
+type: A, layer: 1, pos: 2748
+type: A, layer: 1, pos: 2806
+type: A, layer: 1, pos: 2217
+type: A, layer: 1, pos: 186
+type: A, layer: 1, pos: 845
+type: A, layer: 1, pos: 2820
+type: A, layer: 1, pos: 2990
+type: A, layer: 1, pos: 2836
+type: A, layer: 1, pos: 2850
+type: A, layer: 1, pos: 2773
+type: A, layer: 1, pos: 2522
+type: A, layer: 1, pos: 3552
+type: A, layer: 1, pos: 3294
+type: A, layer: 1, pos: 3544
+type: A, layer: 1, pos: 3247
+type: A, layer: 1, pos: 2753
+type: A, layer: 1, pos: 2775
+type: A, layer: 1, pos: 3270
+type: A, layer: 1, pos: 2524
+type: A, layer: 1, pos: 2308
+type: A, layer: 1, pos: 2733
+type: A, layer: 1, pos: 2776
+type: A, layer: 1, pos: 861
+type: A, layer: 1, pos: 2732
+type: A, layer: 1, pos: 2760
+type: A, layer: 1, pos: 2983
+type: A, layer: 1, pos: 3216
+type: A, layer: 1, pos: 2731
+type: A, layer: 1, pos: 2664
+type: A, layer: 1, pos: 2752
+type: A, layer: 1, pos: 2751
+type: A, layer: 1, pos: 2730
+type: A, layer: 1, pos: 553
+type: A, layer: 1, pos: 2325
+type: A, layer: 1, pos: 2739
+type: A, layer: 1, pos: 620
+type: A, layer: 1, pos: 610
+type: A, layer: 1, pos: 343
+type: A, layer: 1, pos: 3081
+type: A, layer: 1, pos: 2908
+type: A, layer: 1, pos: 2745
+type: A, layer: 1, pos: 2750
+type: A, layer: 1, pos: 3403
+type: A, layer: 1, pos: 2886
+type: A, layer: 1, pos: 3295
+type: A, layer: 1, pos: 2718
+type: A, layer: 1, pos: 2880
+type: A, layer: 1, pos: 2717
+type: A, layer: 1, pos: 2837
+type: A, layer: 1, pos: 838
+type: A, layer: 1, pos: 598
+type: A, layer: 1, pos: 2866
+type: A, layer: 1, pos: 2907
+type: A, layer: 1, pos: 2749
+type: A, layer: 1, pos: 2716
+type: A, layer: 1, pos: 3493
+type: A, layer: 1, pos: 2974
+type: A, layer: 1, pos: 2715
+type: A, layer: 1, pos: 586
+type: A, layer: 1, pos: 2515
+type: A, layer: 1, pos: 2735
+type: A, layer: 1, pos: 2865
+type: A, layer: 1, pos: 3030
+type: A, layer: 1, pos: 619
+type: A, layer: 1, pos: 2902
+type: A, layer: 1, pos: 3285
+type: A, layer: 1, pos: 2734
+type: A, layer: 1, pos: 2502
+type: A, layer: 1, pos: 2736
+type: A, layer: 1, pos: 2737
+type: A, layer: 1, pos: 3484
+type: A, layer: 1, pos: 2761
+type: A, layer: 1, pos: 3342
+type: A, layer: 1, pos: 2738
+type: A, layer: 1, pos: 3223
+type: A, layer: 1, pos: 2895
+type: A, layer: 1, pos: 860
+type: A, layer: 1, pos: 2311
+type: A, layer: 1, pos: 3191
+type: A, layer: 1, pos: 2746
+type: A, layer: 1, pos: 630
+type: A, layer: 1, pos: 3574
+type: A, layer: 1, pos: 853
+type: A, layer: 1, pos: 2881
+type: A, layer: 1, pos: 2942
+type: A, layer: 1, pos: 532
+type: A, layer: 1, pos: 490
+type: A, layer: 1, pos: 2949
+type: A, layer: 1, pos: 3570
+type: A, layer: 1, pos: 2514
+type: A, layer: 1, pos: 3577
+type: A, layer: 1, pos: 2700
+type: A, layer: 1, pos: 3225
+type: A, layer: 1, pos: 504
+type: A, layer: 1, pos: 2701
+type: A, layer: 1, pos: 2476
+type: A, layer: 1, pos: 2702
+type: A, layer: 1, pos: 616
+type: A, layer: 1, pos: 2992
+type: A, layer: 1, pos: 3321
+type: A, layer: 1, pos: 3350
+type: A, layer: 1, pos: 463
+type: A, layer: 1, pos: 574
+type: A, layer: 1, pos: 834
+type: A, layer: 1, pos: 2488
+type: A, layer: 1, pos: 2503
+type: A, layer: 1, pos: 2742
+type: A, layer: 1, pos: 631
+type: A, layer: 1, pos: 2560
+type: A, layer: 1, pos: 2950
+type: A, layer: 1, pos: 2719
+type: A, layer: 1, pos: 2928
+type: A, layer: 1, pos: 2720
+type: A, layer: 1, pos: 2721
+type: A, layer: 1, pos: 2703
+type: A, layer: 1, pos: 2722
+type: A, layer: 1, pos: 2941
+type: A, layer: 1, pos: 649
+type: A, layer: 1, pos: 2706
+type: A, layer: 1, pos: 2708
+type: A, layer: 1, pos: 2501
+type: A, layer: 1, pos: 2709
+type: A, layer: 1, pos: 2707
+type: A, layer: 1, pos: 2723
+type: A, layer: 1, pos: 2705
+type: A, layer: 1, pos: 3525
+type: A, layer: 1, pos: 585
+type: A, layer: 1, pos: 3354
+type: A, layer: 1, pos: 2725
+type: A, layer: 1, pos: 2710
+type: A, layer: 1, pos: 2711
+type: A, layer: 1, pos: 2704
+type: A, layer: 1, pos: 615
+type: A, layer: 1, pos: 3538
+type: A, layer: 1, pos: 2485
+type: A, layer: 1, pos: 2494
+type: A, layer: 1, pos: 3178
+type: A, layer: 1, pos: 2500
+type: A, layer: 1, pos: 3177
+type: A, layer: 1, pos: 652
+type: A, layer: 1, pos: 653
+type: A, layer: 1, pos: 2712
+type: A, layer: 1, pos: 654
+type: A, layer: 1, pos: 2724
+type: A, layer: 1, pos: 374
+type: A, layer: 1, pos: 389
+type: A, layer: 1, pos: 599
+type: A, layer: 1, pos: 614
+type: A, layer: 1, pos: 629
+type: A, layer: 1, pos: 660
+type: A, layer: 1, pos: 661
+type: A, layer: 1, pos: 886
+type: A, layer: 1, pos: 889
+type: A, layer: 1, pos: 2369
+type: A, layer: 1, pos: 2460
+type: A, layer: 1, pos: 2464
+type: A, layer: 1, pos: 2534
+type: A, layer: 1, pos: 2564
+type: A, layer: 1, pos: 2698
+type: A, layer: 1, pos: 2789
+type: A, layer: 1, pos: 2804
+type: A, layer: 1, pos: 2819
+type: A, layer: 1, pos: 2864
+type: A, layer: 1, pos: 2879
+type: A, layer: 1, pos: 2894
+type: A, layer: 1, pos: 2909
+type: A, layer: 1, pos: 2914
+type: A, layer: 1, pos: 2917
+type: A, layer: 1, pos: 2918
+type: A, layer: 1, pos: 2919
+type: A, layer: 1, pos: 2920
+type: A, layer: 1, pos: 2921
+type: A, layer: 1, pos: 2922
+type: A, layer: 1, pos: 2923
+type: A, layer: 1, pos: 2924
+type: A, layer: 1, pos: 2969
+type: A, layer: 1, pos: 3059
+type: A, layer: 1, pos: 3089
+type: A, layer: 1, pos: 3134
+type: A, layer: 1, pos: 3135
+type: A, layer: 1, pos: 3164
+type: A, layer: 1, pos: 3254
+type: A, layer: 1, pos: 3299
+type: A, layer: 1, pos: 3314
+type: A, layer: 1, pos: 3404
+type: A, layer: 1, pos: 3539
+type: A, layer: 1, pos: 3569
+type: A, layer: 1, pos: 3595
+type: A, layer: 1, pos: 3597
+
+Time for candidate selection: 0.10 seconds
+
+### Candidate
+type: A, layer: 1, pos: 2119
+
+## Relational analysis of IS_A2_B2_A1
+
+### Relational analysis result of IS_A2_B2_A1
+Status: Status.VERIFIED
+Output dim: 0, lower bound: -0.3257610, upper bound: 0.3252285
+time: 12.56 seconds
+
+## Relational analysis of IS_A2_B2_A2
+
+### Relational analysis result of IS_A2_B2_A2
+Status: Status.VERIFIED
+Output dim: 0, lower bound: -0.3257576, upper bound: 0.3257705
+time: 16.06 seconds
+
+## Summary of splitting at layer (split count: 2)
+- Time for IS candidates: 33.11 seconds
+IS_A1_B1_A1, status: Status.VERIFIED, split count: 3, time: 33.11
+Output dim: 0, lower bound: -0.3243924, upper bound: 0.3251892
+IS_A1_B1_A2, status: Status.VERIFIED, split count: 3, time: 33.11
+Output dim: 0, lower bound: -0.3243933, upper bound: 0.3257263
+IS_A1_B2_A1, status: Status.VERIFIED, split count: 3, time: 33.11
+Output dim: 0, lower bound: -0.3249484, upper bound: 0.3252302
+IS_A1_B2_A2, status: Status.VERIFIED, split count: 3, time: 33.11
+Output dim: 0, lower bound: -0.3249478, upper bound: 0.3257636
+IS_A2_B1_A1, status: Status.VERIFIED, split count: 3, time: 33.11
+Output dim: 0, lower bound: -0.3252055, upper bound: 0.3251862
+IS_A2_B1_A2, status: Status.VERIFIED, split count: 3, time: 33.11
+Output dim: 0, lower bound: -0.3252085, upper bound: 0.3257233
+IS_A2_B2_A1, status: Status.VERIFIED, split count: 3, time: 33.11
+Output dim: 0, lower bound: -0.3257610, upper bound: 0.3252285
+IS_A2_B2_A2, status: Status.VERIFIED, split count: 3, time: 33.11
+Output dim: 0, lower bound: -0.3257576, upper bound: 0.3257705
+
+## IS Result
+status: Status.VERIFIED
+execution time: (base) + (is) = 104.88 + 2053.98 = 2158.86 seconds
