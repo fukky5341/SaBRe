@@ -8,6 +8,10 @@
 - Jianjun Zhao  (Kyushu University, Fukuoka, Japan)
 
 
+
+## Paper
+[SABRE: Splitting Approximated Bounds for Relational Verification](EMSOFT_26.pdf)
+
 ## Important Note
 - The verifiers were primarily developed and tested on Linux.
 - Verification is NP-complete and can therefore require substantial computation time. 
