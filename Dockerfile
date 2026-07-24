@@ -17,7 +17,7 @@ WORKDIR /workspace
 COPY pyproject.toml uv.lock* ./
 
 # Install Python dependencies
-RUN uv sync --no-dev
+RUN uv sync
 
 # Copy the remaining project files
 COPY . .

@@ -26,4 +26,5 @@ auto-lirpa = { git = "https://github.com/Verified-Intelligence/auto_LiRPA.git" }
 [dependency-groups]
 dev = [
     "ipykernel>=7.1.0",
+    "jupyterlab>=4.6.2",
 ]

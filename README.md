@@ -38,7 +38,7 @@ The details are described in [STATUS.md](STATUS.md).
 Requirements for running the project are described in [REQUIREMENTS.md](REQUIREMENTS.md). The installation guide is provided in [INSTALL.md](INSTALL.md). Here we provide a quick start guide using Docker. For installation from scratch, please refer to [INSTALL.md](INSTALL.md).
 
 
-### Quick Commands and a Notebook
+### Quick Commands
 
 | Goal | Command / File | Description |
 |------|----------------|-------------|
@@ -51,31 +51,26 @@ Requirements for running the project are described in [REQUIREMENTS.md](REQUIREM
 
 ### Quick Start with Docker
 
-**Step 1: Pull the image:**
+**Step 1: Pull the image**
 
 ```bash
 docker pull fukky5341/sabre:latest
 ```
 
-**Step 2: Gurobi License:**
+**Step 2: Prepare a Gurobi license**
 
-A valid Gurobi license is required.
+The Docker image already contains all project files and dependencies. The only external requirement is a valid Gurobi license, which must be mounted into the container.
 
 Please follow the instructions in
 [INSTALL.md #Gurobi-License](INSTALL.md#install-gurobi-solver)
 to obtain and configure a license.
 
-**Step 2: Run the container (mounting your Gurobi license):**
-
-The Docker image does not include a Gurobi license.
-
-Please obtain your own academic or commercial license and save it as `gurobi.lic` on your host machine.
-
-When starting the container, mount the license and specify its location:
+**Step 3: Run the container**
 
 ```bash
 docker run \
   -it \
+  -p 8888:8888 \
   -v /path/to/gurobi.lic:/licenses/gurobi.lic \
   -e GRB_LICENSE_FILE=/licenses/gurobi.lic \
   fukky5341/sabre:latest
@@ -83,13 +78,15 @@ docker run \
 
 Replace `/path/to/gurobi.lic` with the location of your own license file.
 
-**Run a smoke test:**
+**Step 4: Verify the installation**
 
 ```bash
 uv run run_experiment_rs_is.py --quicktest
 ```
-The smoke test typically finishes within a few minutes. The verification time limit is 600 seconds for each method (four methods in total), although the selected quick-test instance usually terminates much earlier. You will see the terminal output as follows if the smoke test is successful:
-```
+
+The smoke test uses a single small verification instance and typically completes within a few minutes. If the installation is successful, the output ends with:
+
+```text
 ** Run mnistF quicktest **
 Running quicktest with d_eps=1, i_eps=2, RS/IS mode=RS_random_Z
 execution: (d:1, i:2, idx:0)
@@ -98,11 +95,14 @@ execution: (d:1, i:2, idx:0)
 
 Done!
 ```
-And also, you can check the log file `nnRelationalVerify/experiment_result/mnistF/RS_random_Z_threshold/d1_e2/0/log.md` for the detailed execution arguments, intermediate results, and final result. Similarly, you can find log files for other methods (IS_dual_ind, IS_dual, RS_dual_Z) in the `nnRelationalVerify/experiment_result/mnistF/` directory. Note: the correspondence between the method and the directory is as follows:
-- `RS_random_Z`: RandRS
-- `IS_dual_ind`: ClasIS
-- `IS_dual`: DualIS
-- `RS_dual_Z`: SABRE
+
+A detailed execution log is also generated at:
+
+```text
+nnRelationalVerify/experiment_result/mnistF/RS_random_Z_threshold/d1_e2/0/log.md
+```
+
+The log contains the execution arguments, intermediate verification results, and the final verification status.
 
 
 ### Installation Guide from Scratch
@@ -110,9 +110,32 @@ And also, you can check the log file `nnRelationalVerify/experiment_result/mnist
 If you want to install the project from scratch, the installation guide is provided in [INSTALL.md](INSTALL.md).
 
 
+### Running the Jupyter Notebook
+
+```bash
+
+docker run \
+  -it \
+  -p 8888:8888 \
+  -v /path/to/gurobi.lic:/licenses/gurobi.lic \
+  -e GRB_LICENSE_FILE=/licenses/gurobi.lic \
+  fukky5341/sabre:latest
+```
+
+Inside the container, launch JupyterLab:
+```bash
+uv run jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+```
+
+After starting JupyterLab, you can access it in either of the following ways.
+Copy and open the URL printed in the terminal, for example: `http://127.0.0.1:8888/lab?token=<TOKEN>`.
+
+In the browser, you can find the contents of this repository and run the notebook.
+
+
 
 ## Illustrative Example
-The details of the example in Section III-B is provided in [example](nnRelationalVerify/example/example.ipynb). You can run the notebook to follow the bound propagation and visualize them and splitting process.
+The details of the example in Section III-B is provided in [nnRelationalVerify/example](nnRelationalVerify/example/example.ipynb). You can run the notebook to follow the bound propagation and visualize them and splitting process.
 
 <figure>
     <img src="nnRelationalVerify/example/bounds.png" alt="Relational backsubstitution example" width="400">
@@ -127,7 +150,7 @@ The details of the example in Section III-B is provided in [example](nnRelationa
 
 ## Running Experiments
 
-In scripts or log files, we use following notations for baseline methods (RandRS, ClasIS, DualIS) and our method SABRE. 
+In the scripts and log files, we use the following names for the baseline methods and SABRE.
 - `RS_random_Z`: RandRS
 - `IS_dual_ind`: ClasIS
 - `IS_dual`: DualIS
@@ -136,17 +159,17 @@ In scripts or log files, we use following notations for baseline methods (RandRS
 
 ### RQ1, RQ2, RQ4
 To run the experiments used in RQ1, RQ2, and RQ4:  
-(single network)
+Example (single network)
 ```
 uv run run_experiment_rs_is.py --networks gtsrb --num 1
 ```
 or  
-(multiple networks)
+Example (multiple networks)
 ```
 uv run run_experiment_rs_is.py --networks gtsrb cifar mnistF mnistC acasxu --num 1
 ```
 **CLI arguments:**
-As command line arguments, you can specify the networks to run experiments on and the number of instances to run for each network, method, and input perturbation. You can run without specifying the number of instances to run all instances as done in the paper.
+As command line arguments, you can specify the networks to run experiments on and the number of instances to run for each network, method, and input perturbation. Omitting --num runs all instances used in the paper.
 
 **Runtime:**
 Full experiments for RQ1, RQ2, and RQ4 take a long time to finish due to the computational complexity of relational verification.
@@ -161,7 +184,7 @@ Full experiments for RQ1, RQ2, and RQ4 take a long time to finish due to the com
 
 
 **Experiment description:**
-In this experiment, we compare the performance of our method SABRE (RS_dual_Z) with baselines: RaVeN (base), ClasIS (IS_dual_ind), DualIS (IS_dual), and RandRS (RS_random_Z) on GTSRB, CIFAR, MNIST-F, MNIST-C, and ACAS Xu. For a given instance with output relational threshold, we evaluate whether each approach can verify or find counterexamples for the instance within the time limit.
+In this experiment, we compare SABRE (RS_dual_Z) with the baseline methods: RaVeN (base), ClasIS (IS_dual_ind), DualIS (IS_dual), and RandRS (RS_random_Z) on GTSRB, CIFAR, MNIST-F, MNIST-C, and ACAS Xu. For a given instance with output relational threshold, we evaluate whether each approach can verify or find counterexamples for the instance within the time limit.
 
 **Results and logs:** 
 The results and logs are generated in `experiment_results/` for each network. The experiment arguments and processing status are written to the log files, and the final result is given at the bottom of the log file.
@@ -200,15 +223,15 @@ uv run run_experiment_dp.py
 ```
 
 **Runtime:**
-Full experiments for RQ3 take at most around $324,000$ seconds (90 hours) for all instances.
+Full experiments for RQ3 take approximately $324,000$ seconds (90 hours) for all instances.
 
 **Experiment description:**
 In this experiment, we compare the performance of our method SABRE (RS_dual_Z) with baselines: ClasIS (IS_dual_ind) and DualIS (IS_dual) on MNIST-F. 
 
 **Results and logs:**
-The results and logs are generated in `experiment_results/mnsit-256x4-dp`. The experiment arguments and processing status are written to the log files, and the final result is given at the bottom of the log file.
+The results and logs are generated in `experiment_result/mnsit-256x4-dp`. The experiment arguments and processing status are written to the log files, and the final result is given at the bottom of the log file.
 
-For example, the log file for a single instance with perturbation ratio $p^{\%}=0.25$ performed by SABRE is `nnRelationalVerify/experiment_result/mnist-256x4-dp/RS_dual_Z_dimperturb_0.25_threshold/d2_e3/1/log.md`, where `d1_e3/2` indicates $d_{eps}=2$, $i_{eps}=d_{eps}*3=6$, and running index is $1$. The log file contains the execution arguments, intermediate results including the unstable ReLU counts, BaB splitting process, and the final result as follows:
+For example, the log file for a single instance with perturbation ratio $p^{\%}=0.25$ performed by SABRE is `nnRelationalVerify/experiment_result/mnist-256x4-dp/RS_dual_Z_dimperturb_0.25_threshold/d2_e3/1/log.md`, where `d1_e3/2` indicates $d_{eps}=2$, $i_{eps}=d_{eps}*3=6$, and running index is $2$. The log file contains the execution arguments, intermediate results including the unstable ReLU counts, BaB splitting process, and the final result as follows:
 ```
 ## Execution arguments:
 Dataset: Dataset.MNIST
@@ -241,13 +264,13 @@ execution time: (base) + (rs) = 2.86 + 47.57 = 50.43 seconds
 
 ### RQ5
 To run the binary search experiments:  
-(single network)
+Example (single network)
 ```
 uv run run_experiment_bs.py --networks gtsrb
 ```
 or
 
-(multiple networks)
+Example (multiple networks)
 ```
 uv run run_experiment_bs.py --networks gtsrb cifar mnistF mnistC acasxu
 ```
@@ -256,7 +279,7 @@ uv run run_experiment_bs.py --networks gtsrb cifar mnistF mnistC acasxu
 As command line arguments, you can specify the networks to run experiments on. 
 
 **Runtime:**
-Full experiments for RQ5 take at most around $5,686,800$ seconds to finish. 
+Full experiments for RQ5 take approximately $5,686,800$ seconds to finish. 
 
 **Experiment description:**
 In this experiment, we compare the performance of our method SABRE (RS_dual_Z) with baselines: RaVeN (base), ClasIS (IS_dual_ind), DualIS (IS_dual), and RandRS (RS_random_Z) via binary search on ACAS Xu, MNIST-F, MNIST-C, CIFAR. In binary search, each approach explores the maximum verifiable input relational distance.
@@ -295,11 +318,11 @@ execution time: 12287.05 seconds
 
 
 ## Reproduction of Figures and Tables in the Paper
-We provide all the necessary scripts and configurations to reproduce the figures and tables in the paper. Note that the exactly same results as in the paper might not be reproduced due to the process of machine-dependent computation. 
+We provide all the necessary scripts and configurations to reproduce the figures and tables in the paper. Note that the exact results reported in the paper may not be reproduced because of machine-dependent numerical differences. 
 
 The scripts are located in `nnRelationalVerify/evaluation`. You can run the [notebook](evaluation/analysis.ipynb) to reproduce the figures and tables in the paper. The notebook contains the code to load the results from `nnRelationalVerify/result/` and generate the figures and tables. 
 
-Two options are provided for results producing figures and tables.
+Two options are provided for producing the figures and tables
 
 - Option 1 (recommended):  
 Use the precomputed results included in `nnRelationalVerify/result/`.
@@ -307,6 +330,7 @@ Running the notebook immediately reproduces every figure and table.
 - Option 2:  
 Run the experiments yourself using the scripts in Section "Running Experiments".
 Replace the contents of `nnRelationalVerify/result/` with your generated results before executing the notebook.
+
 
 ### Figures and Tables Guide
 Here we show the list of figures and tables you can reproduce by running the notebook (all figures and tables are generated by the functions in the [notebook](evaluation/analysis.ipynb)):
@@ -318,8 +342,8 @@ Here we show the list of figures and tables you can reproduce by running the not
 - **Table V (RQ2)**: CIFAR perturbation-distance comparison, generated by `analysis.get_solved_num_and_timeratio_on_d(cifar10, "cifar10")`.
 - **Table VI and Table VII (RQ3)**: different number of dimensional-perturbation analysis tables, generated by `analysis_dp.dp_tables()`.
 - **Table VIII (RQ4)**: comparison of relational neuron selection strategy, generated by `analysis.get_table_Nsolved_timeRatio(...)` with `['DS_random_Z', 'DS_dual_Z']`.
-- **Figure 4 (RQ5)**: pairwise comparison plots for verifiable distance, generated by `binary_search.plot_epsilon_ratio_boxplot_all(cap=10, log_scale=False)`.
-- **Figure 5 (RQ5)**: binary-search statistical summary, generated by `binary_search.statistical_analysis_merge()`.
+- **Figure 6 (RQ5)**: pairwise comparison plots for verifiable distance, generated by `binary_search.plot_epsilon_ratio_boxplot_all(cap=10, log_scale=False)`.
+- **Figure 7 (RQ5)**: binary-search statistical summary, generated by `binary_search.statistical_analysis_merge()`.
 
 
 ## Project Structure and File Descriptions

@@ -10,7 +10,7 @@ import pandas as pd
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-DEFAULT_RESULT_ROOT = SCRIPT_DIR.parent / "result" / "mnist-256x4-dp"
+DEFAULT_RESULT_ROOT = SCRIPT_DIR.parent / "nnRelationalVerify" / "result" / "mnist-256x4-dp"
 DEFAULT_OUTPUT_ROOT = SCRIPT_DIR / "mnist-256x4-dp"
 DEFAULT_SUMMARY = SCRIPT_DIR / "mnist-256x4-dp" / "mnist-256x4-dp_summary.csv"
 NUMBER_PATTERN = r"(?:[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][-+]?\d+)?|nan|NaN|inf|-inf)"

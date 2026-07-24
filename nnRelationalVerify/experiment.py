@@ -131,7 +131,10 @@ def execute_experiment_mnistF(d_eps=None, i_eps=2, RS_mode=None, IS_mode=None, t
     if d_eps is None:
         result_folder_path = f"experiment_result/PE/{dataset_name}/"
     else:
-        result_folder_path = f"experiment_result/{dataset_name}/"
+        if dimensional_perturbation and perturb_ratio is not None:
+            result_folder_path = f"experiment_result/{dataset_name}-dp/"
+        else:
+            result_folder_path = f"experiment_result/{dataset_name}/"
 
     if RS_mode is not None and IS_mode is not None:
         raise ValueError("Only one of RS_mode or IS_mode should be specified.")

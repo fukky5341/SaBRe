@@ -12,8 +12,9 @@ import seaborn as sns
 from matplotlib.ticker import MaxNLocator
 from matplotlib.ticker import ScalarFormatter
 
+SCRIPT_DIR = Path(__file__).resolve().parent
+DEFAULT_RESULT_ROOT = SCRIPT_DIR.parent / "nnRelationalVerify" / "result" / "binary_search"
 SABRE_DISPLAY_NAME = r'S\textsc{a}BR\textsc{e}' if plt.rcParams.get('text.usetex', False) else 'SᴀBRᴇ'
-
 
 def parse_binary_search_results(log_text: str):
     # Capture each "## ... Result" block until the next "##" header or end of text
@@ -769,7 +770,7 @@ def cohens_d_heatmap_with_p(df, annot_mode="symbol"):
 
 
 def statistical_analysis_merge():
-    log_dir = '../result/binary_search'
+    log_dir = DEFAULT_RESULT_ROOT
     # acasxu
     aca_df = extract_binary_search_results_acasxu_all(log_dir)
     # m4
@@ -1451,7 +1452,7 @@ def plot_epsilon_scatter_grouped(
     return fig
 
 def plot_epsilon_ratio_boxplot_all(cap=20, log_scale=False):
-    log_dir = '../result/binary_search'
+    log_dir = DEFAULT_RESULT_ROOT
     # acasxu
     aca_df = extract_binary_search_results_acasxu_all(log_dir)
     # m4
