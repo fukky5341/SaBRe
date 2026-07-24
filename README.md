@@ -231,7 +231,7 @@ In this experiment, we compare the performance of our method SABRE (RS_dual_Z) w
 **Results and logs:**
 The results and logs are generated in `experiment_result/mnsit-256x4-dp`. The experiment arguments and processing status are written to the log files, and the final result is given at the bottom of the log file.
 
-For example, the log file for a single instance with perturbation ratio $p^{\%}=0.25$ performed by SABRE is `nnRelationalVerify/experiment_result/mnist-256x4-dp/RS_dual_Z_dimperturb_0.25_threshold/d2_e3/1/log.md`, where `d1_e3/2` indicates $d_{eps}=2$, $i_{eps}=d_{eps}*3=6$, and running index is $2$. The log file contains the execution arguments, intermediate results including the unstable ReLU counts, BaB splitting process, and the final result as follows:
+For example, the log file for a single instance with perturbation ratio `p^%`$=0.25$ performed by SABRE is `nnRelationalVerify/experiment_result/mnist-256x4-dp/RS_dual_Z_dimperturb_0.25_threshold/d2_e3/2/log.md`, where `d1_e3/2` indicates $d_{eps}=2$, $i_{eps}=d_{eps}*3=6$, and running index is $2$. The log file contains the execution arguments, intermediate results including the unstable ReLU counts, BaB splitting process, and the final result as follows:
 ```
 ## Execution arguments:
 Dataset: Dataset.MNIST
