@@ -4,13 +4,13 @@
 ## Authors
 - Kota Fukuda (Kyushu University, Japan)
 - Zhenya Zhang  (Kyushu University, Fukuoka, Japan National Institute of Informatics, Tokyo, Japan)
-- Guanqin ZHANG (UNSW & CSIRO's Data61, Sydney, Australia)
+- Guanqin Zhang (UNSW & CSIRO's Data61, Sydney, Australia)
 - Jianjun Zhao  (Kyushu University, Fukuoka, Japan)
 
 
 
 ## Paper
-[SABRE: Splitting Approximated Bounds for Relational Verification](EMSOFT_26.pdf)
+[Branch and Bound for Relational Verification of Neural Networks](EMSOFT_26.pdf)
 
 ## Important Note
 - The verifiers were primarily developed and tested on Linux.
