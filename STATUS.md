@@ -5,7 +5,7 @@
 This artifact is permanently archived and publicly accessible through:
 
 - Docker: https://hub.docker.com/r/fukky5341/sabre
-- Zenodo (DOI): https://zenodo.org/record/10394992
+- Zenodo (DOI): https://doi.org/10.5281/zenodo.21536550
 - GitHub: https://github.com/fukky5341/SaBRe
 
 The archived version contains the complete source code, scripts, datasets, documentation, and instructions required to reproduce the experiments in the paper.
