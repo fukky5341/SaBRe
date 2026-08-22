@@ -23,10 +23,19 @@ generator = torch.Generator()
 generator.manual_seed(42)
 
 
-def execute_experiment_acasxu(net_idx1=1, net_idx2=1, d_eps=1, RS_mode=None, IS_mode=None, threshold_analysis=False, time_budget=600, split_limit=5, exe_limit=None, exe_start=None, exe_end=None):
+def execute_experiment_acasxu(net_idx1=1, net_idx2=1, d_eps=1, RS_mode=None, IS_mode=None, threshold_analysis=False,
+                              time_budget=600, split_limit=5, inputs_num=10, exe_limit=None, exe_start=None,
+                              exe_end=None):
     dataset = Dataset.ACAS
     net_name = f'onnx/acasxu_op11/ACASXU_{net_idx1}_{net_idx2}.onnx'
     dataset_name = "acasxu"
+
+    if inputs_num < 1:
+        raise ValueError("inputs_num must be at least 1")
+    inputs_num = min(inputs_num, 10)
+    if exe_start is None and exe_end is None:
+        exe_start = 0
+        exe_end = inputs_num
 
     if RS_mode is not None and IS_mode is not None:
         raise ValueError("Only one of RS_mode or IS_mode should be specified.")
@@ -49,7 +58,7 @@ def execute_experiment_acasxu(net_idx1=1, net_idx2=1, d_eps=1, RS_mode=None, IS_
                               d_eps=d_eps, i_eps=1, net_idx1=net_idx1, net_idx2=net_idx2,
                               relational_prop=relational_prop, RS_mode=RS_mode, IS_mode=IS_mode,
                               exe_limit=exe_limit, exe_start=exe_start, exe_end=exe_end,
-                              split_limit=split_limit, time_budget=time_budget, lp_analysis=lp_analysis,
+                              split_limit=split_limit, inputs_num=inputs_num, time_budget=time_budget, lp_analysis=lp_analysis,
                               threshold_analysis=threshold_analysis, global_target=global_target)
 
 
@@ -219,10 +228,7 @@ def execute_experiment(dataset, net_name, result_file_path, d_eps=None, i_eps=No
 
     backprop_mode = "DP"
     refine_bounds_prop = True
-    if dataset == Dataset.ACAS:
-        count = 10
-    else:
-        count = inputs_num
+    count = inputs_num
     split_limit = split_limit
     time_budget = time_budget  # seconds
     if relational_prop == RelationalProperty.GLOBAL_ROBUSTNESS:

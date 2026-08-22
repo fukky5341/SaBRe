@@ -17,7 +17,8 @@ def run_exp(dataset, d_eps, i_eps, net_idx1=None, net_idx2=None, RS_mode=None, I
         time = 420
         threshold_analysis = True
         execute_experiment_acasxu(net_idx1=net_idx1, net_idx2=net_idx2, d_eps=d_eps, RS_mode=RS_mode, IS_mode=IS_mode,
-                                  split_limit=100, exe_start=exe_start, exe_end=exe_end, time_budget=time, threshold_analysis=threshold_analysis)
+                                  split_limit=100, inputs_num=inputs_num, exe_start=exe_start, exe_end=exe_end,
+                                  time_budget=time, threshold_analysis=threshold_analysis)
     elif dataset == "mnistF":
         if time is None:
             time = 600
@@ -61,7 +62,7 @@ def parse_args() -> argparse.Namespace:
         "--num",
         type=int,
         default=None,
-        help="Maximum input index to run. exe_start is always 0 and exe_end becomes min(num + 1, inputs_num).",
+        help="Number of instances to run per network (capped at the number available).",
     )
     return parser.parse_args()
 
@@ -69,7 +70,9 @@ def parse_args() -> argparse.Namespace:
 def resolve_exe_end(num: int | None, inputs_num: int) -> int:
     if num is None:
         return inputs_num
-    return min(num + 1, inputs_num)
+    if num < 1:
+        raise ValueError("--num must be at least 1")
+    return min(num, inputs_num)
 
 
 def main() -> None:
@@ -165,6 +168,9 @@ def main() -> None:
                         run_exp("mnistF", IS_mode=rsis_mode, d_eps=d_val, i_eps=i_val, exe_start=exe_start, exe_end=exe_end, inputs_num=inputs_num)
 
     if "acasxu" in selected_networks:
+        exe_start = 0
+        inputs_num = 10
+        exe_end = resolve_exe_end(args.num, inputs_num)
         for d_val in [10]:
             for net_idx1 in [1, 2]:
                 for net_idx2 in [1, 2, 3, 4, 5, 6, 7, 8, 9]:
@@ -172,9 +178,11 @@ def main() -> None:
                         print(f"Running experiments with d_eps={d_val}, net_idx1={net_idx1}, net_idx2={net_idx2}, RS/IS_mode={rsis_mode}")
                         print("** Run acasxu **")
                         if rsis_mode.startswith('RS'):
-                            run_exp("acasxu", RS_mode=rsis_mode, d_eps=d_val, i_eps=None, net_idx1=net_idx1, net_idx2=net_idx2)
+                            run_exp("acasxu", RS_mode=rsis_mode, d_eps=d_val, i_eps=None, net_idx1=net_idx1, net_idx2=net_idx2,
+                                    exe_start=exe_start, exe_end=exe_end, inputs_num=inputs_num)
                         elif rsis_mode.startswith('IS'):
-                            run_exp("acasxu", IS_mode=rsis_mode, d_eps=d_val, i_eps=None, net_idx1=net_idx1, net_idx2=net_idx2)
+                            run_exp("acasxu", IS_mode=rsis_mode, d_eps=d_val, i_eps=None, net_idx1=net_idx1, net_idx2=net_idx2,
+                                    exe_start=exe_start, exe_end=exe_end, inputs_num=inputs_num)
 
     print("Done!")
 
