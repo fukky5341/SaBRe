@@ -1,4 +1,4 @@
-# SABRE: Splitting Approximated Bounds for Relational Verification (ARTIFACT)
+# SaBRe: Splitting Approximated Bounds for Relational Verification (ARTIFACT)
 
 
 ## Authors
@@ -154,11 +154,11 @@ The details of the example in Section III-B is provided in [nnRelationalVerify/e
 
 ## Running Experiments
 
-In the scripts and log files, we use the following names for the baseline methods and SABRE.
+In the scripts and log files, we use the following names for the baseline methods and SaBRe.
 - `RS_random_Z`: RandRS
 - `IS_dual_ind`: ClasIS
 - `IS_dual`: DualIS
-- `RS_dual_Z`: SABRE
+- `RS_dual_Z`: SaBRe
 
 
 ### RQ1, RQ2, RQ4
@@ -173,27 +173,29 @@ Example (multiple networks)
 uv run run_experiment_rs_is.py --networks gtsrb cifar mnistF mnistC acasxu --num 1
 ```
 **CLI arguments:**
-As command line arguments, you can specify the networks to run experiments on and the number of instances to run for each network, method, and input perturbation. Omitting --num runs all instances used in the paper.
+As command line arguments, you can specify the networks to run experiments on and the number of instances to run for each network, method, and input perturbation. Omitting `--num` runs all instances used in the paper.
+
+The runtimes below correspond to the full experiments used in the paper. For a smaller evaluation run, use `--num 1`, which restricts the number of instances for each network, method, and input perturbation setting.
 
 **Runtime:**
 Full experiments for RQ1, RQ2, and RQ4 take a long time to finish due to the computational complexity of relational verification.
 
 | Network | Max. Runtime (hours) |
-|---------|---------------------|
-| GTSRB   | 210 h               |
-| CIFAR   | 528 h               |
-| MNIST-F | 78 h                |
-| MNIST-C | 78 h                |
-| ACAS Xu | 8.4 h               |
+|---------|----------------------|
+| GTSRB   | 210 h                |
+| CIFAR   | 528 h                |
+| MNIST-F | 78 h                 |
+| MNIST-C | 78 h                 |
+| ACAS Xu | 84 h                 |
 
 
 **Experiment description:**
-In this experiment, we compare SABRE (RS_dual_Z) with the baseline methods: RaVeN (base), ClasIS (IS_dual_ind), DualIS (IS_dual), and RandRS (RS_random_Z) on GTSRB, CIFAR, MNIST-F, MNIST-C, and ACAS Xu. For a given instance with output relational threshold, we evaluate whether each approach can verify or find counterexamples for the instance within the time limit.
+In this experiment, we compare SaBRe (RS_dual_Z) with the baseline methods: RaVeN (base), ClasIS (IS_dual_ind), DualIS (IS_dual), and RandRS (RS_random_Z) on GTSRB, CIFAR, MNIST-F, MNIST-C, and ACAS Xu. For a given instance with output relational threshold, we evaluate whether each approach can verify or find counterexamples for the instance within the time limit.
 
 **Results and logs:** 
-The results and logs are generated in `experiment_results/` for each network. The experiment arguments and processing status are written to the log files, and the final result is given at the bottom of the log file.
+The results and logs are generated in `experiment_result/` for each network. The experiment arguments and processing status are written to the log files, and the final result is given at the bottom of the log file.
 
-For example, the log file for a single GTSRB instance performed by SABRE is `nnRelationalVerify/experiment_result/gtsrb/RS_dual_Z_threshold/d1_e2/0/log.md`, where `d1_e2/0` indicates $d_{eps}=1$, $i_{eps}=d_{eps}*2=2$, and running index is $0$. The log file contains the execution arguments, intermediate results including the unstable ReLU counts, BaB splitting process, and the final result as follows:
+For example, the log file for a single GTSRB instance performed by SaBRe is `nnRelationalVerify/experiment_result/gtsrb/RS_dual_Z_threshold/d1_e2/0/log.md`, where `d1_e2/0` indicates $d_{eps}=1$, $i_{eps}=d_{eps}*2=2$, and running index is $0$. The log file contains the execution arguments, intermediate results including the unstable ReLU counts, BaB splitting process, and the final result as follows:
 ```
 ## Execution arguments:
 Dataset: Dataset.GTSRB
@@ -230,12 +232,12 @@ uv run run_experiment_dp.py
 Full experiments for RQ3 take approximately $324,000$ seconds (90 hours) for all instances.
 
 **Experiment description:**
-In this experiment, we compare the performance of our method SABRE (RS_dual_Z) with baselines: ClasIS (IS_dual_ind) and DualIS (IS_dual) on MNIST-F. 
+In this experiment, we compare the performance of our method SaBRe (RS_dual_Z) with baselines: ClasIS (IS_dual_ind) and DualIS (IS_dual) on MNIST-F. 
 
 **Results and logs:**
-The results and logs are generated in `experiment_result/mnsit-256x4-dp`. The experiment arguments and processing status are written to the log files, and the final result is given at the bottom of the log file.
+The results and logs are generated in `experiment_result/mnist-256x4-dp`. The experiment arguments and processing status are written to the log files, and the final result is given at the bottom of the log file.
 
-For example, the log file for a single instance with perturbation ratio `p^%`$=0.25$ performed by SABRE is `nnRelationalVerify/experiment_result/mnist-256x4-dp/RS_dual_Z_dimperturb_0.25_threshold/d2_e3/2/log.md`, where `d1_e3/2` indicates $d_{eps}=2$, $i_{eps}=d_{eps}*3=6$, and running index is $2$. The log file contains the execution arguments, intermediate results including the unstable ReLU counts, BaB splitting process, and the final result as follows:
+For example, the log file for a single instance with perturbation ratio `p^%`$=0.25$ performed by SaBRe is `nnRelationalVerify/experiment_result/mnist-256x4-dp/RS_dual_Z_dimperturb_0.25_threshold/d2_e3/2/log.md`, where `d2_e3/2` indicates $d_{eps}=2$, $i_{eps}=d_{eps}*3=6$, and running index is $2$. The log file contains the execution arguments, intermediate results including the unstable ReLU counts, BaB splitting process, and the final result as follows:
 ```
 ## Execution arguments:
 Dataset: Dataset.MNIST
@@ -286,11 +288,11 @@ As command line arguments, you can specify the networks to run experiments on.
 Full experiments for RQ5 take approximately $5,686,800$ seconds to finish. 
 
 **Experiment description:**
-In this experiment, we compare the performance of our method SABRE (RS_dual_Z) with baselines: RaVeN (base), ClasIS (IS_dual_ind), DualIS (IS_dual), and RandRS (RS_random_Z) via binary search on ACAS Xu, MNIST-F, MNIST-C, CIFAR. In binary search, each approach explores the maximum verifiable input relational distance.
+In this experiment, we compare the performance of our method SaBRe (RS_dual_Z) with baselines: RaVeN (base), ClasIS (IS_dual_ind), DualIS (IS_dual), and RandRS (RS_random_Z) via binary search on ACAS Xu, MNIST-F, MNIST-C, CIFAR. In binary search, each approach explores the maximum verifiable input relational distance.
 
-The results and logs are generated in `experiment_results/binary_search`. The experiment arguments and processing status are written to the log files, and the final result is given at the bottom of the log file.
+The results and logs are generated in `experiment_result/binary_search`. The experiment arguments and processing status are written to the log files, and the final result is given at the bottom of the log file.
 
-For example, the log file for a single GTSRB instance performed by SABRE is `nnRelationalVerify/experiment_result/binary_search/gtsrb_2_4/RS_dual_Z/0/log.md`, where `gtsrb_2_4` indicates $d_{eps}=2$, $i_{eps}=d_{eps}*4=8$, and running index is $0$. The log file contains the execution arguments, intermediate results including the unstable ReLU counts, BaB splitting process, binary search exploration process, and the final result as follows:
+For example, the log file for a single GTSRB instance performed by SaBRe is `nnRelationalVerify/experiment_result/binary_search/gtsrb_2_4/RS_dual_Z/0/log.md`, where `gtsrb_2_4` indicates $d_{eps}=2$, $i_{eps}=d_{eps}*4=8$, and running index is $0$. The log file contains the execution arguments, intermediate results including the unstable ReLU counts, BaB splitting process, binary search exploration process, and the final result as follows:
 ```
 ## Execution arguments:
 Dataset: Dataset.GTSRB
@@ -322,18 +324,22 @@ execution time: 12287.05 seconds
 
 
 ## Reproduction of Figures and Tables in the Paper
-We provide all the necessary scripts and configurations to reproduce the figures and tables in the paper. Note that the exact results reported in the paper may not be reproduced because of machine-dependent numerical differences. 
+We provide all the necessary scripts and configurations to reproduce the figures and tables in the paper. 
 
-The scripts are located in `nnRelationalVerify/evaluation`. You can run the [notebook](evaluation/analysis.ipynb) to reproduce the figures and tables in the paper. The notebook contains the code to load the results from `nnRelationalVerify/result/` and generate the figures and tables. 
+**Note**:  The results generated by the artifact may differ slightly from those reported in the paper. After conducting the experiments for the paper, we refactored and cleaned the artifact code for release. These changes, together with machine-dependent numerical differences, can lead to small variations in the verification results. 
 
-Two options are provided for producing the figures and tables
+Nevertheless, the reproduced results are consistent with those reported in the paper. In particular, the overall quantitative trends, relative comparisons between methods, and conclusions of the experimental evaluation remain the same. Therefore, reproduction recovers the same experimental observations and conclusions, although individual numerical values may not be identical.
 
-- Option 1 (recommended):  
-Use the precomputed results included in `nnRelationalVerify/result/`.
-Running the notebook immediately reproduces every figure and table.
-- Option 2:  
-Run the experiments yourself using the scripts in Section "Running Experiments".
-Replace the contents of `nnRelationalVerify/result/` with your generated results before executing the notebook.
+The analysis scripts are located in `evaluation`. The notebook [evaluation/analysis.ipynb](evaluation/analysis.ipynb) generates the figures and tables from the processed results in `nnRelationalVerify/result/`.
+
+Two options are provided:
+
+- Option 1 (recommended): Use the precomputed results.  
+The artifact includes precomputed results in `nnRelationalVerify/result/`.
+Running the notebook [evaluation/analysis.ipynb](evaluation/analysis.ipynb) using these results generates the figures and tables listed below. The generated results may differ slightly from the corresponding values in the paper for the reasons described above, but they should exhibit the same overall results, comparisons, and conclusions.
+- Option 2: Rerun the experiments.  
+Run the experiments following the instructions in Section [Running Experiments](#running-experiments).
+After the experiments are completed, replace the contents of `nnRelationalVerify/result/` with your generated results `nnRelationalVerify/experiment_result/` before executing the notebook. Because verification results can be affected by machine-dependent numerical behavior, results obtained on a different machine may also differ slightly from both the provided precomputed results and the values reported in the paper.
 
 
 ### Figures and Tables Guide
