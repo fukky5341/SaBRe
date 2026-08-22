@@ -8,6 +8,12 @@ import sys
 
 os.chdir(Path(__file__).resolve().parent / "nnRelationalVerify")
 
+import platform
+import torch
+
+if platform.machine() in ("arm64", "aarch64"):
+    torch.backends.mkldnn.enabled = False
+
 # delta_eps = 1/256 * d_eps
 # eps = 1/256 * d_eps * i_eps
 

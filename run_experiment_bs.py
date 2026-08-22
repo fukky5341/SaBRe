@@ -12,6 +12,12 @@ from pathlib import Path
 
 os.chdir(Path(__file__).resolve().parent / "nnRelationalVerify")
 
+import platform
+import torch
+
+if platform.machine() in ("arm64", "aarch64"):
+    torch.backends.mkldnn.enabled = False
+
 
 def run_exp(dataset, net_idx1=None, net_idx2=None, RSIS_mode_list=None, time_budget=None, exe_start=0, exe_end=10, d_eps=None, i_eps=None, threshold_analysis=True):
     if dataset == "cifar":
